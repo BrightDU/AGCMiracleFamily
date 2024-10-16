@@ -7,8 +7,8 @@ import logo from '../public/navlogo.png'; // Ensure this path is correct
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const navContainerRef = useRef(null);
-  
+  const navContainerRef = useRef<HTMLDivElement | null>(null); // Explicitly typing
+
   // Add a state to manage the animation class
   const [animate, setAnimate] = useState(false);
 
@@ -27,8 +27,8 @@ const Navbar = () => {
 
   // Close menu when clicking outside
   useEffect(() => {
-    const handleClickOutside = (event) => {
-      if (navContainerRef.current && !navContainerRef.current.contains(event.target)) {
+    const handleClickOutside = (event: MouseEvent) => { // Specify MouseEvent type
+      if (navContainerRef.current && !navContainerRef.current.contains(event.target as Node)) {
         closeMenu();
       }
     };
@@ -69,7 +69,7 @@ const Navbar = () => {
 
         {/* Full Navigation on Larger Screens */}
         <ul className="hidden md:flex space-x-6 items-center">
-          {['Home','About', 'Services', 'Blog', 'Contact'].map((item) => (
+          {['Home', 'About', 'Services', 'Blog', 'Contact'].map((item) => (
             <li key={item}>
               <Link
                 href={item === 'Home' ? '/' : `#${item.toLowerCase()}`}
@@ -98,6 +98,7 @@ const Navbar = () => {
 };
 
 export default Navbar;
+
 
 
 
