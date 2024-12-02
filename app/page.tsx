@@ -1,12 +1,14 @@
-// app/page.tsx
 import Navbar from './components/Navbar';
 import Header from './components/Header';
 import About from './components/About';
+import Whatwedo from './components/Whatwedo'
 import Services from './components/Services';
-import Contact from './components/Contact';
-import Footer from './components/Footer';
-import Blog from './components/Blog';
+import Gallary from './components/Gallary'
+import Testimonials from './components/Testimonials'; // Import Testimonials component
+// import Blog from './components/Blog';
 
+import Footer from './components/Footer';
+import Hero2 from './components/Hero2';
 
 // Define metadata for the page
 export const metadata = {
@@ -23,11 +25,18 @@ export default function Home() {
       <Navbar />
       <Header />
       <About />
+      <Whatwedo/>
       <Services />
-      <Blog />
-      <Contact />
+      <Gallary/>
+      
+      
+      <Testimonials /> 
+      {/* <Blog /> */}
+      <Hero2 />
+      
       <Footer />
     </>
   );
 }
+
 

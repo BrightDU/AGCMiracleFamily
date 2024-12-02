@@ -1,112 +1,71 @@
 'use client';
 
-import { useEffect, useState } from 'react';
 import Image from 'next/image';
-import visionImg from '../public/vision.jpg'; // Correct path to the images
-import missionImg from '../public/mission.jpg'; // Correct path to the images
+import missionImg from '../public/abtimage.png'; // Ensure the path to the image is correct
 
 const About = () => {
-  const [isVisible, setIsVisible] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      const aboutSection = document.getElementById('about');
-
-      if (aboutSection) { // Add null check here
-        const sectionPosition = aboutSection.getBoundingClientRect().top;
-        const screenPosition = window.innerHeight / 1.2; // Trigger when 80% of the section is visible
-
-        if (sectionPosition < screenPosition) {
-          setIsVisible(true);
-        }
-      }
-    };
-
-    window.addEventListener('scroll', handleScroll);
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, []);
-
   return (
-    <section id="about" className="relative bg-gray-500 py-12 px-6 sm:px-12 md:px-24 lg:px-48 min-h-screen">
-      <div className="relative z-20 text-center mb-10">
-        <h2 className={`text-3xl md:text-4xl text-green font-bold mb-4 ${isVisible ? 'animate-fadeInUp' : 'opacity-0'}`}>
-          About Us
+    <section
+      id="about"
+      className="relative py-12 px-6 sm:px-12 md:px-24 lg:px-48 min-h-screen bg-white flex justify-center items-center"
+    >
+      {/* Container for content */}
+      <div className="max-w-7xl w-full">
+        {/* Subtitle */}
+        <h3 className="font-roboto text-center font-bold text-sm sm:text-base tracking-[2px] text-[#1D2130] mx-auto mb-6">
+          Get to Know Us
+        </h3>
+
+        {/* Title */}
+        <h2 className="font-roboto font-bold text-xl sm:text-2xl md:text-[32px] leading-tight text-[#6A6969] mx-auto text-center mb-6">
+          Our Comprehensive Support for Every Stage of Growth
         </h2>
-        <p className={`text-lg font-bold md:text-xl text-gray-800 ${isVisible ? 'animate-fadeInUp' : 'opacity-0'}`}>
-          We are committed to helping businesses, researchers, and government agencies leverage data to optimize processes and achieve significant growth.
-        </p>
-      </div>
 
-      <div className="relative z-20 flex flex-col md:flex-row justify-between items-start md:items-stretch space-y-6 md:space-y-0 md:space-x-6">
-        {/* Vision Statement */}
-        <div className={`relative bg-white shadow-md rounded-md w-full md:w-1/2 lg:w-1/2 flex flex-col h-80 ${isVisible ? 'animate-fadeInUp' : 'opacity-0'}`}>
-          <div className="relative w-full h-full overflow-hidden rounded-t-md">
-            {/* Background Image for Vision */}
-            <Image
-              src={visionImg}
-              alt="Vision Background"
-              fill
-              style={{ objectFit: 'cover' }}
-              className="absolute top-0 left-0 w-full h-full"
-            />
-            {/* Overlay for Vision */}
-            <div className="absolute inset-0 bg-black opacity-70"></div>
-            {/* Text on top of the image */}
-            <div className="absolute inset-0 flex flex-col items-center justify-center text-white z-10 p-4">
-              <h3 className="text-3xl md:text-4xl font-bold mb-2 text-center">Our Vision</h3>
-              <p className="text-gray-200 text-center font-l font-bold">
-                To Empower individuals, government agencies, private organizations, and researchers to make informed decisions and achieve growth through strategic data utilization and process optimization.
-              </p>
-            </div>
-          </div>
+        {/* Text Content */}
+          <p className="font-roboto font-normal text-sm sm:text-base leading-relaxed text-[#525560] mx-auto text-left sm:text-center mb-6">
+            At Carelife Foundation, we are dedicated to providing comprehensive support from the very beginning of life. Our programs are designed to nurture every child, starting from conception through infancy, and guide them through the pivotal transition from childhood to adulthood; ensuring each child enters adulthood with a sense of hope and positivity for the future.
+          </p>
+
+          <p className="font-roboto font-normal text-sm sm:text-base leading-relaxed text-[#525560] mx-auto text-left sm:text-center mb-6">
+            Our commitment to Maternal and Child health is fundamental to our mission. By empowering every expectant mother and child with the resources and support they need, we lay the foundation for a healthier generation. Our programs are crosscutting, targeting beneficiaries mainly in the slums.
+          </p>
+
+          <p className="font-roboto font-normal text-sm sm:text-base leading-relaxed text-[#525560] mx-auto text-left sm:text-center mb-6">
+            We tailor our interventions based on evidence-driven research and comprehensive needs assessments, focusing on key areas such as health, nutrition, education, child rights, gender equality, and life skills. By addressing these fundamental aspects, we aim to help each child fully develop their potential before making the critical transition into adulthood.
+          </p>
+
+        {/* Learn More Button */}
+        <div className="text-center mt-6">
+          <button className="bg-[#003871] text-white font-roboto font-medium text-sm sm:text-base py-3 px-6 rounded-full hover:bg-[#002c5f] transition duration-200">
+            Learn More
+          </button>
         </div>
 
-        {/* Mission Statement */}
-        <div className={`relative bg-white shadow-md rounded-md w-full md:w-1/2 lg:w-1/2 flex flex-col h-80 ${isVisible ? 'animate-fadeInUp' : 'opacity-0'}`}>
-          <div className="relative w-full h-full overflow-hidden rounded-t-md">
-            {/* Background Image for Mission */}
-            <Image
-              src={missionImg}
-              alt="Mission Background"
-              fill
-              style={{ objectFit: 'cover' }}
-              className="absolute top-0 left-0 w-full h-full"
-            />
-            {/* Overlay for Mission */}
-            <div className="absolute inset-0 bg-black opacity-60"></div>
-            {/* Text on top of the image */}
-            <div className="absolute inset-0 flex flex-col items-center justify-center text-white z-10 p-4">
-              <h3 className="text-3xl md:text-4xl font-bold mb-2 text-center">Our Mission</h3>
-              <p className="text-gray-200 font-l text-center font-bold">
-                To Accelerate clients' progress by harnessing the power of modern technologies, including Artificial Intelligence/Business Intelligence and advanced data analytics.
-              </p>
-            </div>
-          </div>
+        {/* Image Section */}
+        <div className="relative w-full max-w-[1200px] h-auto mt-12 mx-auto">
+          <Image
+            src={missionImg}
+            alt="Relevant Image"
+            layout="responsive"
+            width={1200}
+            height={556}
+            style={{ objectFit: 'cover' }}
+            className="rounded-lg"
+          />
         </div>
       </div>
-
-      {/* Add CSS animations */}
-      <style jsx>{`
-        @keyframes fadeInUp {
-          0% {
-            opacity: 0;
-            transform: translateY(20px);
-          }
-          100% {
-            opacity: 1;
-            transform: translateY(0);
-          }
-        }
-
-        .animate-fadeInUp {
-          animation: fadeInUp 0.9s forwards;
-        }
-      `}</style>
     </section>
   );
 };
 
 export default About;
+
+
+
+
+
+
+
+
+
 
