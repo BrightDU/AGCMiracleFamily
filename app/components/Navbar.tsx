@@ -172,7 +172,7 @@ const Navbar = () => {
             </li>
             <li>
               <Link
-                href="/impact"
+                href="#impact"
                 className="block px-4 py-2 font-bold hover:bg-[#003871] hover:text-white transition-all duration-300"
                 onClick={closeMenu}
               >
