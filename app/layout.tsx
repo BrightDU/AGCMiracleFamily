@@ -1,8 +1,8 @@
-import type { Metadata } from 'next';
+// RootLayout.tsx
+
+import { Metadata } from 'next';
 import localFont from 'next/font/local';
-import Navbar from '../app/components/Navbar';  // Import Navbar
-
-
+import Navbar from '../app/components/Navbar'; // Import Navbar component
 import './globals.css';
 
 // Load local fonts
@@ -36,20 +36,22 @@ export default function RootLayout({
     <html lang="en">
       <head>
         <link rel="icon" href="/favicon.ico" type="image/x-icon" />
-        {/* Optional: If you have a PNG favicon, uncomment this */}
-        {/* <link rel="icon" href="/favicon.png" type="image/png" /> */}
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen flex flex-col`}
       >
-        
-        <div className="flex-grow">{children}</div> {/* This ensures content takes full height */}
-         
-        
+        {/* Include Navbar so it's visible on all pages */}
+        <Navbar />
+
+        <div className="flex-grow">
+          {/* The rest of your page content */}
+          {children}
+        </div>
       </body>
     </html>
   );
 }
+
 
 
 

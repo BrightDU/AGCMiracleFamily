@@ -1,10 +1,10 @@
 import Image from "next/image"; // Importing the Image component
 import { FaTwitter, FaFacebookF, FaInstagram, FaLinkedinIn } from "react-icons/fa"; // Importing social media icons
-import Log from "../public/carelife-logo.jpg"; // Import the logo image correctly
+import Log from "../public/carelifelogo2.jpg"; // Import the logo image correctly
 
 const Footer = () => {
   return (
-    <footer className="bg-[#003771] font-roboto text-white py-8 text-center mx-auto mt-auto mb-0">
+    <footer className="bg-[#003771]  font-roboto text-white py-8 text-center mx-auto mt-auto mb-0">
       {/* Outer Footer Container */}
       <div className="w-full flex justify-center mt-[60px] items-start">
         {/* Inner Footer Container */}
@@ -37,6 +37,15 @@ const Footer = () => {
               <FaInstagram className="text-white text-xl cursor-pointer hover:text-[#E4405F]" />
               <FaLinkedinIn className="text-white text-xl cursor-pointer hover:text-[#0e76a8]" />
             </div>
+            <div className="mt-2">
+                <a href="mailto:info@carelifefoundation.com" className="block text-xl text-[#FFFFFF]  transition duration-300">
+                  info@carelifefoundation.com
+                </a>
+                <a href="mailto:bts@carelifefoundation.com" className="block text-xl text-[#FFFFFF]  transition duration-300">
+                  bts@carelifefoundation.com
+                </a>
+              </div>
+            
 
             {/* Follow Us Text */}
             <p className="text-sm font-roboto font-semibold mt-4">Follow us on our social channels</p>

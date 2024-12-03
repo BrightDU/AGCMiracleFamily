@@ -77,7 +77,7 @@ const Gallary = () => {
       {/* Content Container */}
       <div className="max-w-7xl w-full mx-auto text-center mb-8" style={{ marginTop: '-80px' }}>
         <h3 className="font-roboto font-bold text-xl sm:text-2xl md:text-[32px] leading-tight text-[#6A6969] mb-4">
-          Gallary
+          Gallery
         </h3>
         <p className="font-roboto font-normal text-sm sm:text-base leading-relaxed text-[#525560] mb-2">
           Each image is a testament to the collective efforts of our dedicated volunteers, partners, and supporters.

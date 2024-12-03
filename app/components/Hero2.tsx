@@ -8,7 +8,7 @@ import image1 from '../public/hero2img.png';
 const HeroSection = () => {
   return (
     <section
-      className="relative h-[433px] w-full sm:w-[1265px] flex items-center justify-center text-center px-4 sm:px-8 lg:px-16 xl:px-24 overflow-hidden sm:mt-0 lg:mt-16"
+      className="relative h-[433px]  w-full mx-auto   max-w-full flex items-center justify-center text-center px-0 sm:px-8 lg:px-16 xl:px-24 overflow-hidden sm:mt-0 lg:mt-16"
     >
       {/* Background Image */}
       <div className="absolute inset-0">

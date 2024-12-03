@@ -2,10 +2,12 @@ import Navbar from './components/Navbar';
 import Header from './components/Header';
 import About from './components/About';
 import Whatwedo from './components/Whatwedo'
+import Impact from './components/Impact'
 import Services from './components/Services';
 import Gallary from './components/Gallary'
+
 import Testimonials from './components/Testimonials'; // Import Testimonials component
-// import Blog from './components/Blog';
+
 
 import Footer from './components/Footer';
 import Hero2 from './components/Hero2';
@@ -26,12 +28,13 @@ export default function Home() {
       <Header />
       <About />
       <Whatwedo/>
+      <Impact/>
       <Services />
       <Gallary/>
       
       
       <Testimonials /> 
-      {/* <Blog /> */}
+      
       <Hero2 />
       
       <Footer />

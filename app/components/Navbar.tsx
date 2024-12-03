@@ -3,10 +3,15 @@
 import { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
+import { FaChevronDown } from 'react-icons/fa';
 import logo from '../public/carelife-logo.jpg';
+import Modal from './Modal'; 
 
 const Navbar = () => {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(false); 
+  const [mobileProgramsDropdownOpen, setMobileProgramsDropdownOpen] = useState(false);
+  const [desktopProgramsDropdownOpen, setDesktopProgramsDropdownOpen] = useState(false);
+  const [isModalOpen, setIsModalOpen] = useState(false); 
   const navContainerRef = useRef<HTMLDivElement | null>(null);
   const [animate, setAnimate] = useState(false);
 
@@ -16,10 +21,13 @@ const Navbar = () => {
 
   const toggleMenu = () => {
     setIsOpen((prev) => !prev);
+    setMobileProgramsDropdownOpen(false); 
   };
 
   const closeMenu = () => {
     setIsOpen(false);
+    setMobileProgramsDropdownOpen(false);
+    setDesktopProgramsDropdownOpen(false);
   };
 
   useEffect(() => {
@@ -35,104 +43,218 @@ const Navbar = () => {
     };
   }, []);
 
+  const toggleDesktopProgramsDropdown = () => {
+    setDesktopProgramsDropdownOpen((prev) => !prev);
+  };
+
+  const toggleMobileProgramsDropdown = () => {
+    setMobileProgramsDropdownOpen((prev) => !prev);
+  };
+
+  const openModal = () => {
+    setIsModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setIsModalOpen(false);
+  };
+
   return (
-    <nav
-      className={`bg-[#FFFFFF] text-#525560 font-roboto font-medium py-4 fixed top-0 w-full z-50 transition-all duration-700 ease-out ${
-        animate ? 'transform translate-y-0 opacity-100' : 'transform -translate-y-full opacity-0'
-      }`}
-      ref={navContainerRef}
-      style={{ fontSize: '16px', lineHeight: '18.75px' }}
-    >
-      <div className="container mx-auto flex justify-between items-center px-4 sm:px-6 lg:px-8 h-16">
-        {/* Logo */}
-        <div className="flex items-center">
-          <Link href="/" className="hover:text-[#93e9be] transition-all duration-300">
-            <Image src={logo} alt="Logo" width={143} height={40} className="object-contain" />
-          </Link>
-        </div>
+    <>
+      <nav
+        className={`bg-[#FFFFFF] text-#525560 font-roboto font-medium py-4 fixed top-0 w-full z-50 transition-all duration-700 ease-out ${
+          animate ? 'transform translate-y-0 opacity-100' : 'transform -translate-y-full opacity-0'
+        }`}
+        ref={navContainerRef}
+        style={{ fontSize: '16px', lineHeight: '18.75px' }}
+      >
+        <div className="container mx-auto flex justify-between items-center px-4 sm:px-6 lg:px-8 h-16">
+          {/* Logo */}
+          <div className="flex items-center">
+            <Link href="/" className="hover:text-[#93e9be] transition-all duration-300">
+              <Image src={logo} alt="Logo" width={143} height={40} className="object-contain" />
+            </Link>
+          </div>
 
-        {/* Centered Navigation Links */}
-        <ul className="hidden md:flex space-x-6 items-center mx-auto">
-          {[
-            { name: 'Home', link: '/' },
-            { name: 'About', link: '/aboutuspage' },
-            { name: 'What We Do', link: '#whatwedo' },
-            { name: 'Blog', link: '/blog' },
-            { name: 'Gallary', link: '#gallary' },
-            { name: 'Contact', link: '#contact' },
-          ].map(({ name, link }) => (
-            <li key={name}>
-              <Link
-                href={link}
-                className="relative py-2 group inline-block text-[#525560] transition-colors duration-300 hover:text-[#003871]"
+          {/* Desktop Navigation Links */}
+          <ul className="hidden md:flex space-x-6 items-center mx-auto">
+            {[{ name: 'Home', link: '/' }, { name: 'About', link: '#about' }, { name: 'Impacts', link: '#impact' }].map(({ name, link }) => (
+              <li key={name}>
+                <Link
+                  href={link}
+                  className="relative py-2 group inline-block text-[#525560] transition-colors duration-300 hover:text-[#003871]"
+                >
+                  {name}
+                  <span className="absolute left-0 bottom-0 w-0 h-[2px] bg-[#003871] transition-all duration-300 group-hover:w-full"></span>
+                </Link>
+              </li>
+            ))}
+            
+            {/* Programs Dropdown for Desktop */}
+            <li className="relative">
+              <button
+                onClick={toggleDesktopProgramsDropdown}
+                className="flex items-center relative py-2 text-[#525560] transition-colors duration-300 hover:text-[#003871] focus:outline-none"
               >
-                {name}
-                <span className="absolute left-0 bottom-0 w-0 h-[2px] bg-[#003871] transition-all duration-300 group-hover:w-full"></span>
-              </Link>
+                Our Programmes
+                <FaChevronDown className="ml-1" />
+              </button>
+              {desktopProgramsDropdownOpen && (
+                <ul className="absolute left-0 mt-2 bg-[#DDF3FF] shadow-lg rounded-md overflow-hidden w-52">
+                  {[{ name: 'Empowerment', link: '#home' }, { name: 'Behind the Scene(BTS)', link: '/bts' }].map(({ name, link }) => (
+                    <li key={name}>
+                      <Link
+                        href={link}
+                        className="block px-4 py-2 hover:bg-[#003871] hover:text-white transition-all duration-300"
+                        onClick={closeMenu}
+                      >
+                        {name}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              )}
             </li>
-          ))}
-        </ul>
 
-        {/* Donate Button for Desktop */}
-        <div className="hidden md:block">
-          <Link
-            href="/donate"
-            className="flex justify-end items-center bg-[#003871] text-white w-[115px] h-[43px] rounded-[48px] pt-[12px] pr-[32px] pb-[12px] pl-[32px] gap-[10px] text-[16px] leading-[18.75px] font-roboto font-medium"
-          >
-            <span className="w-[51px] h-[19px] text-right">Donate</span>
-          </Link>
+            {[{ name: 'Blog', link: '/blog' }, { name: 'Gallery', link: '/gallery' }, { name: 'Contact', link: '/contact' }].map(({ name, link }) => (
+              <li key={name}>
+                <Link
+                  href={link}
+                  className="relative py-2 group inline-block text-[#525560] transition-colors duration-300 hover:text-[#003871]"
+                >
+                  {name}
+                  <span className="absolute left-0 bottom-0 w-0 h-[2px] bg-[#003871] transition-all duration-300 group-hover:w-full"></span>
+                </Link>
+              </li>
+            ))}
+          </ul>
+
+          {/* Donate Button for Desktop */}
+          <div className="hidden md:block">
+            <button
+              onClick={openModal}
+              className="flex justify-end items-center bg-[#003871] text-white w-[115px] h-[43px] pt-[12px] pr-[32px] pb-[12px] pl-[32px] gap-[10px] text-[16px] leading-[18.75px] font-roboto font-medium"
+            >
+              Donate
+            </button>
+          </div>
+
+          {/* Hamburger Menu for Mobile */}
+          <div className="md:hidden text-#003871 mr-7">
+            <button onClick={toggleMenu} className="focus:outline-none">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-8 h-8">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16m-7 6h7" />
+              </svg>
+            </button>
+          </div>
         </div>
 
-        {/* Hamburger Menu for Mobile */}
-        <div className="md:hidden text-#003871 mr-7">
-          <button onClick={toggleMenu} className="focus:outline-none">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-8 h-8">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16m-7 6h7" />
-            </svg>
-          </button>
-        </div>
-      </div>
-
-      {/* Mobile Dropdown Menu */}
-      {isOpen && (
-        <ul className="md:hidden absolute bg-white text-xl text-[#003871] right-0 top-6 w-full shadow-lg z-20 pt-4 overflow-y-auto">
-          {[
-            { name: 'Home', link: '/' },
-            { name: 'About', link: '/aboutuspage' },
-            { name: 'What We Do', link: '#whatwedo' },
-            { name: 'Blog', link: '/blog' },
-            { name: 'Gallary', link: '#gallary' },
-                                            
-            { name: 'Contact', link: '#contact' },
-          ].map(({ name, link }) => (
-            <li key={name}>
+        {/* Mobile Dropdown Menu */}
+        {isOpen && (
+          <ul className="md:hidden absolute bg-white text-xl text-[#003871] right-0 top-6 w-full shadow-lg z-20 pt-4 overflow-y-auto">
+            <li>
               <Link
-                href={link}
-                className="block px-4 py-2 font-bold hover:bg-[#003871] transition-all duration-300"
+                href="/"
+                className="block px-4 py-2 font-bold hover:bg-[#003871] hover:text-white transition-all duration-300"
                 onClick={closeMenu}
               >
-                {name}
+                Home
               </Link>
             </li>
-          ))}
-          {/* Donate Button in Mobile Menu */}
-<li className="mt-4 flex justify-center">
-  <Link
-    href="/donate"
-    className="bg-[#003871] text-white w-[115px] h-[43px] rounded-[48px] flex items-center justify-center text-[16px] leading-[18.75px] font-roboto font-medium"
-    onClick={closeMenu}
-  >
-    Donate
-  </Link>
-</li>
+            <li>
+              <Link
+                href="#about"
+                className="block px-4 py-2 font-bold hover:bg-[#003871] hover:text-white transition-all duration-300"
+                onClick={closeMenu}
+              >
+                About
+              </Link>
+            </li>
+            <li>
+              <Link
+                href="/impact"
+                className="block px-4 py-2 font-bold hover:bg-[#003871] hover:text-white transition-all duration-300"
+                onClick={closeMenu}
+              >
+                Impacts
+              </Link>
+            </li>
+            <li>
+              <button
+                onClick={toggleMobileProgramsDropdown}
+                className="block px-4 py-2 font-bold hover:bg-[#003871] hover:text-white transition-all duration-300"
+              >
+                Our Programs
+                <FaChevronDown className="inline ml-2" />
+              </button>
+              {mobileProgramsDropdownOpen && (
+                <ul className="pl-6">
+                  {[{ name: 'Empowerment', link: '#home' }, { name: 'Behind the Scene(BTS)', link: '/bts' }].map(({ name, link }) => (
+                    <li key={name}>
+                      <Link
+                        href={link}
+                        className="block px-4 py-2 hover:bg-[#003871] hover:text-white transition-all duration-300"
+                        onClick={closeMenu}
+                      >
+                        {name}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              )}
+            </li>
+            <li>
+              <Link
+                href="/blog"
+                className="block px-4 py-2 font-bold hover:bg-[#003871] hover:text-white transition-all duration-300"
+                onClick={closeMenu}
+              >
+                Blog
+              </Link>
+            </li>
+            <li>
+              <Link
+                href="/gallery"
+                className="block px-4 py-2 font-bold hover:bg-[#003871] hover:text-white transition-all duration-300"
+                onClick={closeMenu}
+              >
+                Gallery
+              </Link>
+            </li>
+            <li>
+              <Link
+                href="/contact"
+                className="block px-4 py-2 font-bold hover:bg-[#003871] hover:text-white transition-all duration-300"
+                onClick={closeMenu}
+              >
+                Contact
+              </Link>
+            </li>
+            <li className="px-4 py-2">
+              <button
+                onClick={openModal}
+                className="w-full bg-[#003871] text-white py-2 px-4 rounded-md font-bold"
+              >
+                Donate
+              </button>
+            </li>
+          </ul>
+        )}
+      </nav>
 
-        </ul>
-      )}
-    </nav>
+      <Modal isOpen={isModalOpen} onClose={closeModal} />
+    </>
   );
 };
 
 export default Navbar;
+
+
+
+
+
+
+
 
 
 

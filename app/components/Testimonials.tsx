@@ -1,6 +1,7 @@
 'use client';
 
-import Image from 'next/image'; // Import the Image component
+import { useEffect, useState } from 'react';
+import Image from 'next/image';
 
 // Import images for testimonials
 import testimonialImage1 from '../public/testimonial1.jpg'; // Adjust path as needed
@@ -32,8 +33,37 @@ const testimonials = [
 ];
 
 const Testimonials = () => {
+  const [isInView, setIsInView] = useState(false);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setIsInView(true);
+          }
+        });
+      },
+      { threshold: 0.5 } // Trigger when 50% of the section is visible
+    );
+
+    const section = document.getElementById('testimonials-section');
+    if (section) {
+      observer.observe(section);
+    }
+
+    return () => {
+      if (section) {
+        observer.unobserve(section);
+      }
+    };
+  }, []);
+
   return (
-    <section className="py-16 bg-[#FFFFFF]">
+    <section
+      id="testimonials-section"
+      className={`py-16 bg-[#FFFFFF] ${isInView ? 'animate-fadeIn' : ''}`}
+    >
       <div className="container mx-auto px-4">
         {/* Testimonial Title */}
         <h3
@@ -124,6 +154,9 @@ const Testimonials = () => {
 };
 
 export default Testimonials;
+
+
+
 
 
 
