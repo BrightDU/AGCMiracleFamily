@@ -53,6 +53,24 @@ const Gallary = () => {
     }
   };
 
+  const handleCloseModal = () => {
+    setSelectedImage(null); // Close the modal when clicking the overlay
+  };
+
+  const handleNextImage = () => {
+    const currentIndex = cardData.findIndex((card) => card.image === selectedImage);
+    if (currentIndex < cardData.length - 1) {
+      setSelectedImage(cardData[currentIndex + 1].image); // Show the next image
+    }
+  };
+
+  const handlePrevImage = () => {
+    const currentIndex = cardData.findIndex((card) => card.image === selectedImage);
+    if (currentIndex > 0) {
+      setSelectedImage(cardData[currentIndex - 1].image); // Show the previous image
+    }
+  };
+
   const visibleCards = cardData.slice(startIndex, startIndex + cardsPerPage);
 
   return (
@@ -64,20 +82,43 @@ const Gallary = () => {
       >
         {/* Modal for Enlarged Image */}
         {selectedImage && (
-          <div className="fixed top-0 left-0 w-full h-full bg-black bg-opacity-75 flex items-center justify-center z-50">
-            <button
-              className="absolute top-4 right-4 text-white text-3xl"
-              onClick={() => setSelectedImage(null)}
+          <div
+            className="fixed top-0 left-0 w-full h-full bg-black bg-opacity-75 flex items-center justify-center z-50"
+            onClick={handleCloseModal} // Close modal when clicking outside the image
+          >
+            <div
+              className="relative"
+              onClick={(e) => e.stopPropagation()} // Prevent closing when clicking the image
             >
-              <FaTimes />
-            </button>
-            <Image
-              src={selectedImage}
-              alt="Enlarged View"
-              width={800}
-              height={800}
-              className="object-contain max-w-full max-h-full"
-            />
+              <button
+                className="absolute top-4 right-4 text-white text-3xl"
+                onClick={handleCloseModal}
+              >
+                <FaTimes />
+              </button>
+              <Image
+                src={selectedImage}
+                alt="Enlarged View"
+                width={800}
+                height={800}
+                className="object-contain max-w-full max-h-full"
+              />
+              {/* Modal Navigation Arrows */}
+              <button
+                className="absolute left-4 text-white text-3xl top-1/2 transform -translate-y-1/2"
+                onClick={handlePrevImage}
+                disabled={cardData.findIndex((card) => card.image === selectedImage) === 0}
+              >
+                <FaArrowLeft />
+              </button>
+              <button
+                className="absolute right-4 text-white text-3xl top-1/2 transform -translate-y-1/2"
+                onClick={handleNextImage}
+                disabled={cardData.findIndex((card) => card.image === selectedImage) === cardData.length - 1}
+              >
+                <FaArrowRight />
+              </button>
+            </div>
           </div>
         )}
 
@@ -141,7 +182,6 @@ const Gallary = () => {
             <FaArrowRight size={15} />
           </button>
         </div>
-        
       </section>
       <HeroSection /> 
       <Footer />
@@ -150,6 +190,7 @@ const Gallary = () => {
 };
 
 export default Gallary;
+
 
 
 

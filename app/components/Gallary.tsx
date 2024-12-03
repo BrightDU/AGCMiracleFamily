@@ -48,29 +48,67 @@ const Gallary = () => {
     }
   };
 
+  const handleCloseModal = () => {
+    setSelectedImage(null);
+  };
+
+  const handleNextImage = () => {
+    const currentIndex = cardData.findIndex((card) => card.image === selectedImage);
+    if (currentIndex < cardData.length - 1) {
+      setSelectedImage(cardData[currentIndex + 1].image);
+    }
+  };
+
+  const handlePrevImage = () => {
+    const currentIndex = cardData.findIndex((card) => card.image === selectedImage);
+    if (currentIndex > 0) {
+      setSelectedImage(cardData[currentIndex - 1].image);
+    }
+  };
+
   const visibleCards = cardData.slice(startIndex, startIndex + cardsPerPage);
 
   return (
     <section
       id="gallary"
-      className="relative py-12 px-6 sm:px-12 md:px-24 lg:px-48 h-[600px] bg-white flex flex-col items-center justify-start"
+      className="relative py-12 px-6 sm:px-12 md:px-24 lg:px-48 sm:mt-[-130px] sm:h-[500px] h-[500px] mt-[30px] bg-white flex flex-col items-center justify-start"
     >
       {/* Modal for Enlarged Image */}
       {selectedImage && (
-        <div className="fixed top-0 left-0 w-full h-full bg-black bg-opacity-75 flex items-center justify-center z-50">
-          <button
-            className="absolute top-4 right-4 text-white text-3xl"
-            onClick={() => setSelectedImage(null)}
-          >
-            <FaTimes />
-          </button>
-          <Image
-            src={selectedImage}
-            alt="Enlarged View"
-            width={800}
-            height={800}
-            className="object-contain max-w-full max-h-full"
-          />
+        <div
+          className="fixed top-0 left-0 w-full h-full bg-black bg-opacity-75 flex items-center justify-center z-50"
+          onClick={handleCloseModal} // Close modal when clicking outside the image
+        >
+          <div className="relative" onClick={(e) => e.stopPropagation()}> {/* Prevent closing when clicking the image */}
+            <button
+              className="absolute top-4 right-4 text-white text-3xl"
+              onClick={handleCloseModal}
+            >
+              <FaTimes />
+            </button>
+            <Image
+              src={selectedImage}
+              alt="Enlarged View"
+              width={800}
+              height={800}
+              className="object-contain max-w-full max-h-full"
+            />
+            {/* Modal Navigation Arrows */}
+            <button
+              className="absolute left-4 text-white text-3xl top-1/2 transform -translate-y-1/2"
+              onClick={handlePrevImage}
+              disabled={cardData.findIndex((card) => card.image === selectedImage) === 0}
+            >
+              <FaArrowLeft />
+            </button>
+            <button
+              className="absolute right-4 text-white text-3xl top-1/2 transform -translate-y-1/2"
+              onClick={handleNextImage}
+              disabled={cardData.findIndex((card) => card.image === selectedImage) === cardData.length - 1}
+            >
+              <FaArrowRight />
+            </button>
+          </div>
         </div>
       )}
 
@@ -92,7 +130,7 @@ const Gallary = () => {
         {visibleCards.map((card) => (
           <div
             key={card.id}
-            className="bg-white border border-gray-200 rounded-lg shadow-lg w-[230px] h-[315px] overflow-hidden cursor-pointer"
+            className="bg-white border border-gray-200 rounded-lg shadow-lg w-[330px] h-[315px] overflow-hidden cursor-pointer"
             onClick={() => setSelectedImage(card.image)}
           >
             <Image
@@ -107,20 +145,20 @@ const Gallary = () => {
       </div>
 
       {/* Pagination Buttons for Mobile */}
-      <div className="flex justify-center gap-2">
+      <div className="flex justify-center gap-4 mb-8">
         <button
           onClick={handlePrev}
           className="text-[#141b34] hover:text-gray-600 p-3 rounded-full bg-white hover:bg-gray-300 transition duration-200"
           disabled={startIndex === 0}
         >
-          <FaArrowLeft size={15} />
+          <FaArrowLeft size={20} />
         </button>
         <button
           onClick={handleNext}
           className="text-[#141b34] hover:text-gray-600 p-3 rounded-full bg-white hover:bg-gray-300 transition duration-200"
           disabled={startIndex + cardsPerPage >= cardData.length}
         >
-          <FaArrowRight size={15} />
+          <FaArrowRight size={20} />
         </button>
       </div>
     </section>
@@ -128,6 +166,8 @@ const Gallary = () => {
 };
 
 export default Gallary;
+
+
 
 
 
