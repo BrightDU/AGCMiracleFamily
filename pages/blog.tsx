@@ -28,23 +28,23 @@ const Blog = () => {
         </motion.div>
 
         {/* Tabs Section */}
-        <motion.div
-          className="flex justify-center space-x-4 mb-12 overflow-x-auto"
-          initial={{ opacity: 0, y: -100 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1 }}
-        >
-          {["Education", "Food", "Medical", "Home", "Water", "Recent"].map(
-            (tab, index) => (
-              <button
-                key={index}
-                className="bg-[#F6F6F6] font-roboto text-[16px] text-[#555555] px-4 py-[8px] rounded-full hover:bg-[#DDF3FF] transition"
-              >
-                {tab}
-              </button>
-            )
-          )}
-        </motion.div>
+<motion.div
+  className="flex justify-start sm:justify-center items-center gap-4 mb-12 overflow-x-auto w-full px-4"
+  initial={{ opacity: 0, y: -100 }}
+  animate={{ opacity: 1, y: 0 }}
+  transition={{ duration: 1 }}
+>
+  {["Education", "Food", "Medical", "Home", "Water", "Recent"].map(
+    (tab, index) => (
+      <button
+        key={index}
+        className="whitespace-nowrap bg-[#F6F6F6] font-roboto text-[16px] text-[#555555] px-4 py-2 rounded-full hover:bg-[#DDF3FF] transition"
+      >
+        {tab}
+      </button>
+    )
+  )}
+</motion.div>
 
         {/* Recent Blog Post Heading */}
         <motion.div
