@@ -42,13 +42,10 @@ const HeroSection = () => {
       {/* Text Content */}
       <div className="relative z-10 text-white max-w-[1140px] mx-auto px-4">
         <h1 className="text-[18px] leading-[1.5] sm:text-[28px] md:text-[40px] sm:leading-[1.3] font-bold mt-8 mb-6 sm:mb-10">
-          Empowering every child for the positive<br />
-          future they truly deserve
+        Caring for early lives<br />
+        Empowering every child to embrace adulthood positively
         </h1>
 
-        <button className="px-6 py-3 rounded-full bg-white text-[#1D2130] text-sm sm:text-base font-medium shadow-md hover:bg-gray-100 transition">
-          What we do
-        </button>
 
         {/* Stats Section */}
         <div className="flex flex-col sm:flex-row justify-between items-center text-[12px] sm:text-[14px] mt-10 sm:mt-20 gap-4">

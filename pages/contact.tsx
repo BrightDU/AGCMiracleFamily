@@ -1,8 +1,8 @@
 import 'tailwindcss/tailwind.css';
-import { FaTwitter, FaFacebookF, FaInstagram, FaLinkedinIn } from 'react-icons/fa'; // Social media icons
+import { FaFacebookF, FaInstagram, FaLinkedinIn, FaWhatsapp } from 'react-icons/fa'; // Social media icons
+import { TbBrandX } from 'react-icons/tb'; // X (formerly Twitter) icon
 import { motion } from 'framer-motion'; // Import motion from framer-motion
 
-// Import Footer and Navbar components
 import Footer from '../app/components/Footer';
 import Navbar from '../app/components/Navbar';
 
@@ -16,11 +16,19 @@ const Contact = () => {
         {/* Title */}
         <motion.h1
           className="font-roboto font-bold text-[16px] text-center mb-10 tracking-[2px] text-[#1D2130]"
-          initial={{ opacity: 0, y: -20 }} // Start position
-          animate={{ opacity: 1, y: 0 }} // End position
-          transition={{ duration: 1 }} // Duration of the animation
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1 }}
         >
           Contact
+        </motion.h1>
+        <motion.h1
+          className="font-roboto font-bold text-[16px] text-center mb-10 tracking-[2px] text-[#1D2130]"
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1 }}
+        >
+          We would love to hear from you
         </motion.h1>
 
         {/* Contact Section */}
@@ -34,17 +42,20 @@ const Contact = () => {
           >
             {/* Social Media Icons */}
             <div className="flex space-x-4 justify-center">
-              <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
-                <FaTwitter className="text-[#003871] text-3xl transition duration-300" />
+              <a href="https://www.x.com/teamcarelife" target="_blank" rel="noopener noreferrer">
+                <TbBrandX className="text-[#003871] text-3xl transition duration-300" />
               </a>
-              <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
+              <a href="https://www.facebook.com/TeamCarelife/" target="_blank" rel="noopener noreferrer">
                 <FaFacebookF className="text-[#003871] text-3xl transition duration-300" />
               </a>
-              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
+              <a href="https://www.instagram.com/carelifefoundation/" target="_blank" rel="noopener noreferrer">
                 <FaInstagram className="text-[#003871] text-3xl transition duration-300" />
               </a>
-              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
+              <a href="https://www.linkedin.com/company/104742373/admin/dashboard/" target="_blank" rel="noopener noreferrer">
                 <FaLinkedinIn className="text-[#003871] text-3xl transition duration-300" />
+              </a>
+              <a href="https://wa.me/+2349122180058" target="_blank" rel="noopener noreferrer">
+                <FaWhatsapp className="text-[#003871] text-3xl transition duration-300" />
               </a>
             </div>
 
@@ -71,7 +82,9 @@ const Contact = () => {
           >
             <form className="border-4 border-[#003871] p-6 space-y-6 rounded-xl">
               <div>
-                <label htmlFor="name" className="block text-lg font-medium text-[#003871]">Name</label>
+                <label htmlFor="name" className="block text-lg font-medium text-[#003871]">
+                  Name
+                </label>
                 <input
                   type="text"
                   id="name"
@@ -82,7 +95,9 @@ const Contact = () => {
               </div>
 
               <div>
-                <label htmlFor="email" className="block text-lg font-medium text-[#003871]">Email</label>
+                <label htmlFor="email" className="block text-lg font-medium text-[#003871]">
+                  Email
+                </label>
                 <input
                   type="email"
                   id="email"
@@ -93,7 +108,9 @@ const Contact = () => {
               </div>
 
               <div>
-                <label htmlFor="message" className="block text-lg font-medium text-[#003871]">Message</label>
+                <label htmlFor="message" className="block text-lg font-medium text-[#003871]">
+                  Message
+                </label>
                 <textarea
                   id="message"
                   name="message"
@@ -120,6 +137,7 @@ const Contact = () => {
 };
 
 export default Contact;
+
 
 
 ;

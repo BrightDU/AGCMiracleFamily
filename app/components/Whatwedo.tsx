@@ -99,12 +99,7 @@ const Whatwedo = () => {
                 </p>
 
                 <div className="mt-auto text-center">
-                  <button
-                    className="bg-[#003871] text-white font-roboto font-medium text-center py-[13px] px-[24px] rounded-full hover:bg-[#002c5f] transition duration-200"
-                    style={{ width: '140px', height: '50px' }}
-                  >
-                    Learn More
-                  </button>
+                 
                 </div>
               </div>
             </div>

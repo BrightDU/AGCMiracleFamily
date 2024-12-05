@@ -4,6 +4,7 @@ import Image from 'next/image'; // Import the Image component
 import heroBackground from '../app/public/btsheroimg.png'; // Replace with your actual path
 import aboutBtsImage from '../app/public/aboutBtsImage.jpg'; // Replace with the image path for the About BTS section
 import Footer from '../app/components/Footer';
+import image1 from '../app/public/hero2img.png';
 
 // Import team member images
 import member1 from '../app/public/member1.jpg';
@@ -46,15 +47,13 @@ const Bts = () => {
 
         {/* Overlay Content */}
         <div className="absolute inset-0 flex flex-col justify-center items-center">
-          <h1 className="font-roboto font-bold  text-[16px] text-white">
-            ABOUT OUR BTS PROGRAM
-          </h1>
-          <h2 className="font-roboto font-normal text-[31px] text-white leading-[120%] mt-4">
+         
+          <h1 className="font-roboto font-normal text-[31px] text-white leading-[120%] mt-4">
             Behind The Scene (BTS)
-          </h2>
+          </h1>
           <p className="font-roboto font-medium text-[20px] text-white leading-[160%] mt-6 max-w-[700px]">
-            "Not all heroes wear capes; some work quietly behind the scenes,
-            shaping the world with their dedication and heart."
+            "At Carelife Character Foundation, our "BTS Project" celebrates unsung heroes behind success. 
+            We honor their dedication and empower them to mentor younger adults."
           </p>
         </div>
       </div>
@@ -107,9 +106,12 @@ const Bts = () => {
             About Bts
           </h2>
           <p className="font-roboto text-[16px] text-[#1D2130] sm:text-left text-left mt-6">
-            Carelife Foundation is dedicated to creating a world where every child and adolescent has the opportunity to achieve their full growth potential. We provide comprehensive support through health, education, and personal development initiatives, fostering a nurturing environment that promotes growth and well-being.
+          The BTS Project is for the BTS PEOPLE -  individuals who, although not always visible, are the bedrock of visible and celebrated brands. These people work behind the scenes, often without recognition, yet play an essential role in driving projects forward and ensuring their success and sustainability. They can be found in every aspect of industries, SMEs, governmental and non-government - most importantly, those behind selfless community developments.
+
           </p>
+          
         </div>
+        
         <div className="w-full md:w-1/2 flex justify-end mt-8 md:mt-0">
           <Image
             src={aboutBtsImage}
@@ -155,6 +157,38 @@ const Bts = () => {
             </div>
           ))}
         </div>
+        {/* Hero Section */}
+<div className="relative w-full h-[700px] mb-[-100px] flex flex-col justify-center items-center text-center mt-16">
+  {/* Background Image */}
+  <Image
+    src={image1} // Single image
+    alt="Background Image"
+    layout="fill" // Makes the image cover the section
+    objectFit="cover" // Ensures it covers the area without distortion
+    objectPosition="center" // Keeps the image centered
+    priority // Ensures the current image is prioritized for loading
+  />
+  {/* Overlay */}
+  <div className="absolute inset-0 bg-black bg-opacity-30"></div>
+
+  {/* Contribution Container */}
+  <div className="relative z-10 text-center mx-auto px-4 sm:px-8 lg:px-12 xl:px-16">
+    <div className="w-full sm:w-[870.35px] h-full bg-transparent flex flex-col justify-center items-center text-white mx-auto">
+      {/* Contribution Text */}
+      <h1 className="text-[18px] leading-[1.5] sm:text-[28px] md:text-[45px] sm:leading-[1.3] font-semibold mt-8 mb-6 sm:mb-10">
+      Do you know a Behind The Scene Worker?
+        <br />
+        let’s bring them to the Spotlight.
+      </h1>
+
+      {/* Contribution Button */}
+      <button className="w-[145px] sm:w-[130px] h-[51px] sm:h-[51px] bg-white text-[#1D2130] text-[16px] sm:text-[14px] font-roboto font-medium rounded-[48px] py-3 px-6 sm:py-3 sm:px-6">
+      RECOMMEND
+      </button>
+    </div>
+  </div>
+</div>
+
       </div>
       {/* Footer */}
       <Footer />

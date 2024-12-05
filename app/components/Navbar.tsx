@@ -78,7 +78,7 @@ const Navbar = () => {
 
           {/* Desktop Navigation Links */}
           <ul className="hidden md:flex space-x-6 items-center mx-auto">
-            {[{ name: 'Home', link: '/' }, { name: 'About', link: '#about' }, { name: 'Impacts', link: '#impact' }].map(({ name, link }) => (
+            {[{ name: 'Home', link: '/' }, { name: 'About', link: '/about' }, ].map(({ name, link }) => (
               <li key={name}>
                 <Link
                   href={link}
@@ -101,7 +101,7 @@ const Navbar = () => {
               </button>
               {desktopProgramsDropdownOpen && (
                 <ul className="absolute left-0 mt-2 bg-[#DDF3FF] shadow-lg rounded-md overflow-hidden w-52">
-                  {[{ name: 'Empowerment', link: '#home' }, { name: 'Behind the Scene(BTS)', link: '/bts' }].map(({ name, link }) => (
+                  {[{ name: 'Intervention Programs', link: '/intervention' }, { name: 'Behind the Scene(BTS)', link: '/bts' }].map(({ name, link }) => (
                     <li key={name}>
                       <Link
                         href={link}
@@ -133,7 +133,7 @@ const Navbar = () => {
           <div className="hidden md:block">
             <button
               onClick={openModal}
-              className="flex justify-end items-center bg-[#003871] text-white w-[115px] h-[43px] pt-[12px] pr-[32px] pb-[12px] pl-[32px] gap-[10px] text-[16px] leading-[18.75px] font-roboto font-medium"
+              className="flex justify-end items-center bg-[#003871] text-white w-[115px] h-[55px] pt-[12px] pr-[32px] pb-[12px] pl-[32px] gap-[10px] text-[16px] leading-[18.75px] font-roboto font-medium"
             >
               Donate
             </button>
@@ -163,14 +163,14 @@ const Navbar = () => {
             </li>
             <li>
               <Link
-                href="#about"
+                href="/about"
                 className="block px-4 py-2 font-bold hover:bg-[#003871] hover:text-white transition-all duration-300"
                 onClick={closeMenu}
               >
                 About
               </Link>
             </li>
-            <li>
+            {/* <li>
               <Link
                 href="#impact"
                 className="block px-4 py-2 font-bold hover:bg-[#003871] hover:text-white transition-all duration-300"
@@ -178,18 +178,18 @@ const Navbar = () => {
               >
                 Impacts
               </Link>
-            </li>
+            </li> */}
             <li>
               <button
                 onClick={toggleMobileProgramsDropdown}
                 className="block px-4 py-2 font-bold hover:bg-[#003871] hover:text-white transition-all duration-300"
               >
-                Our Programs
+                Our Programmes
                 <FaChevronDown className="inline ml-2" />
               </button>
               {mobileProgramsDropdownOpen && (
                 <ul className="pl-6">
-                  {[{ name: 'Empowerment', link: '#home' }, { name: 'Behind the Scene(BTS)', link: '/bts' }].map(({ name, link }) => (
+                  {[{ name: 'Intervention Programs', link: '/intervention' }, { name: 'Behind the Scene(BTS)', link: '/bts' }].map(({ name, link }) => (
                     <li key={name}>
                       <Link
                         href={link}
