@@ -133,7 +133,7 @@ const Navbar = () => {
           <div className="hidden md:block">
             <button
               onClick={openModal}
-              className="flex justify-end items-center bg-[#003871] text-white w-[115px] h-[55px] pt-[12px] pr-[32px] pb-[12px] pl-[32px] gap-[10px] text-[16px] leading-[18.75px] font-roboto font-medium"
+              className="flex justify-end items-center bg-[#003871] hover:bg-[#DDF3FF] hover:text-[#003871] text-white w-[115px] h-[55px] pt-[12px] pr-[32px] pb-[12px] pl-[32px] gap-[10px] text-[16px] leading-[18.75px] font-roboto font-medium"
             >
               Donate
             </button>

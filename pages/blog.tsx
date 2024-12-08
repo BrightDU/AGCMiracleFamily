@@ -127,60 +127,9 @@ const Blog = () => {
           </p>
         </motion.div>
 
-        {/* Additional Image Section */}
-        <motion.div
-          className="relative w-full h-auto mt-12 mx-auto"
-          initial={{ opacity: 0, y: -100 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1 }}
-        >
-          <Image
-            src={missionImg}
-            alt="Relevant Image"
-            layout="responsive"
-            width={700}
-            height={552}
-            className="rounded-lg"
-          />
-        </motion.div>
+       
 
-        {/* Title Section 2 */}
-        <motion.div
-          className="mt-8 text-center"
-          initial={{ opacity: 0, y: -100 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1 }}
-        >
-          <h2 className="font-bold text-[16px] sm:text-[26px] text-[#1D2130] leading-[36px] sm:leading-[28px]">
-            Back to the future: Quality education through respect, commitment and accountability.
-          </h2>
-        </motion.div>
-
-        {/* Paragraph Section 2 */}
-        <motion.div
-          className="mt-6 text-left sm:text-center"
-          initial={{ opacity: 0, y: -100 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1 }}
-        >
-          <p className="font-roboto text-[16px] text-[#525560] leading-[160%] max-w-full mx-auto sm:mx-4">
-            At just 9 months old, severe malnutrition left Fatima too weak to
-            stand. But with the determination and strength of her mum, she was
-            able to get vital treatment and nutritious food from a Save the
-            Children-supported health center. Five months on, she blossomed
-            into a healthy baby - walking and playing with big sister, Fatun.
-            With the right support, there are endless opportunities for kids
-            like Fatima. A donation from people like you can help more children
-            like her get the life-saving treatment they need. Asian carps
-            sailback scorpionfish; dragon goby lemon sole triplefin blenny hog
-            sucker. Smelt sleeper shovelnose sturgeon merluccid hake cow shark
-            herring smelt trout-perch barbeled houndshark. Shell-ear Asian
-            carps blackfish Port Jackson shark Atlantic saury. Sacramento
-            blackfish pricklefish, Atlantic cod, “driftwood catfish chimaera
-            ribbonfish, marblefish worm eel smelt mora gray reef shark
-            scabbard fish.
-          </p>
-        </motion.div>
+        
       </div>
 
       {/* Footer */}

@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
-import Image from 'next/image';
+import Image, { StaticImageData } from 'next/image';
 import cardImage1 from '../public/gcard1.jpg';
 import cardImage2 from '../public/gcard2.jpg';
 import cardImage3 from '../public/gcard3.jpg';
@@ -33,8 +33,8 @@ const Gallary = () => {
   ];
 
   const [startIndex, setStartIndex] = useState(0);
-  const [selectedImage, setSelectedImage] = useState(null);
-  const cardsPerPage = 1; // For mobile view, show 1 card at a time
+  const [selectedImage, setSelectedImage] = useState<StaticImageData | null>(null);
+  const cardsPerPage = 1;
 
   const handleNext = () => {
     if (startIndex + cardsPerPage < cardData.length) {
@@ -69,50 +69,24 @@ const Gallary = () => {
   const visibleCards = cardData.slice(startIndex, startIndex + cardsPerPage);
 
   return (
-    <section
-      id="gallary"
-      className="relative py-12 px-6 sm:px-12 md:px-24 lg:px-48 sm:mt-[-130px] sm:h-[500px] h-[500px] mt-[30px] bg-white flex flex-col items-center justify-start"
-    >
-      {/* Modal for Enlarged Image */}
+    <section id="gallary" className="relative py-12 px-6 sm:px-12 md:px-24 lg:px-48 sm:mt-[-130px] sm:h-[500px] h-[500px] mt-[30px] bg-white flex flex-col items-center justify-start">
       {selectedImage && (
-        <div
-          className="fixed top-0 left-0 w-full h-full bg-black bg-opacity-75 flex items-center justify-center z-50"
-          onClick={handleCloseModal} // Close modal when clicking outside the image
-        >
-          <div className="relative" onClick={(e) => e.stopPropagation()}> {/* Prevent closing when clicking the image */}
-            <button
-              className="absolute top-4 right-4 text-white text-3xl"
-              onClick={handleCloseModal}
-            >
+        <div className="fixed top-0 left-0 w-full h-full bg-black bg-opacity-75 flex items-center justify-center z-50" onClick={handleCloseModal}>
+          <div className="relative" onClick={(e) => e.stopPropagation()}>
+            <button className="absolute top-4 right-4 text-white text-3xl" onClick={handleCloseModal}>
               <FaTimes />
             </button>
-            <Image
-              src={selectedImage}
-              alt="Enlarged View"
-              width={800}
-              height={800}
-              className="object-contain max-w-full max-h-full"
-            />
-            {/* Modal Navigation Arrows */}
-            <button
-              className="absolute left-4 text-white text-3xl top-1/2 transform -translate-y-1/2"
-              onClick={handlePrevImage}
-              disabled={cardData.findIndex((card) => card.image === selectedImage) === 0}
-            >
+            <Image src={selectedImage} alt="Enlarged View" width={800} height={800} className="object-contain max-w-full max-h-full" />
+            <button className="absolute left-4 text-white text-3xl top-1/2 transform -translate-y-1/2" onClick={handlePrevImage}>
               <FaArrowLeft />
             </button>
-            <button
-              className="absolute right-4 text-white text-3xl top-1/2 transform -translate-y-1/2"
-              onClick={handleNextImage}
-              disabled={cardData.findIndex((card) => card.image === selectedImage) === cardData.length - 1}
-            >
+            <button className="absolute right-4 text-white text-3xl top-1/2 transform -translate-y-1/2" onClick={handleNextImage}>
               <FaArrowRight />
             </button>
           </div>
         </div>
       )}
 
-      {/* Content Container */}
       <div className="max-w-7xl w-full mx-auto text-center mb-8" style={{ marginTop: '-80px' }}>
         <h3 className="font-roboto font-bold text-xl sm:text-2xl md:text-[32px] leading-tight text-[#6A6969] mb-4">
           Gallery
@@ -125,39 +99,19 @@ const Gallary = () => {
         </p>
       </div>
 
-      {/* Cards Section for Mobile */}
       <div className="flex justify-center items-center mb-6">
         {visibleCards.map((card) => (
-          <div
-            key={card.id}
-            className="bg-white border border-gray-200 rounded-lg shadow-lg w-[330px] h-[315px] overflow-hidden cursor-pointer"
-            onClick={() => setSelectedImage(card.image)}
-          >
-            <Image
-              src={card.image}
-              alt={`Card ${card.id}`}
-              width={230}
-              height={315}
-              className="w-full h-full object-cover"
-            />
+          <div key={card.id} className="bg-white border border-gray-200 rounded-lg shadow-lg w-[330px] h-[315px] overflow-hidden cursor-pointer" onClick={() => setSelectedImage(card.image)}>
+            <Image src={card.image} alt={`Card ${card.id}`} width={230} height={315} className="w-full h-full object-cover" />
           </div>
         ))}
       </div>
 
-      {/* Pagination Buttons for Mobile */}
       <div className="flex justify-center gap-4 mb-8">
-        <button
-          onClick={handlePrev}
-          className="text-[#141b34] hover:text-gray-600 p-3 rounded-full bg-white hover:bg-gray-300 transition duration-200"
-          disabled={startIndex === 0}
-        >
+        <button onClick={handlePrev} className="text-[#141b34] hover:text-gray-600 p-3 rounded-full bg-white hover:bg-gray-300 transition duration-200" disabled={startIndex === 0}>
           <FaArrowLeft size={20} />
         </button>
-        <button
-          onClick={handleNext}
-          className="text-[#141b34] hover:text-gray-600 p-3 rounded-full bg-white hover:bg-gray-300 transition duration-200"
-          disabled={startIndex + cardsPerPage >= cardData.length}
-        >
+        <button onClick={handleNext} className="text-[#141b34] hover:text-gray-600 p-3 rounded-full bg-white hover:bg-gray-300 transition duration-200" disabled={startIndex + cardsPerPage >= cardData.length}>
           <FaArrowRight size={20} />
         </button>
       </div>
@@ -166,6 +120,8 @@ const Gallary = () => {
 };
 
 export default Gallary;
+
+
 
 
 

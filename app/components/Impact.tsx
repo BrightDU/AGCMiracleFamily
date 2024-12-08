@@ -4,7 +4,7 @@ import React, { useEffect, useRef, useState } from 'react';
 
 const Impact = () => {
   const [visibleCounters, setVisibleCounters] = useState(false);
-  const impactRef = useRef(null);
+  const impactRef = useRef<HTMLDivElement | null>(null);
 
   const counters = [
     { value: 34000000, text: 'Donations Received', suffix: 'M+' },
@@ -31,7 +31,13 @@ const Impact = () => {
     };
   }, []);
 
-  const Counter = ({ value, suffix }) => {
+  // Define types for Counter props
+  interface CounterProps {
+    value: number;
+    suffix: string;
+  }
+
+  const Counter: React.FC<CounterProps> = ({ value, suffix }) => {
     const [count, setCount] = useState(0);
 
     useEffect(() => {
@@ -101,6 +107,7 @@ const Impact = () => {
 };
 
 export default Impact;
+
 
 
 

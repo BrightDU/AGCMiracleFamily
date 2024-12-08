@@ -1,6 +1,8 @@
 'use client';
 
 import React, { useState } from 'react';
+import type { StaticImageData } from 'next/image';
+
 import 'tailwindcss/tailwind.css'; // This should be in your globals or _app.js
 import Navbar from '../app/components/Navbar';
 import Footer from '../app/components/Footer';
@@ -19,7 +21,7 @@ import cardImage10 from '../app/public/gcard10.jpg';
 import cardImage11 from '../app/public/gcard11.jpg';
 import cardImage12 from '../app/public/gcard12.jpg';
 import { FaArrowLeft, FaArrowRight, FaTimes } from 'react-icons/fa';
-import { motion } from 'framer-motion'; // Importing motion from framer-motion
+import { motion } from 'framer-motion';
 
 const Gallary = () => {
   const cardData = [
@@ -38,7 +40,7 @@ const Gallary = () => {
   ];
 
   const [startIndex, setStartIndex] = useState(0);
-  const [selectedImage, setSelectedImage] = useState(null);
+  const [selectedImage, setSelectedImage] = useState<StaticImageData | null>(null); // Type added here
   const cardsPerPage = 1; // For mobile view, show 1 card at a time
 
   const handleNext = () => {
@@ -183,7 +185,7 @@ const Gallary = () => {
           </button>
         </div>
       </section>
-      <HeroSection /> 
+      <HeroSection />
       <Footer />
     </>
   );

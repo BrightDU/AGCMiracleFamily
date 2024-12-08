@@ -1,6 +1,12 @@
 import { useEffect, useState } from "react";
 
-const Modal = ({ isOpen, onClose }) => {
+// Define the prop types for the Modal component
+interface ModalProps {
+  isOpen: boolean; // `isOpen` is a boolean
+  onClose: () => void; // `onClose` is a function that takes no arguments and returns void
+}
+
+const Modal: React.FC<ModalProps> = ({ isOpen, onClose }) => {
   const [heartColor, setHeartColor] = useState("#003871");
 
   // Animation to alternate heart color
@@ -189,6 +195,7 @@ const Modal = ({ isOpen, onClose }) => {
 };
 
 export default Modal;
+
 
 
 
