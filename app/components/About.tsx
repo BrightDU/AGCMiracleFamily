@@ -49,7 +49,7 @@ const About = () => {
             }`}
           >
             <h3 className="font-roboto text-lg sm:text-xl font-bold text-[#003771] mb-4">
-              Mission Statement
+               Our Mission 
             </h3>
             <p className="font-roboto font-normal text-sm sm:text-base leading-relaxed text-[#525560]">
               Our mission is to empower every child by enhancing maternal and child health, nutrition, and supportive development; promoting maternal literacy, advocacy, education, and implementing research-based interventions for a virtuous society.
@@ -66,7 +66,7 @@ const About = () => {
             }`}
           >
             <h3 className="font-roboto text-lg sm:text-xl font-bold text-[#003771] mb-4">
-              Vision Statement
+              Our Vision 
             </h3>
             <p className="font-roboto font-normal text-sm sm:text-base leading-relaxed text-[#525560]">
               Our vision is to foster a safe and supportive environment for every child, empowering them to get the future they deserve.
