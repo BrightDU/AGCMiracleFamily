@@ -182,9 +182,15 @@ const Bts = () => {
       </h1>
 
       {/* Contribution Button */}
-      <button className="w-[145px] sm:w-[130px] h-[51px] sm:h-[51px] bg-white text-[#1D2130] text-[16px] sm:text-[14px] font-roboto font-medium rounded-[48px] py-3 px-6 sm:py-3 sm:px-6">
-      RECOMMEND
-      </button>
+      <a
+  href="mailto:info@carelifefoundation.com"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="w-[145px] sm:w-[130px] h-[51px] sm:h-[51px] bg-white text-[#1D2130] text-[16px] sm:text-[14px] font-roboto font-medium rounded-[48px] py-3 px-6 sm:py-3 sm:px-6 flex items-center justify-center"
+>
+  RECOMMEND
+</a>
+
     </div>
   </div>
 </div>
