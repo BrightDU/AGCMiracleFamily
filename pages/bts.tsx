@@ -149,7 +149,7 @@ Through our BTS Project, we will share their stories, achievements, and the impa
       </div>
 
       {/* Contribution Section */}
-      <div className="relative w-full h-[700px] mb-[-100px] flex flex-col justify-center items-center text-center mt-16">
+      <div className="relative w-full h-[433px] mb-[-50px] flex flex-col justify-center items-center text-center mt-16">
         <Image
           src={image1}
           alt="Background Image"
@@ -161,14 +161,14 @@ Through our BTS Project, we will share their stories, achievements, and the impa
         <div className="absolute inset-0 bg-black bg-opacity-30"></div>
         <div className="relative z-10 text-center mx-auto px-4 sm:px-8 lg:px-12 xl:px-16">
           <div className="w-full sm:w-[870.35px] h-full bg-transparent flex flex-col justify-center items-center text-white mx-auto">
-            <h1 className="text-[18px] leading-[1.5] sm:text-[28px] md:text-[45px] sm:leading-[1.3] font-semibold mt-8 mb-6 sm:mb-10">
+            <h1 className="text-[18px]  font-roboto leading-[1.5] sm:text-[25px] md:text-[45px] sm:leading-[1.3] font-semibold mt-8 mb-6 sm:mb-10">
               Do you know a Behind The Scene Worker? Let’s bring them to the Spotlight.
             </h1>
             <a
               href="mailto:info@carelifefoundation.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="w-[174px] bg-[#F5972E] text-[14px] font-semibold rounded-md py-4 flex justify-center items-center text-center"
+              className="w-[174px] bg-[#FFFFFF] font-roboto font-medium text-[16px] h-[51px] w-[130px] text-[#1D2130] mt-6 rounded-[46px] hover:bg-[#003871] hover:text-white flex justify-center items-center text-center"
             >
               RECOMMEND
             </a>

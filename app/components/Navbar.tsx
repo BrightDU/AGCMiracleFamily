@@ -4,7 +4,7 @@ import { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { FaChevronDown } from 'react-icons/fa';
-import logo from '../public/carelife-logo.jpg';
+import lo from '../public/carelife-logo.jpg'; // Corrected the image path
 import Modal from './Modal';
 
 const Navbar = () => {
@@ -62,9 +62,7 @@ const Navbar = () => {
   return (
     <>
       <nav
-        className={`bg-[#FFFFFF] text-#525560 font-roboto font-medium py-4 fixed top-0 w-full z-50 transition-all duration-700 ease-out ${
-          animate ? 'transform translate-y-0 opacity-100' : 'transform -translate-y-full opacity-0'
-        }`}
+        className={`bg-[#FFFFFF] text-#525560 font-roboto font-medium py-4 fixed top-0 w-full z-50 transition-all duration-700 ease-out ${animate ? 'transform translate-y-0 opacity-100' : 'transform -translate-y-full opacity-0'}`}
         ref={navContainerRef}
         style={{ fontSize: '16px', lineHeight: '18.75px' }}
       >
@@ -72,7 +70,7 @@ const Navbar = () => {
           {/* Logo */}
           <div className="flex items-center">
             <Link href="/" className="hover:text-[#93e9be] transition-all duration-300">
-              <Image src={logo} alt="Logo" width={143} height={40} className="object-contain" />
+              <Image src={lo} alt="Logo" width={143} height={40} className="object-contain" />
             </Link>
           </div>
 
@@ -241,6 +239,7 @@ const Navbar = () => {
 };
 
 export default Navbar;
+
 
 
 

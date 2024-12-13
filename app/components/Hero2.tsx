@@ -31,7 +31,7 @@ const HeroSection = () => {
           <h1 className="text-[18px] leading-[1.5] sm:text-[28px] md:text-[45px] sm:leading-[1.3] tracking-[0.02em] font-bold font-roboto text-white">
             Change Lives with Your Generosity
           </h1>
-          <p className="text-white mt-6 font-light text-[14px] leading-[1.6] sm:text-[16px] sm:leading-[1.8] text-center">
+          <p className="text-white mt-6 font-bold text-[18px] leading-[1.6] sm:text-[28px]  sm:leading-[1.8] text-center">
             Your support can make a world of difference. Donate today and bring
             hope to those in need.
           </p>
