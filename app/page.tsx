@@ -14,8 +14,8 @@ import Hero2 from './components/Hero2';
 
 // Define metadata for the page
 export const metadata = {
-  title: 'Carelife-Foundation',
-  description: 'Helping businesses grow through strategic data utilization and process optimization.', // Updated description
+  title: 'Carelife Foundation',
+  description: ' NGO, Charity, Support, Intervention programs, Nigeria,UK.', // Updated description
   icons: {
     icon: '/favicon.ico', // Ensure this path is correct
   },

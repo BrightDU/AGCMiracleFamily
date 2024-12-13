@@ -5,13 +5,13 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { FaChevronDown } from 'react-icons/fa';
 import logo from '../public/carelife-logo.jpg';
-import Modal from './Modal'; 
+import Modal from './Modal';
 
 const Navbar = () => {
-  const [isOpen, setIsOpen] = useState(false); 
+  const [isOpen, setIsOpen] = useState(false);
   const [mobileProgramsDropdownOpen, setMobileProgramsDropdownOpen] = useState(false);
   const [desktopProgramsDropdownOpen, setDesktopProgramsDropdownOpen] = useState(false);
-  const [isModalOpen, setIsModalOpen] = useState(false); 
+  const [isModalOpen, setIsModalOpen] = useState(false);
   const navContainerRef = useRef<HTMLDivElement | null>(null);
   const [animate, setAnimate] = useState(false);
 
@@ -21,7 +21,7 @@ const Navbar = () => {
 
   const toggleMenu = () => {
     setIsOpen((prev) => !prev);
-    setMobileProgramsDropdownOpen(false); 
+    setMobileProgramsDropdownOpen(false);
   };
 
   const closeMenu = () => {
@@ -78,7 +78,7 @@ const Navbar = () => {
 
           {/* Desktop Navigation Links */}
           <ul className="hidden md:flex space-x-6 items-center mx-auto">
-            {[{ name: 'Home', link: '/' }, { name: 'About', link: '/about' }, ].map(({ name, link }) => (
+            {[{ name: 'Home', link: '/' }, { name: 'About', link: '/about' }].map(({ name, link }) => (
               <li key={name}>
                 <Link
                   href={link}
@@ -89,7 +89,7 @@ const Navbar = () => {
                 </Link>
               </li>
             ))}
-            
+
             {/* Programs Dropdown for Desktop */}
             <li className="relative">
               <button
@@ -101,12 +101,13 @@ const Navbar = () => {
               </button>
               {desktopProgramsDropdownOpen && (
                 <ul className="absolute left-0 mt-2 bg-[#DDF3FF] shadow-lg rounded-md overflow-hidden w-52">
-                  {[{ name: 'Intervention Programs', link: '/intervention' }, { name: 'Behind the Scene(BTS)', link: '/bts' }].map(({ name, link }) => (
+                  {[{ name: 'Intervention Programs', link: '/intervention' }, { name: 'Behind the Scene(BTS)', link: '/bts', isNewTab: true }].map(({ name, link, isNewTab }) => (
                     <li key={name}>
                       <Link
                         href={link}
                         className="block px-4 py-2 hover:bg-[#003871] hover:text-white transition-all duration-300"
                         onClick={closeMenu}
+                        target={isNewTab ? '_blank' : '_self'} // This opens BTS in a new tab
                       >
                         {name}
                       </Link>
@@ -170,15 +171,6 @@ const Navbar = () => {
                 About
               </Link>
             </li>
-            {/* <li>
-              <Link
-                href="#impact"
-                className="block px-4 py-2 font-bold hover:bg-[#003871] hover:text-white transition-all duration-300"
-                onClick={closeMenu}
-              >
-                Impacts
-              </Link>
-            </li> */}
             <li>
               <button
                 onClick={toggleMobileProgramsDropdown}
@@ -189,12 +181,13 @@ const Navbar = () => {
               </button>
               {mobileProgramsDropdownOpen && (
                 <ul className="pl-6">
-                  {[{ name: 'Intervention Programs', link: '/intervention' }, { name: 'Behind the Scene(BTS)', link: '/bts' }].map(({ name, link }) => (
+                  {[{ name: 'Intervention Programs', link: '/intervention' }, { name: 'Behind the Scene(BTS)', link: '/bts', isNewTab: true }].map(({ name, link, isNewTab }) => (
                     <li key={name}>
                       <Link
                         href={link}
                         className="block px-4 py-2 hover:bg-[#003871] hover:text-white transition-all duration-300"
                         onClick={closeMenu}
+                        target={isNewTab ? '_blank' : '_self'} // This opens BTS in a new tab
                       >
                         {name}
                       </Link>
@@ -248,6 +241,8 @@ const Navbar = () => {
 };
 
 export default Navbar;
+
+
 
 
 

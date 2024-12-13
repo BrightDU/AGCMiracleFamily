@@ -21,7 +21,7 @@ const geistMono = localFont({
 // Define metadata
 export const metadata: Metadata = {
   title: 'Carelife Foundation',
-  description: 'Helping businesses grow through strategic data utilization and process optimization.',
+  description: ' NGO, Charity, Support, Intervention programs, Nigeria,UK.',
   icons: {
     icon: '/favicon.ico', // Link to the favicon
   },
