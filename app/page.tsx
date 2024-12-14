@@ -17,7 +17,7 @@ export const metadata = {
   title: 'Carelife Foundation',
   description: ' NGO, Charity, Support, Intervention programs, Nigeria,UK.', // Updated description
   icons: {
-    icon: '/favicon.ico', // Ensure this path is correct
+    icon: '/favicon.ico', 
   },
 };
 
