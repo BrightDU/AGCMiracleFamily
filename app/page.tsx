@@ -1,7 +1,7 @@
 import Navbar from './components/Navbar';
 import Header from './components/Header';
 import About from './components/About';
-import Whatwedo from './components/Whatwedo'
+// import Whatwedo from './components/Whatwedo'
 import Impact from './components/Impact'
 import Services from './components/Services';
 import Gallary from './components/Gallary'
@@ -27,7 +27,7 @@ export default function Home() {
       <Navbar />
       <Header />
       <About />
-      <Whatwedo/>
+      {/* <Whatwedo/> */}
       <Impact/>
       <Services />
       <Gallary/>

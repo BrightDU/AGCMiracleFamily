@@ -4,7 +4,7 @@ import { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { FaChevronDown } from 'react-icons/fa';
-import lo from '../public/carelife-logo.jpg'; // Corrected the image path
+import lo from '../public/carelife-logo.jpg'; // Ensure the path to your logo image is correct
 import Modal from './Modal';
 
 const Navbar = () => {
@@ -62,7 +62,7 @@ const Navbar = () => {
   return (
     <>
       <nav
-        className={`bg-[#FFFFFF] text-#525560 font-roboto font-medium py-4 fixed top-0 w-full z-50 transition-all duration-700 ease-out ${animate ? 'transform translate-y-0 opacity-100' : 'transform -translate-y-full opacity-0'}`}
+        className={`bg-[#FFFFFF] text-[#525560] font-roboto font-medium py-4 fixed top-0 w-full z-50 transition-all duration-700 ease-out ${animate ? 'opacity-100' : 'opacity-0 translate-y-[-100%]'}`}
         ref={navContainerRef}
         style={{ fontSize: '16px', lineHeight: '18.75px' }}
       >
@@ -115,7 +115,7 @@ const Navbar = () => {
               )}
             </li>
 
-            {[{ name: 'Blog', link: '/blog' }, { name: 'Gallery', link: '/gallery' }, { name: 'Contact', link: '/contact' }].map(({ name, link }) => (
+            {[{ name: 'Blog', link: '/blog' }, { name: 'Gallery', link: '/gallery' }].map(({ name, link }) => (
               <li key={name}>
                 <Link
                   href={link}
@@ -126,6 +126,19 @@ const Navbar = () => {
                 </Link>
               </li>
             ))}
+
+            {/* Contact Link */}
+            <li>
+              <a
+                href="https://docs.google.com/forms/d/1ONaLrIKrSF0HZP4fsXOQd_7rOCsTNpmT0fvB7bY9TPg/edit"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="relative py-2 group inline-block text-[#525560] transition-colors duration-300 hover:text-[#003871]"
+              >
+                Contact
+                <span className="absolute left-0 bottom-0 w-0 h-[2px] bg-[#003871] transition-all duration-300 group-hover:w-full"></span>
+              </a>
+            </li>
           </ul>
 
           {/* Donate Button for Desktop */}
@@ -139,7 +152,7 @@ const Navbar = () => {
           </div>
 
           {/* Hamburger Menu for Mobile */}
-          <div className="md:hidden text-#003871 mr-7">
+          <div className="md:hidden text-[#003871] mr-7">
             <button onClick={toggleMenu} className="focus:outline-none">
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-8 h-8">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16m-7 6h7" />
@@ -213,18 +226,19 @@ const Navbar = () => {
               </Link>
             </li>
             <li>
-              <Link
-                href="/contact"
+              <a
+                href="https://docs.google.com/forms/d/1ONaLrIKrSF0HZP4fsXOQd_7rOCsTNpmT0fvB7bY9TPg/edit"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="block px-4 py-2 font-bold hover:bg-[#003871] hover:text-white transition-all duration-300"
-                onClick={closeMenu}
               >
                 Contact
-              </Link>
+              </a>
             </li>
-            <li className="px-4 py-2">
+            <li>
               <button
                 onClick={openModal}
-                className="w-full bg-[#003871] text-white py-2 px-4 rounded-md font-bold"
+                className="block px-4 py-2 font-bold bg-[#003871] text-white hover:bg-[#DDF3FF] hover:text-[#003871] transition-all duration-300"
               >
                 Donate
               </button>
@@ -233,12 +247,18 @@ const Navbar = () => {
         )}
       </nav>
 
-      <Modal isOpen={isModalOpen} onClose={closeModal} />
+      {/* Donate Modal */}
+      {<Modal isOpen={isModalOpen} onClose={closeModal} />}
     </>
   );
 };
 
 export default Navbar;
+
+
+
+
+
 
 
 

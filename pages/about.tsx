@@ -3,7 +3,7 @@
 import { useEffect, useRef, useState } from 'react';
 import Image from 'next/image';
 import Navbar from '../app/components/Navbar'; // Adjust the path based on your folder structure
-import Services from '../app/components/Services'; // Adjust the path to your Services component
+import Whatwedo from '../app/components/Whatwedo'; // Adjust the path to your Services component
 import missionImg from '../app/public/aboutpageimg.jpg'; // Ensure the path to the image is correct
 import 'tailwindcss/tailwind.css';
 import HeroSection from '../app/components/Hero2';
@@ -80,7 +80,7 @@ const About = () => {
 
      {/* Services Section */}
 <div className="mt-[10px] sm:mt-[200px]">
-  <Services />
+<Whatwedo/>
   
 </div>
 <div className='mt-[-40px] sm:mt-[-100px]' >

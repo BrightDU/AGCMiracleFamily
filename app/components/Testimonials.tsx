@@ -26,7 +26,7 @@ const testimonials = [
   {
     image: testimonialImage3,
     quote:
-      "Fundraising is really 'Relationship Raising.' As nonprofits, we want our donors to fall in love with our mission. Bloomerang helps make that happen and simplifies the journey from prospects to donor engagement.",
+      "As my due date approached, my health began to decline due to malnutrition, and I feared for my baby's well-being. Fortunately, during one of my visits to the local health center, I unexpectedly encountered representatives from Carelife Character Foundation. Their kindness, encouragement, generosity and support were a beacon of hope.  I gave birth to a healthy baby girl named Ekemmi. I am eternally grateful to Carelife Character Foundation for their aid, which enabled me to become a proud mother.",
     name: "Tayyab Yunus",
     title: "CEO & Founder",
   },
