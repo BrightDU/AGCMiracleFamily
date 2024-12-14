@@ -12,12 +12,12 @@ import Testimonials from './components/Testimonials'; // Import Testimonials com
 import Footer from './components/Footer';
 import Hero2 from './components/Hero2';
 
-// Define metadata for the page
+
 export const metadata = {
   title: 'Carelife Foundation',
   description: ' NGO, Charity, Support, Intervention programs, Nigeria,UK.', // Updated description
   icons: {
-    icon: '/favicon.ico', // Ensure this path is correct
+    icon: '/favicon.ico', 
   },
 };
 
