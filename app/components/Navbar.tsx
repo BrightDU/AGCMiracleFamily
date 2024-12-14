@@ -135,7 +135,7 @@ const Navbar = () => {
                 rel="noopener noreferrer"
                 className="relative py-2 group inline-block text-[#525560] transition-colors duration-300 hover:text-[#003871]"
               >
-                Contact
+                Volunteer Or Partner With Us
                 <span className="absolute left-0 bottom-0 w-0 h-[2px] bg-[#003871] transition-all duration-300 group-hover:w-full"></span>
               </a>
             </li>
@@ -232,7 +232,7 @@ const Navbar = () => {
                 rel="noopener noreferrer"
                 className="block px-4 py-2 font-bold hover:bg-[#003871] hover:text-white transition-all duration-300"
               >
-                Contact
+                Volunteer Or Partner With Us
               </a>
             </li>
             <li>

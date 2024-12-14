@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from 'react';
 import Image from 'next/image';
-import whatwedoimg from '../public/whatwedo.jpg'; // Main section image
+
 import cardImage1 from '../public/card1.png'; // Replace with the actual path for the first card image
 import cardImage2 from '../public/card2.png'; // Replace with the actual path for the second card image
 import cardImage3 from '../public/card3.png'; // Replace with the actual path for the third card image
@@ -114,17 +114,7 @@ const Whatwedo = () => {
             </div>
           ))}
         </div>
-        <div className="relative w-full max-w-[1300px] h-auto mt-12 mx-auto">
-          <Image
-            src={whatwedoimg}
-            alt="Relevant Image"
-            layout="responsive"
-            width={1300}
-            height={556}
-            style={{ objectFit: 'cover' }}
-            className="rounded-lg"
-          />
-        </div>
+        
       </div>
     </section>
   );
