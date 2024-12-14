@@ -198,7 +198,7 @@ const Navbar = () => {
                         href={link}
                         className="block px-4 py-2 hover:bg-[#003871] hover:text-white transition-all duration-300"
                         onClick={closeMenu}
-                        target={isNewTab ? '_blank' : '_self'} // This opens BTS in a new tab
+                        target={isNewTab ? '_blank' : '_self'} 
                       >
                         {name}
                       </Link>
