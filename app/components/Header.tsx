@@ -66,7 +66,7 @@ const HeroSection = () => {
         ))}
       </div>
 
-      {/* Floating WhatsApp Icon */}
+      
 <a
   href="https://wa.me/+2349122180058"
   target="_blank"
