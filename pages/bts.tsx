@@ -125,28 +125,7 @@ Through our BTS Project, we will share their stories, achievements, and the impa
         </div>
       </div>
 
-      {/* Team Section */}
-      <div className="py-16">
-        <h3 className="text-sm font-bold font-roboto font-[16px] tracking-wide text-[#1D2130] uppercase text-center">
-          The Brain Behind CareLife
-        </h3>
-        <h2 className="text-[32px] font-roboto font-regular text-[#6A6969] mt-2 text-center">Meet Our Awardees</h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
-          {teamMembers.map((member, index) => (
-            <div key={index} className="flex flex-col items-center bg-white shadow-lg rounded-lg p-4">
-              <Image
-                src={member.image}
-                alt={member.name}
-                width={200}
-                height={200}
-                className="rounded-full"
-              />
-              <h3 className="mt-4 text-lg font-semibold text-gray-900">{member.name}</h3>
-              <p className="text-sm text-gray-600 mt-2">{member.role}</p>
-            </div>
-          ))}
-        </div>
-      </div>
+     
 
       {/* Contribution Section */}
       <div className="relative w-full h-[433px] mb-[-50px] flex flex-col justify-center items-center text-center mt-16">
@@ -175,9 +154,10 @@ Through our BTS Project, we will share their stories, achievements, and the impa
           </div>
         </div>
       </div>
-
+      <div className='mt-8'>
       {/* Footer */}
       <Footer />
+      </div>
     </div>
   );
 };

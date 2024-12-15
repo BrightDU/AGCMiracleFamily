@@ -31,27 +31,27 @@ const About = () => {
     <section
       id="about"
       ref={aboutRef}
-      className="relative py-12 px-6 sm:px-12 md:px-24 lg:px-48 min-h-screen bg-white flex justify-center items-center overflow-x-hidden"
+      className="relative py-12 px-6 sm:px-12 md:px-24 lg:px-48  h-[650px]  sm:min-h-screen bg-white flex justify-center items-center overflow-x-hidden"
     >
       {/* Container for content */}
-      <div className="max-w-7xl w-full">
+      <div className="max-w-7xl mt-[-480px] sm:mb-auto mb-[-550px]  sm:mt-auto w-full">
         {/* Title */}
-        <h2 className="font-roboto text-center font-bold text-sm sm:text-base tracking-[2px] text-[#1D2130] mx-auto mb-6">
+        <h2 className="font-roboto text-center  font-bold text-sm sm:text-base tracking-[2px] text-[#1D2130] mx-auto mb-6">
           Mission and Vision
         </h2>
 
         {/* Mission and Vision Content */}
-        <div className="flex flex-col md:flex-row justify-between sm:items-center items-start gap-10">
+        <div className="flex flex-col md:flex-row mb-[680px] sm:mb-auto justify-between sm:items-center items-start gap-10">
           {/* Mission Section */}
           <div
             className={`flex-1 text-left transform transition-all duration-1000 ${
               isVisible ? 'translate-x-0 opacity-100' : '-translate-x-10 opacity-0'
             }`}
           >
-            <h3 className="font-roboto text-lg sm:text-xl font-bold text-[#003771] mb-4">
+            <h3 className="font-roboto text-lg  sm:text-xl font-bold text-[#003771] mb-4">
                Our Mission 
             </h3>
-            <p className="font-roboto font-normal text-sm sm:text-base leading-relaxed text-[#525560]">
+            <p className="font-roboto font-normal  text-sm sm:text-base leading-relaxed text-[#525560]">
               Our mission is to empower every child by enhancing maternal and child health, nutrition, and supportive development; promoting maternal literacy, advocacy, education, and implementing research-based interventions for a virtuous society.
             </p>
           </div>
@@ -75,15 +75,15 @@ const About = () => {
         </div>
 
         {/* Image Section */}
-        <div className="relative w-full max-w-[1200px] h-auto mt-12 mx-auto">
+        <div className="relative w-full max-w-[1200px] sm:h-auto  mb-auto h-[-800] mt-[-650px]  sm:mt-20 sm:mt-12 mx-auto">
           <Image
             src={missionImg}
             alt="Relevant Image"
             layout="responsive"
             width={1200}
-            height={556}
+            height={656}
             style={{ objectFit: 'cover' }}
-            className="rounded-lg"
+            className="rounded-lg h-[350px] sm:h-[450px] md:h-auto"
           />
         </div>
       </div>

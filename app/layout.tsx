@@ -1,11 +1,9 @@
-// RootLayout.tsx
-
 import { Metadata } from 'next';
 import localFont from 'next/font/local';
-import Navbar from '../app/components/Navbar'; // Import Navbar component
+import Navbar from '../app/components/Navbar';
 import './globals.css';
+import favicon from '../app/public/favicon.ico'; // Explicit import for favicon
 
-// Load local fonts
 const geistSans = localFont({
   src: './fonts/GeistVF.woff',
   variable: '--font-geist-sans',
@@ -18,12 +16,11 @@ const geistMono = localFont({
   weight: '100 900',
 });
 
-// Define metadata
 export const metadata: Metadata = {
   title: 'Carelife Foundation',
-  description: ' NGO, Charity, Support, Intervention programs, Nigeria,UK.',
+  description: 'NGO, Charity, Support, Intervention programs, Nigeria,UK.',
   icons: {
-    icon: '/favicon.ico', // Link to the favicon
+    icon: favicon.src, // Use imported favicon
   },
 };
 
@@ -35,22 +32,19 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+        {/* Use the imported favicon */}
+        <link rel="icon" href={favicon.src} type="image/x-icon" />
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen flex flex-col`}
       >
-        {/* Include Navbar so it's visible on all pages */}
         <Navbar />
-
-        <div className="flex-grow">
-          {/* The rest of your page content */}
-          {children}
-        </div>
+        <div className="flex-grow">{children}</div>
       </body>
     </html>
   );
 }
+
 
 
 

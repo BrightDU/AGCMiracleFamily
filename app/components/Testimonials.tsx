@@ -85,7 +85,7 @@ const Testimonials = () => {
             fontWeight: "1300",
           }}
         >
-          We are creating a place where children with special needs can thrive
+          We are creating a place where every child can thrive.
         </h2>
 
         {/* Testimonials Grid */}

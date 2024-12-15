@@ -69,7 +69,7 @@ const Gallary = () => {
   const visibleCards = cardData.slice(startIndex, startIndex + cardsPerPage);
 
   return (
-    <section id="gallary" className="relative py-12 px-6 sm:px-12 md:px-24 lg:px-48 sm:mt-[-130px] sm:h-[500px] h-[500px] mt-[30px] bg-white flex flex-col items-center justify-start">
+    <section id="gallary" className="relative py-12 px-6 sm:px-12 md:px-24 lg:px-48 sm:mb-auto mb-[50px] sm:mt-[-80px] sm:h-[500px] h-[500px] mt-[20px] bg-white flex flex-col items-center justify-start">
       {selectedImage && (
         <div className="fixed top-0 left-0 w-full h-full bg-black bg-opacity-75 flex items-center justify-center z-50" onClick={handleCloseModal}>
           <div className="relative" onClick={(e) => e.stopPropagation()}>

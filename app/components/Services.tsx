@@ -88,7 +88,7 @@ const Services = () => {
               {Corevalue.title}
             </h3>
             {Corevalue.points.map((point, idx) => (
-              <p key={idx} className="font-roboto font-normal text-[12px] md:text-[13px] ml-[-10px] md:ml-[-30px] leading-[20px] md:leading-[25.6px] text-[#525560] text-left">
+              <p key={idx} className="font-roboto font-bold text-[12px] md:text-[13px] ml-[-10px] md:ml-[-30px] leading-[20px] md:leading-[25.6px] text-[#525560] text-left">
                 {point}
               </p>
             ))}
