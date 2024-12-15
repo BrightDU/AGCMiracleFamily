@@ -3,9 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
+    "dev": "npm dev",
+    "build": "npm build",
+    "start": "npm start",
     "lint": "next lint"
   },
   "dependencies": {
@@ -13,9 +13,7 @@
     "next": "^14.2.14",
     "react": "^18",
     "react-dom": "^18",
-    "react-icons": "^5.3.0",
-    "@typescript-eslint/eslint-plugin": "^8.18.0",
-    "@typescript-eslint/parser": "^8.18.0"
+    "react-icons": "^5.3.0"
   },
   "devDependencies": {
     "@types/node": "^22.7.4",
@@ -24,7 +22,7 @@
     "@typescript-eslint/eslint-plugin": "^8.18.0",
     "@typescript-eslint/parser": "^8.18.0",
     "autoprefixer": "^10.4.20",
-    "eslint": "^8.0.0",
+    "eslint": "^8.57.1",
     "eslint-config-next": "^15.1.0",
     "postcss": "^8.4.47",
     "tailwindcss": "^3.4.13",
