@@ -1,6 +1,6 @@
 'use client';
 
-import Image from 'next/image'; // Import the Image component
+import Image from 'next/image'; 
 import missionImg from '../public/Vector.png'; // Adjust path as needed
 import Testimonials from './Testimonials'; // Import the Testimonials component
 
