@@ -6,7 +6,7 @@
 // import Footer from '../app/components/Footer';
 // import Navbar from '../app/components/Navbar';
 
-// const Contact = () => {
+const Contact = () => {
 //   return (
 //     <div className="font-roboto mt-[100px]">
 //       {/* Navbar */}
@@ -136,7 +136,11 @@
 //   );
 // };
 
-// export default Contact;
+return (
+  <div>
+  </div>
+);
+export default Contact;
 
 
 

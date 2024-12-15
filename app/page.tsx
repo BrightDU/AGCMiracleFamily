@@ -4,7 +4,7 @@ import About from './components/About';
 // import Whatwedo from './components/Whatwedo'
 import Impact from './components/Impact'
 import Services from './components/Services';
-import Gallary from './components/Gallary'
+import Gallery from './components/Gallery'
 
 import Testimonials from './components/Testimonials'; // Import Testimonials component
 
@@ -30,7 +30,7 @@ export default function Home() {
       {/* <Whatwedo/> */}
       <Impact/>
       <Services />
-      <Gallary/>
+      <Gallery/>
       
       
       <Testimonials /> 
