@@ -16,7 +16,7 @@ import cardImage11 from '../public/gcard11.jpg';
 import cardImage12 from '../public/gcard12.jpg';
 import { FaArrowLeft, FaArrowRight, FaTimes } from 'react-icons/fa';
 
-const Gallary = () => {
+const Gallery = () => {
   const cardData = [
     { id: 1, image: cardImage1 },
     { id: 2, image: cardImage2 },
@@ -119,7 +119,7 @@ const Gallary = () => {
   );
 };
 
-export default Gallary;
+export default Gallery;
 
 
 
