@@ -2,7 +2,7 @@
 
 import Image from 'next/image'; 
 import missionImg from '../public/Vector.png'; // Adjust path as needed
-import Testimonials from './Testimonials'; // Import the Testimonials component
+// import Testimonials from './Testimonials'; // Import the Testimonials component
 
 const Services = () => {
   return (

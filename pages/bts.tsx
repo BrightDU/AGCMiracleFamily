@@ -7,25 +7,25 @@ import Footer from '../app/components/Footer';
 import image1 from '../app/public/hero2img.png';
 
 // Import team member images
-import member1 from '../app/public/member1.jpg';
-import member2 from '../app/public/member2.jpg';
-import member3 from '../app/public/member3.jpg';
-import member4 from '../app/public/member4.jpg';
-import member5 from '../app/public/member5.jpg';
-import member6 from '../app/public/member6.jpg';
-import member7 from '../app/public/member7.jpg';
-import member8 from '../app/public/member8.jpg';
+// import member1 from '../app/public/member1.jpg';
+// import member2 from '../app/public/member2.jpg';
+// import member3 from '../app/public/member3.jpg';
+// import member4 from '../app/public/member4.jpg';
+// import member5 from '../app/public/member5.jpg';
+// import member6 from '../app/public/member6.jpg';
+// import member7 from '../app/public/member7.jpg';
+// import member8 from '../app/public/member8.jpg';
 
-const teamMembers = [
-  { name: 'Jerome Bell', role: 'Marketing Coordinator', image: member1 },
-  { name: 'Leslie Alexander', role: 'Creative Director', image: member2 },
-  { name: 'Kristin Watson', role: 'Project Manager', image: member3 },
-  { name: 'Jacob Jones', role: 'UX Designer', image: member4 },
-  { name: 'Cody Fisher', role: 'Software Engineer', image: member5 },
-  { name: 'Savannah Nguyen', role: 'Data Analyst', image: member6 },
-  { name: 'Ralph Edwards', role: 'Finance Specialist', image: member7 },
-  { name: 'Kathryn Murphy', role: 'Operations Lead', image: member8 },
-];
+// const teamMembers = [
+//   { name: 'Jerome Bell', role: 'Marketing Coordinator', image: member1 },
+//   { name: 'Leslie Alexander', role: 'Creative Director', image: member2 },
+//   { name: 'Kristin Watson', role: 'Project Manager', image: member3 },
+//   { name: 'Jacob Jones', role: 'UX Designer', image: member4 },
+//   { name: 'Cody Fisher', role: 'Software Engineer', image: member5 },
+//   { name: 'Savannah Nguyen', role: 'Data Analyst', image: member6 },
+//   { name: 'Ralph Edwards', role: 'Finance Specialist', image: member7 },
+//   { name: 'Kathryn Murphy', role: 'Operations Lead', image: member8 },
+// ];
 
 const Bts = () => {
   return (

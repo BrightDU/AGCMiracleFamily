@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion'; // Import motion for animation
 import Navbar from '../app/components/Navbar'; // Adjust the import path if needed
-import HeroSection from '../app/components/Hero2'; // Import the HeroSection or Hero2 component
+// import HeroSection from '../app/components/Hero2'; // Import the HeroSection or Hero2 component
 import Footer from '../app/components/Footer'; // Import the HeroSection or Hero2 component
 
 import 'tailwindcss/tailwind.css'; // Ensure this is in your global styles or _app.js

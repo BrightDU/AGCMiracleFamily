@@ -3,6 +3,7 @@ import { FaFacebookF, FaInstagram, FaLinkedinIn } from "react-icons/fa";
 import { FaWhatsapp } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import FooterImage from "../public/carelifelogo2.jpg"; // Update the path as needed
+import Link  from 'next/link';
 
 const Footer = () => {
   return (
@@ -30,46 +31,46 @@ const Footer = () => {
             Follow Us on Our Social Channels
           </p>
           <div className="flex ml-[37px] space-x-4">
-            <a
+            <Link
               href="https://www.x.com/teamcarelife"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Twitter"
             >
               <FaXTwitter className="text-white text-xl hover:text-[#1DA1F2]" />
-            </a>
-            <a
+            </Link>
+            <Link
               href="https://www.facebook.com/TeamCarelife/"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Facebook"
             >
               <FaFacebookF className="text-white text-xl hover:text-[#3b5998]" />
-            </a>
-            <a
+            </Link>
+            <Link
               href="https://www.instagram.com/carelifefoundation/"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Instagram"
             >
               <FaInstagram className="text-white text-xl hover:text-[#E4405F]" />
-            </a>
-            <a
+            </Link>
+            <Link
               href="https://www.linkedin.com/company/104742373/admin/dashboard/"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="LinkedIn"
             >
               <FaLinkedinIn className="text-white text-xl hover:text-[#0e76a8]" />
-            </a>
-            <a
+            </Link>
+            <Link
               href="https://wa.me/+2349122180058"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="WhatsApp"
             >
               <FaWhatsapp className="text-white text-xl hover:text-[#25D366]" />
-            </a>
+            </Link>
           </div>
         </div>
 
@@ -82,21 +83,21 @@ const Footer = () => {
           </p>
           <p className="text-sm mb-4">
           For charity-related activities, email us at : <br />
-            <a
+            <Link
               href="mailto:info@carelifefoundation.com"
               className="hover:underline"
             >
               info@carelifefoundation.com
-            </a>
+            </Link>
           </p>
           <p className="text-sm mb-6">
           For the BTS project please email us at: <br />
-            <a
+            <Link
               href="mailto:bts@carelifefoundation.com"
               className="hover:underline"
             >
               bts@carelifefoundation.com
-            </a>
+            </Link>
           </p>
           <h4 className="text-lg font-semibold mb-4">Address</h4>
           
@@ -112,23 +113,23 @@ const Footer = () => {
             <h4 className="text-lg font-semibold mb-4">Home</h4>
             <ul className="space-y-2">
               <li>
-                <a href="/about" className="hover:underline">
+                <Link href="/about" className="hover:underline">
                   About Us
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="/bts" className="hover:underline">
+                <Link href="/bts" className="hover:underline">
                   Projects
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="/intervention" className="hover:underline">
+                <Link href="/intervention" className="hover:underline">
                   What We Do
-                </a>
+                </Link>
               </li>
              {/* Contact Link */}
             <li>
-              <a
+              <Link
                 href="https://docs.google.com/forms/d/1ONaLrIKrSF0HZP4fsXOQd_7rOCsTNpmT0fvB7bY9TPg/edit"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -136,7 +137,7 @@ const Footer = () => {
               >
                 Contact Us
                 <span className="absolute left-0 bottom-0 w-0 h-[2px] bg-[#003871] transition-all duration-300 group-hover:w-full"></span>
-              </a>
+              </Link>
             </li>
             </ul>
           </div>
@@ -144,20 +145,20 @@ const Footer = () => {
             <h4 className="text-lg font-semibold mb-4">More</h4>
             <ul className="space-y-2">
               <li>
-                <a href="/donate" className="hover:underline">
+                <Link href="/donate" className="hover:underline">
                   Donate
-                </a>
+                </Link>
               </li>
              
               <li>
-                <a href="/blog" className="hover:underline">
+                <Link href="/blog" className="hover:underline">
                   Blog
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="/privacy" className="hover:underline">
+                <Link href="/privacy" className="hover:underline">
                   Privacy Policy
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
