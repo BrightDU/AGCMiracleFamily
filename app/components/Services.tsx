@@ -24,6 +24,14 @@ const Services = () => {
           ]
         },
         {
+          title: "Integrity",
+          points: [
+            "We uphold the highest ethical standards,",
+            "maintaining transparency and accountability in all",
+            "our operations."
+          ]
+        },
+        {
           title: "Compassion",
           points: [
             "We approach every aspect of our work with",
@@ -33,29 +41,21 @@ const Services = () => {
           ]
         },
         {
-          title: "Resilience",
-          points: [
-            "We are dedicated to fostering strength and",
-            "adaptability in the communities we serve,",
-            "supporting individuals through challenges",
-            "and promoting long-term growth and well-being."
-          ]
-        },
-        {
-          title: "Integrity",
-          points: [
-            "We uphold the highest ethical standards,",
-            "maintaining transparency and accountability in all",
-            "our operations."
-          ]
-        },
-        {
           title: "Advocacy",
           points: [
             "We champion the rights of children and",
             "adolescents, ensuring their voices are heard and",
             "their needs are addressed through effective",
             "programs, policies, and community engagement."
+          ]
+        },
+        {
+          title: "Resilience",
+          points: [
+            "We are dedicated to fostering strength and",
+            "adaptability in the communities we serve,",
+            "supporting individuals through challenges",
+            "and promoting long-term growth and well-being."
           ]
         },
         {

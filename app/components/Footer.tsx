@@ -56,7 +56,7 @@ const Footer = () => {
               <FaInstagram className="text-white text-xl hover:text-[#E4405F]" />
             </Link>
             <Link
-              href="https://www.linkedin.com/company/104742373/admin/dashboard/"
+              href="https://www.linkedin.com/company/104742373/"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="LinkedIn"

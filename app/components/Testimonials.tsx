@@ -24,11 +24,11 @@ const testimonials = [
     title: "Founder & Chief Encouragement Officer",
   },
   {
-    image: testimonialImage3,
+    image: "",
     quote:
       "As my due date approached, my health began to decline due to malnutrition, and I feared for my baby's well-being. Fortunately, during one of my visits to the local health center, I unexpectedly encountered representatives from Carelife Character Foundation. Their kindness, encouragement, generosity and support were a beacon of hope.  I gave birth to a healthy baby girl named Ekemmi. I am eternally grateful to Carelife Character Foundation for their aid, which enabled me to become a proud mother.",
-    name: "Tayyab Yunus",
-    title: "CEO & Founder",
+    name: "",
+    title: "",
   },
 ];
 
