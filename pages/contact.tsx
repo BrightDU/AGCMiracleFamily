@@ -1,7 +1,7 @@
-// import 'tailwindcss/tailwind.css';
-// import { FaFacebookF, FaInstagram, FaLinkedinIn, FaWhatsapp } from 'react-icons/fa'; // Social media icons
-// import { TbBrandX } from 'react-icons/tb'; // X (formerly Twitter) icon
-// import { motion } from 'framer-motion'; // Import motion from framer-motion
+import 'tailwindcss/tailwind.css';
+import { FaFacebookF, FaInstagram, FaLinkedinIn, FaWhatsapp } from 'react-icons/fa'; // Social media icons
+import { TbBrandX } from 'react-icons/tb'; // X (formerly Twitter) icon
+import { motion } from 'framer-motion'; // Import motion from framer-motion
 
 // import Footer from '../app/components/Footer';
 // import Navbar from '../app/components/Navbar';
@@ -141,15 +141,4 @@ return (
   </div>
 );
 export default Contact;
-
-
-
-;
-
-
-
-
-
-
-
 
