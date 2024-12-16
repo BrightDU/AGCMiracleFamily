@@ -6,7 +6,7 @@ import Image from 'next/image';
 // Import images for testimonials
 import testimonialImage1 from '../public/testimonial1.jpg'; // Adjust path as needed
 import testimonialImage2 from '../public/testimonial2.jpg'; // Adjust path as needed
-import testimonialImage3 from '../public/testimonial3.jpg'; // Adjust path as needed
+
 
 const testimonials = [
   {
