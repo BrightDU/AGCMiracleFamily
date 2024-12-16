@@ -1,25 +1,23 @@
-import Navbar from './components/Navbar';
-import Header from './components/Header';
-import About from './components/About';
+import Navbar from "../app/components/Navbar";
+import Header from "../app/components/Header";
+import About from "../app/components/About";
 // import Whatwedo from './components/Whatwedo'
-import Impact from './components/Impact'
-import Services from './components/Services';
-import Gallery from './components/Gallery'
+import Impact from "../app/components/Impact";
+import Services from "../app/components/Services";
+import Gallery from "../app/components/Gallery";
 
-import Testimonials from './components/Testimonials'; // Import Testimonials component
+import Testimonials from "../app/components/Testimonials"; // Import Testimonials component
 
+import Footer from "../app/components/Footer";
+import Hero2 from "../app/components/Hero2";
 
-import Footer from './components/Footer';
-import Hero2 from './components/Hero2';
-
-
-export const metadata = {
-  title: 'Carelife Foundation',
-  description: ' NGO, Charity, Support, Intervention programs, Nigeria,UK.', // Updated description
-  icons: {
-    icon: '/favicon.ico', 
-  },
-};
+// export const metadata = {
+//   title: 'Carelife Foundation',
+//   description: ' NGO, Charity, Support, Intervention programs, Nigeria,UK.', // Updated description
+//   icons: {
+//     icon: '/favicon.ico',
+//   },
+// };
 
 export default function Home() {
   return (
@@ -28,18 +26,15 @@ export default function Home() {
       <Header />
       <About />
       {/* <Whatwedo/> */}
-      <Impact/>
+      <Impact />
       <Services />
-      <Gallery/>
-      
-      
-      <Testimonials /> 
-      
+      <Gallery />
+
+      <Testimonials />
+
       <Hero2 />
-      
+
       <Footer />
     </>
   );
 }
-
-

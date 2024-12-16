@@ -7,11 +7,11 @@ import Link  from 'next/link';
 
 const Footer = () => {
   return (
-    <footer className="bg-[#003771] font-roboto text-white py-8">
+    <footer className="bg-[#003771]  font-roboto text-white py-8">
       {/* Footer Container */}
-      <div className="max-w-[1200px] mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div className="max-w-[1200px] mx-auto  px-6 grid grid-cols-1 md:grid-cols-3 gap-8">
         {/* Column 1: Logo, Short Description, Social Media */}
-        <div>
+        <div className="mt-[-80px] ml-[-30px] sm:ml-auto">
           {/* Logo */}
           <Image
             src={FooterImage}

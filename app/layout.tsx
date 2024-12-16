@@ -18,7 +18,7 @@ const geistMono = localFont({
 
 export const metadata: Metadata = {
   title: 'Carelife Foundation',
-  description: 'NGO, Charity, Support, Intervention programs, Nigeria,UK.',
+  description: 'NGO, Charity, Support, Intervention programs, Nigeria, UK.',
   icons: {
     icon: favicon.src, // Use imported favicon
   },
@@ -32,8 +32,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        {/* Use the imported favicon */}
-        <link rel="icon" href={favicon.src} type="image/x-icon" />
+        {/* Add global favicon link for SSR */}
+        <link rel="icon" href={favicon.src} type="image/x-icon" sizes="any" />
+        <meta name="description" content="NGO, Charity, Support, Intervention programs, Nigeria, UK." />
+        <title>Carelife Foundation</title>
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen flex flex-col`}
@@ -44,6 +46,7 @@ export default function RootLayout({
     </html>
   );
 }
+
 
 
 

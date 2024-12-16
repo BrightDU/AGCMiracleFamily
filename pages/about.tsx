@@ -1,5 +1,3 @@
-'use client';
-
 import { useEffect, useRef, useState } from 'react';
 import Link from 'next/link'; // Import Link for navigation
 import Image from 'next/image';
@@ -11,24 +9,16 @@ import HeroSection from '../app/components/Hero2';
 import Footer from '../app/components/Footer';
 
 // Import team member images
-import member1 from '../app/public/member1.jpg';
-import member2 from '../app/public/member2.jpg';
-import member3 from '../app/public/member3.jpg';
-import member4 from '../app/public/member4.jpg';
-import member5 from '../app/public/member5.jpg';
-import member6 from '../app/public/member6.jpg';
-import member7 from '../app/public/member7.jpg';
-import member8 from '../app/public/member8.jpg';
+import member1 from '../app/public/member1.png';
+import member2 from '../app/public/member2.png';
+import member3 from '../app/public/member3.png';
+import member4 from '../app/public/member4.png';
 
 const teamMembers = [
   { name: 'Jerome Bell', role: 'Marketing Coordinator', image: member1 },
   { name: 'Leslie Alexander', role: 'Creative Director', image: member2 },
   { name: 'Kristin Watson', role: 'Project Manager', image: member3 },
   { name: 'Jacob Jones', role: 'UX Designer', image: member4 },
-  { name: 'Cody Fisher', role: 'Software Engineer', image: member5 },
-  { name: 'Savannah Nguyen', role: 'Data Analyst', image: member6 },
-  { name: 'Ralph Edwards', role: 'Finance Specialist', image: member7 },
-  { name: 'Kathryn Murphy', role: 'Operations Lead', image: member8 },
 ];
 
 const About = () => {
@@ -36,6 +26,7 @@ const About = () => {
   const aboutRef = useRef(null);
 
   useEffect(() => {
+    const refCurrent = aboutRef.current; // Save the current value of aboutRef
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
@@ -45,13 +36,13 @@ const About = () => {
       { threshold: 0.5 }
     );
 
-    if (aboutRef.current) {
-      observer.observe(aboutRef.current);
+    if (refCurrent) {
+      observer.observe(refCurrent);
     }
 
     return () => {
-      if (aboutRef.current) {
-        observer.unobserve(aboutRef.current);
+      if (refCurrent) {
+        observer.unobserve(refCurrent);
       }
     };
   }, []);
@@ -101,41 +92,43 @@ const About = () => {
       </section>
 
       {/* Services Section */}
-<div className="mt-[10px] sm:mt-[200px]">
-  <Whatwedo />
-  {/* READ MORE BUTTON */}
-  <Link href="/intervention">
-    <button className="bg-[#003871] font-roboto font-medium text-[16px] h-[51px] w-[200px] text-white mt-4 sm:mt-2 rounded-md mx-auto block">
-      Read More
-    </button>
-  </Link>
-</div>
-
-{/* Team Section */}
-<div className="py-12 mt-[-10px]">
-  <h3 className="text-sm font-bold font-roboto font-[16px] tracking-wide text-[#1D2130] uppercase text-center">
-    The Brain Behind CareLife
-  </h3>
-  <h2 className="text-[32px] font-roboto font-regular text-[#6A6969] mt-2 text-center">
-    Meet The Team
-  </h2>
-  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
-    {teamMembers.map((member, index) => (
-      <div key={index} className="flex flex-col items-center bg-white shadow-lg rounded-lg p-4">
-        <Image
-          src={member.image}
-          alt={member.name}
-          width={200}
-          height={200}
-          className="rounded-full"
-        />
-        <h3 className="mt-4 text-lg font-semibold text-gray-900">{member.name}</h3>
-        <p className="text-sm text-gray-600 mt-2">{member.role}</p>
+      <div className="mt-[10px] sm:mt-[200px]">
+        <Whatwedo />
+        {/* READ MORE BUTTON */}
+        <Link href="/intervention">
+          <button className="bg-[#003871] font-roboto font-medium text-[16px] h-[51px] w-[200px] text-white mt-4 sm:mt-2 rounded-md mx-auto block">
+            Read More
+          </button>
+        </Link>
       </div>
-    ))}
-  </div>
-</div>
 
+      {/* Team Section */}
+      <div className="py-12 mt-[-10px]">
+        <h3 className="text-sm font-bold font-roboto font-[16px] tracking-wide text-[#1D2130] uppercase text-center">
+          The Brain Behind CareLife
+        </h3>
+        <h2 className="text-[32px] font-roboto font-regular text-[#6A6969] mt-2 text-center">
+          Meet The Team
+        </h2>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
+          {teamMembers.map((member, index) => (
+            <div
+              key={index}
+              className="flex flex-col items-center bg-white shadow-lg rounded-lg p-4"
+            >
+              <Image
+                src={member.image}
+                alt={member.name}
+                width={200}
+                height={200}
+                className="rounded-full"
+              />
+              <h3 className="mt-4 text-lg font-semibold text-gray-900">{member.name}</h3>
+              <p className="text-sm text-gray-600 mt-2">{member.role}</p>
+            </div>
+          ))}
+        </div>
+      </div>
 
       {/* Hero Section and Footer */}
       <div className="mt-[-40px] sm:mt-[-100px]">
@@ -147,5 +140,6 @@ const About = () => {
 };
 
 export default About;
+
 
 
