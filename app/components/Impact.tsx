@@ -80,7 +80,7 @@ const Impact = () => {
           Our Impact
         </h2>
         <p className="font-roboto font-bold text-[16px] tracking-[2px] text-[#1D2130]">
-          Together, we make a difference in millions of lives. Here's what we've achieved.
+          Together, we make a difference in millions of lives. Here&apos;s what we&apos;ve achieved.
         </p>
       </div>
 

@@ -48,7 +48,7 @@ const Bts = () => {
             Behind The Scene (BTS)
           </h1>
           <p className="font-roboto font-medium text-[20px] text-white leading-[160%] mt-6 max-w-[700px]">
-          &quot;At Carelife Character Foundation, our 'BTS Project' celebrates unsung heroes behind success. We honor their dedication and empower them to mentor younger adults.&quot;
+          &quot;At Carelife Character Foundation, our &apos;BTS Project&apos; celebrates unsung heroes behind success. We honor their dedication and empower them to mentor younger adults.&quot;
           </p>
         </div>
       </div>
