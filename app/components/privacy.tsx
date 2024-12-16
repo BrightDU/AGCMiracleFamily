@@ -1,11 +1,5 @@
 'use client';
 
-import { useEffect, useState } from 'react';
-import Image from 'next/image';
-
-import cardImage1 from '../public/card1.png'; // Replace with the actual path for the first card image
-import cardImage2 from '../public/card2.png'; // Replace with the actual path for the second card image
-import cardImage3 from '../public/card3.png'; // Replace with the actual path for the third card image
 
 const PrivacyPolicy = () => {
   

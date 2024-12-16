@@ -48,7 +48,7 @@ const Bts = () => {
             Behind The Scene (BTS)
           </h1>
           <p className="font-roboto font-medium text-[20px] text-white leading-[160%] mt-6 max-w-[700px]">
-            "At Carelife Character Foundation, our 'BTS Project' celebrates unsung heroes behind success. We honor their dedication and empower them to mentor younger adults."
+          &quot;At Carelife Character Foundation, our 'BTS Project' celebrates unsung heroes behind success. We honor their dedication and empower them to mentor younger adults.&quot;
           </p>
         </div>
       </div>
@@ -141,7 +141,7 @@ Through our BTS Project, we will share their stories, achievements, and the impa
         <div className="relative z-10 text-center mx-auto px-4 sm:px-8 lg:px-12 xl:px-16">
           <div className="w-full sm:w-[870.35px] h-full bg-transparent flex flex-col justify-center items-center text-white mx-auto">
             <h1 className="text-[18px]  font-roboto leading-[1.5] sm:text-[25px] md:text-[45px] sm:leading-[1.3] font-semibold mt-8 mb-6 sm:mb-10">
-              Do you know a Behind The Scene Worker? Let’s bring them to the Spotlight.
+              Do you know a Behind The Scene Worker? Let&apos;s bring them to the Spotlight.
             </h1>
             <a
               href="mailto:info@carelifefoundation.com"
