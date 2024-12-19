@@ -173,12 +173,12 @@ const Navbar = () => {
 
         {/* Mobile Menu */}
         {isOpen && (
-          <ul className="md:hidden bg-white shadow-lg rounded-md mt-2 px-4 pb-4">
+          <ul className="md:hidden bg-white font-bold  shadow-lg rounded-md mt-2 px-4 pb-4">
             {[{ name: 'Home', link: '/' }, { name: 'About', link: '/about' }].map(({ name, link }) => (
               <li key={name} className="py-2">
                 <Link
                   href={link}
-                  className="block text-[#525560] transition-colors duration-300 hover:text-[#003871]"
+                  className="block text-[#003771] text-[20px] transition-colors duration-300 hover:text-[#003871]"
                   onClick={closeMenu}
                 >
                   {name}
@@ -190,7 +190,7 @@ const Navbar = () => {
             <li className="py-2">
               <button
                 onClick={toggleMobileProgramsDropdown}
-                className="w-full text-left flex items-center text-[#525560] transition-colors duration-300 hover:text-[#003871] focus:outline-none"
+                className="w-full text-left flex items-center text-[#003771] text-[20px] transition-colors duration-300 hover:text-[#003871] focus:outline-none"
               >
                 Our Programmes
                 <FaChevronDown className="ml-1" />
@@ -198,10 +198,10 @@ const Navbar = () => {
               {mobileProgramsDropdownOpen && (
                 <ul className="pl-4 mt-2">
                   {[{ name: 'Intervention Programs', link: '/intervention' }, { name: 'Life Skills', link: '/skills' }, { name: 'Community Development', link: '/community-development' }, { name: 'Health Intervention', link: '/health-intervention' }, { name: 'Education Intervention', link: '/education-intervention' }, { name: 'Advocacy', link: '/advocacy' }].map(({ name, link }) => (
-                    <li key={name} className="py-1">
+                    <li key={name} className="py-3">
                       <Link
                         href={link}
-                        className="block text-[#525560] transition-colors duration-300 hover:text-[#003871]"
+                        className="block text-[#003771]  font-semibold text-[20px] transition-colors duration-300 hover:text-[#003871]"
                         onClick={closeMenu}
                       >
                         {name}
@@ -216,7 +216,7 @@ const Navbar = () => {
             <li className="py-2">
               <Link
                 href="/bts"
-                className="block text-[#525560] transition-colors duration-300 hover:text-[#003871]"
+                className="block text-[#003771]  text-[20px] transition-colors duration-300 hover:text-[#003871]"
                 onClick={closeMenu}
               >
                 Behind the Scene (BTS)
@@ -227,7 +227,7 @@ const Navbar = () => {
             <li className="py-2">
               <Link
                 href="/gallery"
-                className="block text-[#525560] transition-colors duration-300 hover:text-[#003871]"
+                className="block text-[#003771]  text-[20px] transition-colors duration-300 hover:text-[#003871]"
                 onClick={closeMenu}
               >
                 Gallery
@@ -240,7 +240,7 @@ const Navbar = () => {
                 href="https://docs.google.com/forms/d/1ONaLrIKrSF0HZP4fsXOQd_7rOCsTNpmT0fvB7bY9TPg/edit"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="block text-[#525560] transition-colors duration-300 hover:text-[#003871]"
+                className="block text-[#003771]  text-[20px] transition-colors duration-300 hover:text-[#003871]"
                 onClick={closeMenu}
               >
                 Volunteer Or Partner With Us
