@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react';
 import Image from 'next/image';
 import 'tailwindcss/tailwind.css';
 import Skill1 from '../app/public/lifeskill.jpg';
-import Skill2 from '../app/public/skill.jpg';
+import Skill2 from '../app/public/skiller.jpg';
 
 import Navbar from '../app/components/Navbar'; // Replace with the correct Navbar import path
 import HeroSection from '../app/components/Hero2'; // Replace with the correct HeroSection import path
