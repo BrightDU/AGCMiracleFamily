@@ -5,7 +5,7 @@ import Image from 'next/image';
 import 'tailwindcss/tailwind.css';
 import Maternal from '../app/public/maternal.jpg';
 import Adolescent from '../app/public/adolesent.jpg';
-import Life from '../app/public/lifeskill.jpg';
+import Life from '../app/public/aboutBtsImage.jpg';
 import Navbar from '../app/components/Navbar'; // Replace with the correct Navbar import path
 import HeroSection from '../app/components/Hero2'; // Replace with the correct HeroSection import path
 import Footer from '../app/components/Footer'; // Replace with the correct Footer import path

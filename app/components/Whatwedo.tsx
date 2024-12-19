@@ -61,7 +61,7 @@ const Whatwedo = () => {
   return (
     <section
       id="whatwedo"
-      className={`relative py-12 px-6 sm:px-12 md:px-24 lg:px-48 min-h-screen bg-white flex justify-center items-center transition-all duration-700 ${
+      className={`relative py-12 px-6 sm:px-12 md:px-24 lg:px-48 mt-[-100px]  sm:mt-auto min-h-screen bg-white flex justify-center items-center transition-all duration-700 ${
         isInView ? 'animate-floating' : ''
       }`}
     >
