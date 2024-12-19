@@ -13,6 +13,8 @@ const Impact = () => {
   ];
 
   useEffect(() => {
+    const impactElement = impactRef.current;
+
     const observer = new IntersectionObserver(
       ([entry]) => {
         setVisibleCounters(entry.isIntersecting);
@@ -20,16 +22,16 @@ const Impact = () => {
       { threshold: 0.5 }
     );
 
-    if (impactRef.current) {
-      observer.observe(impactRef.current);
+    if (impactElement) {
+      observer.observe(impactElement);
     }
 
     return () => {
-      if (impactRef.current) {
-        observer.unobserve(impactRef.current);
+      if (impactElement) {
+        observer.unobserve(impactElement);
       }
     };
-  }, []);
+  }, []); // Only run on mount and unmount, no dependencies required
 
   // Define types for Counter props
   interface CounterProps {
@@ -60,7 +62,7 @@ const Impact = () => {
       } else {
         setCount(0); // Reset the count when the section goes out of view
       }
-    }, [visibleCounters, value]);
+    }, [value]); // Only depend on 'value', 'visibleCounters' is already managed by state
 
     return (
       <span className="text-[16px] sm:text-[20px] font-bold text-gray-800">
@@ -107,6 +109,8 @@ const Impact = () => {
 };
 
 export default Impact;
+
+
 
 
 

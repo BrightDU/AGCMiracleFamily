@@ -69,24 +69,24 @@ const Whatwedo = () => {
         <h3 className="font-roboto text-center font-bold text-sm sm:text-base tracking-[2px] text-[#1D2130] mx-auto mb-6">
           What We Do
         </h3>
-        <h2 className="font-roboto font-bold text-xl sm:text-2xl md:text-[32px] leading-tight text-[#6A6969] mx-auto text-center mb-6">
-          Pioneering Research for Social Impact
-        </h2>
-        <p className="font-roboto font-normal text-sm sm:text-base leading-relaxed text-[#525560] mx-auto text-left sm:text-center mb-3">
-          Access a range of research papers and studies related to our work in maternal, child, and AYP. Reports: Read our annual
+        
+        <p className="font-roboto font-normal text-sm sm:text-base leading-relaxed text-[#525560] mx-auto text-left sm:text-left mb-3">
+        At Carelife Foundation, our intervention and life skills projects are designed to help early lives transition into adulthood with a positive outlook. These programs are evidence-based, informed by in-depth research conducted by our team to identify real needs and develop the most effective strategies to address them.
+
         </p>
-        <p className="font-roboto font-normal text-sm sm:text-base leading-relaxed text-[#525560] mx-auto text-left sm:text-center mb-6">
-          reports and project-specific documents to see our impact and progress.
+        <p className="font-roboto font-normal text-sm sm:text-base leading-relaxed text-[#525560] mx-auto text-left sm:text-left mb-6">
+        We employ a bottom-up approach, engaging the family and immediate community as key stakeholders and decision-makers in identifying problems interfering with a child&apos;s proper growth and development and crafting solutions to address these needs. This inclusive strategy ensures that our interventions are practical, relevant, and family-driven.
+
         </p>
-        <h2 className="font-roboto font-bold text-xl sm:text-2xl md:text-[16px] mt-[40px] leading-tight text-[#6A6969] mx-auto text-center mb-6">
-          RECENT RESEARCH AND PUBLICATIONS
-        </h2>
-        <p className="font-roboto font-normal text-sm sm:text-base leading-relaxed text-[#525560] mx-auto text-left sm:text-center mb-3">
-          Five months on, she blossomed into a healthy baby - walking and playing with big sister, Fatun. With the right support, there
-        </p>
-        <p className="font-roboto font-normal text-sm sm:text-base leading-relaxed text-[#525560] mx-auto text-left sm:text-center mb-6">
-          are endless opportunities for kids like Fatima. A donation from people like you can help more children like her get the life-saving treatment they need
-        </p>
+       
+        <p className="font-roboto font-normal text-sm sm:text-base leading-relaxed text-[#525560] mx-auto text-left sm:text-left mb-6">
+  Our work begins at the foundation of life, with our footprint at every critical development phase—from pregnancy and childbirth to childhood, adolescence, and young adulthood. By supporting growth and equipping young people with essential skills, we aim to foster holistic development and prepare them for a productive, positive future.
+</p>
+<p className="font-roboto font-normal text-sm sm:text-base leading-relaxed text-[#525560] mx-auto text-left sm:text-left mb-3">
+  Our charity&apos;s social impacts are research-driven and focus on reaching underserved populations, particularly those in slums and remote communities. These efforts address key thematic areas such as Maternal and Child Health, Safe Delivery Services, Nutrition and Early Childhood (Neuro)development, Maternal Literacy, Education, Advocacy, Adolescent Sexual and Reproductive Health (ASRH), Life Skills Development, and Mentorship Programs. Additionally, our work extends to community development projects tailored to meet pressing needs that enhance child care and overall well-being.
+</p>
+
+
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mt-12 mb-6">
           {cardData.map((card) => (
             <div

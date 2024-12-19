@@ -7,12 +7,15 @@ import missionImg from '../app/public/aboutpageimg.jpg'; // Ensure the path to t
 import 'tailwindcss/tailwind.css';
 import HeroSection from '../app/components/Hero2';
 import Footer from '../app/components/Footer';
+import favicon from '../app/public/favicon.ico'; // Explicit import for favicon
 
 // Import team member images
 import member1 from '../app/public/member1.png';
 import member2 from '../app/public/member2.png';
 import member3 from '../app/public/member3.png';
 import member4 from '../app/public/member4.png';
+
+import Head from 'next/head'; // Import the Head component
 
 const teamMembers = [
   { name: 'Jerome Bell', role: 'Marketing Coordinator', image: member1 },
@@ -49,6 +52,14 @@ const About = () => {
 
   return (
     <>
+      {/* Add Favicon and Title */}
+      <Head>
+        {/* Add global favicon link for SSR */}
+        <link rel="icon" href={favicon.src} type="image/x-icon" sizes="any" />
+        <meta name="description" content="NGO, Charity, Support, Intervention programs, Nigeria, UK." />
+        <title>About Us</title>
+      </Head>
+
       {/* Navbar */}
       <Navbar />
 
@@ -140,6 +151,7 @@ const About = () => {
 };
 
 export default About;
+
 
 
 

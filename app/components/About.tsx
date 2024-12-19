@@ -9,6 +9,8 @@ const About = () => {
   const aboutRef = useRef(null);
 
   useEffect(() => {
+    const currentRef = aboutRef.current; // Store the current reference value
+
     const observer = new IntersectionObserver(
       ([entry]) => {
         setIsVisible(entry.isIntersecting); // Update state based on intersection
@@ -16,13 +18,13 @@ const About = () => {
       { threshold: 0.5 } // Trigger animation when 50% of the section is in view
     );
 
-    if (aboutRef.current) {
-      observer.observe(aboutRef.current);
+    if (currentRef) {
+      observer.observe(currentRef); // Observe using the stored ref
     }
 
     return () => {
-      if (aboutRef.current) {
-        observer.unobserve(aboutRef.current);
+      if (currentRef) {
+        observer.unobserve(currentRef); // Cleanup using the stored ref
       }
     };
   }, []);
@@ -49,7 +51,7 @@ const About = () => {
             }`}
           >
             <h3 className="font-roboto text-lg  sm:text-xl font-bold text-[#003771] mb-4">
-               Our Mission 
+              Our Mission
             </h3>
             <p className="font-roboto font-normal  text-sm sm:text-base leading-relaxed text-[#525560]">
               Our mission is to empower every child by enhancing maternal and child health, nutrition, and supportive development; promoting maternal literacy, advocacy, education, and implementing research-based interventions for a virtuous society.
@@ -66,7 +68,7 @@ const About = () => {
             }`}
           >
             <h3 className="font-roboto text-lg sm:text-xl font-bold text-[#003771] mb-4">
-              Our Vision 
+              Our Vision
             </h3>
             <p className="font-roboto font-normal text-sm sm:text-base leading-relaxed text-[#525560]">
               Our vision is to foster a safe and supportive environment for every child, empowering them to get the future they deserve.

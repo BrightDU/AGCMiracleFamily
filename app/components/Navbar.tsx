@@ -99,13 +99,12 @@ const Navbar = () => {
               </button>
               {desktopProgramsDropdownOpen && (
                 <ul className="absolute left-0 mt-2 bg-[#DDF3FF] shadow-lg rounded-md overflow-hidden w-52">
-                  {[{ name: 'Intervention Programs', link: '/intervention' }, { name: 'Behind the Scene(BTS)', link: '/bts', isNewTab: true }].map(({ name, link, isNewTab }) => (
+                  {[{ name: 'Intervention Programs', link: '/intervention' }, { name: 'Life Skills', link: '/skills' }, { name: 'Community Development', link: '/community-development' }, { name: 'Health Intervention', link: '/health-intervention' }, { name: 'Education Intervention', link: '/education-intervention' }, { name: 'Advocacy', link: '/advocacy' }].map(({ name, link }) => (
                     <li key={name}>
                       <Link
                         href={link}
                         className="block px-4 py-2 hover:bg-[#003871] hover:text-white transition-all duration-300"
                         onClick={closeMenu}
-                        target={isNewTab ? '_blank' : '_self'} // This opens BTS in a new tab
                       >
                         {name}
                       </Link>
@@ -115,19 +114,30 @@ const Navbar = () => {
               )}
             </li>
 
-            {[{ name: 'Blog', link: '/blog' }, { name: 'Gallery', link: '/gallery' }].map(({ name, link }) => (
-              <li key={name}>
-                <Link
-                  href={link}
-                  className="relative py-2 group inline-block text-[#525560] transition-colors duration-300 hover:text-[#003871]"
-                >
-                  {name}
-                  <span className="absolute left-0 bottom-0 w-0 h-[2px] bg-[#003871] transition-all duration-300 group-hover:w-full"></span>
-                </Link>
-              </li>
-            ))}
+            {/* Behind the Scene */}
+            <li>
+              <Link
+                href="/bts"
+                className="relative py-2 group inline-block text-[#525560] transition-colors duration-300 hover:text-[#003871]"
+                target="_blank"
+              >
+                Behind the Scene (BTS)
+                <span className="absolute left-0 bottom-0 w-0 h-[2px] bg-[#003871] transition-all duration-300 group-hover:w-full"></span>
+              </Link>
+            </li>
 
-            {/* Contact Link */}
+            {/* Gallery */}
+            <li>
+              <Link
+                href="/gallery"
+                className="relative py-2 group inline-block text-[#525560] transition-colors duration-300 hover:text-[#003871]"
+              >
+                Gallery
+                <span className="absolute left-0 bottom-0 w-0 h-[2px] bg-[#003871] transition-all duration-300 group-hover:w-full"></span>
+              </Link>
+            </li>
+
+            {/* Volunteer or Partner With Us */}
             <li>
               <a
                 href="https://docs.google.com/forms/d/1ONaLrIKrSF0HZP4fsXOQd_7rOCsTNpmT0fvB7bY9TPg/edit"
@@ -161,44 +171,38 @@ const Navbar = () => {
           </div>
         </div>
 
-        {/* Mobile Dropdown Menu */}
+        {/* Mobile Menu */}
         {isOpen && (
-          <ul className="md:hidden absolute bg-white text-xl text-[#003871] right-0 top-6 w-full shadow-lg z-20 pt-4 overflow-y-auto">
-            <li>
-              <Link
-                href="/"
-                className="block px-4 py-2 font-bold hover:bg-[#003871] hover:text-white transition-all duration-300"
-                onClick={closeMenu}
-              >
-                Home
-              </Link>
-            </li>
-            <li>
-              <Link
-                href="/about"
-                className="block px-4 py-2 font-bold hover:bg-[#003871] hover:text-white transition-all duration-300"
-                onClick={closeMenu}
-              >
-                About
-              </Link>
-            </li>
-            <li>
+          <ul className="md:hidden bg-white shadow-lg rounded-md mt-2 px-4 pb-4">
+            {[{ name: 'Home', link: '/' }, { name: 'About', link: '/about' }].map(({ name, link }) => (
+              <li key={name} className="py-2">
+                <Link
+                  href={link}
+                  className="block text-[#525560] transition-colors duration-300 hover:text-[#003871]"
+                  onClick={closeMenu}
+                >
+                  {name}
+                </Link>
+              </li>
+            ))}
+
+            {/* Mobile Programs Dropdown */}
+            <li className="py-2">
               <button
                 onClick={toggleMobileProgramsDropdown}
-                className="block px-4 py-2 font-bold hover:bg-[#003871] hover:text-white transition-all duration-300"
+                className="w-full text-left flex items-center text-[#525560] transition-colors duration-300 hover:text-[#003871] focus:outline-none"
               >
                 Our Programmes
-                <FaChevronDown className="inline ml-2" />
+                <FaChevronDown className="ml-1" />
               </button>
               {mobileProgramsDropdownOpen && (
-                <ul className="pl-6">
-                  {[{ name: 'Intervention Programs', link: '/intervention' }, { name: 'Behind the Scene(BTS)', link: '/bts', isNewTab: true }].map(({ name, link, isNewTab }) => (
-                    <li key={name}>
+                <ul className="pl-4 mt-2">
+                  {[{ name: 'Intervention Programs', link: '/intervention' }, { name: 'Life Skills', link: '/skills' }, { name: 'Community Development', link: '/community-development' }, { name: 'Health Intervention', link: '/health-intervention' }, { name: 'Education Intervention', link: '/education-intervention' }, { name: 'Advocacy', link: '/advocacy' }].map(({ name, link }) => (
+                    <li key={name} className="py-1">
                       <Link
                         href={link}
-                        className="block px-4 py-2 hover:bg-[#003871] hover:text-white transition-all duration-300"
+                        className="block text-[#525560] transition-colors duration-300 hover:text-[#003871]"
                         onClick={closeMenu}
-                        target={isNewTab ? '_blank' : '_self'} 
                       >
                         {name}
                       </Link>
@@ -207,38 +211,47 @@ const Navbar = () => {
                 </ul>
               )}
             </li>
-            <li>
+
+            {/* BTS */}
+            <li className="py-2">
               <Link
-                href="/blog"
-                className="block px-4 py-2 font-bold hover:bg-[#003871] hover:text-white transition-all duration-300"
+                href="/bts"
+                className="block text-[#525560] transition-colors duration-300 hover:text-[#003871]"
                 onClick={closeMenu}
               >
-                Blog
+                Behind the Scene (BTS)
               </Link>
             </li>
-            <li>
+
+            {/* Gallery */}
+            <li className="py-2">
               <Link
                 href="/gallery"
-                className="block px-4 py-2 font-bold hover:bg-[#003871] hover:text-white transition-all duration-300"
+                className="block text-[#525560] transition-colors duration-300 hover:text-[#003871]"
                 onClick={closeMenu}
               >
                 Gallery
               </Link>
             </li>
-            <li>
+
+            {/* Volunteer or Partner */}
+            <li className="py-2">
               <a
                 href="https://docs.google.com/forms/d/1ONaLrIKrSF0HZP4fsXOQd_7rOCsTNpmT0fvB7bY9TPg/edit"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="block px-4 py-2 font-bold hover:bg-[#003871] hover:text-white transition-all duration-300"
+                className="block text-[#525560] transition-colors duration-300 hover:text-[#003871]"
+                onClick={closeMenu}
               >
                 Volunteer Or Partner With Us
               </a>
             </li>
-            <li>
+
+            {/* Donate Button */}
+            <li className="py-2">
               <button
                 onClick={openModal}
-                className="block px-4 py-2 font-bold bg-[#003871] text-white hover:bg-[#DDF3FF] hover:text-[#003871] transition-all duration-300"
+                className="w-full text-center bg-[#003871] hover:bg-[#DDF3FF] hover:text-[#003871] text-white py-2 rounded-md"
               >
                 Donate
               </button>
@@ -247,13 +260,18 @@ const Navbar = () => {
         )}
       </nav>
 
-      {/* Donate Modal */}
-      {<Modal isOpen={isModalOpen} onClose={closeModal} />}
+      {/* Modal Component for Donate */}
+      {isModalOpen && <Modal isOpen={isModalOpen} onClose={closeModal} />}
     </>
   );
 };
 
 export default Navbar;
+
+
+
+
+
 
 
 

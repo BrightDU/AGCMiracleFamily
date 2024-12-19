@@ -2,6 +2,8 @@
 
 import React, { useState } from 'react';
 import type { StaticImageData } from 'next/image';
+import favicon from '../app/public/favicon.ico'; // Explicit import for favicon
+import Head from 'next/head'; // Import the Head component
 
 import 'tailwindcss/tailwind.css'; // This should be in your globals or _app.js
 import Navbar from '../app/components/Navbar';
@@ -77,6 +79,13 @@ const Gallary = () => {
 
   return (
     <>
+     {/* Add Favicon and Title */}
+     <Head>
+        {/* Add global favicon link for SSR */}
+        <link rel="icon" href={favicon.src} type="image/x-icon" sizes="any" />
+        <meta name="description" content="NGO, Charity, Support, Intervention programs, Nigeria, UK." />
+        <title>Gallery</title>
+      </Head>
       <Navbar />
       <section
         id="gallary"

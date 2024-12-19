@@ -7,6 +7,7 @@ import Services from "../app/components/Services";
 import Gallery from "../app/components/Gallery";
 
 import Testimonials from "../app/components/Testimonials"; // Import Testimonials component
+import Partner from "./components/partner";
 
 import Footer from "../app/components/Footer";
 import Hero2 from "../app/components/Hero2";
@@ -31,6 +32,7 @@ export default function Home() {
       <Gallery />
 
       <Testimonials />
+      <Partner />
 
       <Hero2 />
 

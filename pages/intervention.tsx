@@ -9,6 +9,8 @@ import Life from '../app/public/lifeskill.jpg';
 import Navbar from '../app/components/Navbar'; // Replace with the correct Navbar import path
 import HeroSection from '../app/components/Hero2'; // Replace with the correct HeroSection import path
 import Footer from '../app/components/Footer'; // Replace with the correct Footer import path
+import favicon from '../app/public/favicon.ico'; // Explicit import for favicon
+import Head from 'next/head'; // Import the Head component
 
 const Whatwedo = () => {
   const [isInView, setIsInView] = useState(false);
@@ -36,7 +38,14 @@ const Whatwedo = () => {
   }, []);
 
   return (
-    <div>
+    <>
+     {/* Add Favicon and Title */}
+     <Head>
+        {/* Add global favicon link for SSR */}
+        <link rel="icon" href={favicon.src} type="image/x-icon" sizes="any" />
+        <meta name="description" content="NGO, Charity, Support, Intervention programs, Nigeria, UK." />
+        <title>Intervention Programmes</title>
+      </Head>
       {/* Render Navbar */}
       <Navbar />
 
@@ -154,7 +163,7 @@ const Whatwedo = () => {
 
       {/* Render Footer */}
       <Footer />
-    </div>
+    </>
   );
 };
 

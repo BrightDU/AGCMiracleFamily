@@ -8,6 +8,35 @@ html {
   min-height: fit-content;
 }
 
+/* Tailwind CSS: Add animation class in your global CSS or Tailwind config */
+@keyframes moveCarousel {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+
+/* Make sure your partner images are evenly spaced and aligned */
+.carousel-container {
+  display: flex;
+  gap: 2rem; /* Space between items */
+  align-items: center; /* Align items vertically at the center */
+  justify-content: center; /* Align items horizontally at the center */
+}
+
+.carousel-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 128px;
+  height: 128px;
+  border-radius: 10px; /* Ensure images are circular */
+  overflow: hidden;
+}
+
 
 
 
