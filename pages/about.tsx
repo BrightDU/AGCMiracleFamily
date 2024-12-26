@@ -18,10 +18,10 @@ import member4 from '../app/public/member4.png';
 import Head from 'next/head'; // Import the Head component
 
 const teamMembers = [
-  { name: 'Jerome Bell', role: 'Marketing Coordinator', image: member1 },
-  { name: 'Leslie Alexander', role: 'Creative Director', image: member2 },
-  { name: 'Kristin Watson', role: 'Project Manager', image: member3 },
-  { name: 'Jacob Jones', role: 'UX Designer', image: member4 },
+  { name: 'ANIEKEME GEORGE', role: 'ED CEO', image: member1 },
+  { name: 'SYVESTER EBONG', role: 'MEMBER OF BOARD', image: member2 },
+  { name: 'EMMANUAL MORGAN', role: 'MEMBER OF BOARD', image: member3 },
+  { name: 'FAITH EBERECHI', role: 'OPERATIONS MANAGER', image: member4 },
 ];
 
 const About = () => {
