@@ -11,6 +11,7 @@ import Footer from '../app/components/Footer';
 import HeroSection from '../app/components/Hero2';
 import Image from 'next/image';
 import cardImage1 from '../app/public/gcard1.jpg';
+import whiteimg1 from '../app/public/whitehero1.jpg';
 import cardImage2 from '../app/public/gcard2.jpg';
 import cardImage3 from '../app/public/gcard3.jpg';
 import cardImage4 from '../app/public/gcard4.jpg';
@@ -22,23 +23,34 @@ import cardImage9 from '../app/public/gcard9.jpg';
 import cardImage10 from '../app/public/gcard10.jpg';
 import cardImage11 from '../app/public/gcard11.jpg';
 import cardImage12 from '../app/public/gcard12.jpg';
+import whiteimg2 from '../app/public/whitehero2.jpg';
+import whiteimg3 from '../app/public/whitehero3.jpg';
+import headerimage5 from '../app/public/headerimage5.png'
+import headerimage4 from '../app/public/headerimage4.png'
+import headerimage6 from '../app/public/headerimage6.png'
 import { FaArrowLeft, FaArrowRight, FaTimes } from 'react-icons/fa';
 import { motion } from 'framer-motion';
 
 const Gallary = () => {
   const cardData = [
     { id: 1, image: cardImage1 },
-    { id: 2, image: cardImage2 },
-    { id: 3, image: cardImage3 },
-    { id: 4, image: cardImage4 },
-    { id: 5, image: cardImage5 },
-    { id: 6, image: cardImage6 },
-    { id: 7, image: cardImage7 },
-    { id: 8, image: cardImage8 },
-    { id: 9, image: cardImage9 },
-    { id: 10, image: cardImage10 },
-    { id: 11, image: cardImage11 },
-    { id: 12, image: cardImage12 },
+    { id: 2, image: whiteimg1 },
+    { id: 3, image: cardImage2 },
+    { id: 4, image: cardImage3 },
+    { id: 5, image: cardImage4 },
+    { id: 6, image: cardImage5 },
+    { id: 7, image: cardImage6 },
+    { id: 8, image: cardImage7 },
+    { id: 9, image: cardImage8 },
+    { id: 10, image: cardImage9 },
+    { id: 11, image: cardImage10 },
+    { id: 12, image: cardImage11 },
+    { id: 13, image: cardImage12 },
+    { id: 14, image: whiteimg2 },
+    { id: 15, image: whiteimg3 },
+    { id: 16, image: headerimage5 },
+    { id: 17, image: headerimage4 },
+    { id: 18, image: headerimage6 },
   ];
 
   const [startIndex, setStartIndex] = useState(0);

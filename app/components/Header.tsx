@@ -5,17 +5,22 @@ import Image from 'next/image';
 
 // Import images
 import image1 from '../public/image1.png';
+import whitehero1 from '../public/whitehero1.jpg'
 import headerimage4 from '../public/headerimage4.png'
+
 import headerimage6 from '../public/headerimage6.png'
+import whitehero2 from '../public/whitehero2.jpg'
 import headerimage5 from '../public/headerimage5.png'
-import headerimage7 from '../public/headerimage7.png'
+
+
 import image2 from '../public/image2.png';
 import image3 from '../public/image3.png';
+import whitehero3 from '../public/whitehero3.jpg'
 
 const HeroSection = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
 
-  const images = [image1,headerimage4,headerimage6, image2,headerimage5, image3,headerimage7];
+  const images = [image1,whitehero1,headerimage4,headerimage6,whitehero2, image2,headerimage5, image3,whitehero3];
 
   useEffect(() => {
     const interval = setInterval(() => {
