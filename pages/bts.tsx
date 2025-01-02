@@ -141,12 +141,10 @@ const Bts = () => {
 
         {/* Team Section */}
               <div className="py-12 mt-[-10px]">
-                <h3 className="text-sm font-bold font-roboto font-[16px] tracking-wide text-[#1D2130] uppercase text-center">
+                <h3 className="text-sm font-bold font-roboto font-[30px] mb-5 tracking-wide text-[#1D2130] uppercase text-center">
                 THE BTS HALL OF FAME
                 </h3>
-                <h2 className="text-[32px] font-roboto font-regular text-[#6A6969] mt-2 text-center">
-                  Meet The Team
-                </h2>
+               
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
                   {teamMembers.map((member, index) => (
                     <div
