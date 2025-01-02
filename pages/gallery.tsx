@@ -28,8 +28,19 @@ import whiteimg3 from '../app/public/whitehero3.jpg';
 import headerimage5 from '../app/public/headerimage5.png'
 import headerimage4 from '../app/public/headerimage4.png'
 import headerimage6 from '../app/public/headerimage6.png'
+import missionImg from '../app/public/aboutpageimg.jpg'; // Ensure the path to the image is correct ttt
+import Skill1 from '../app/public/lifeskill.jpg';
+import Skill2 from '../app/public/skiller.jpg';
+import community from '../app/public/communityimg.jpg';
+import community2 from '../app/public/community.jpg';
+import education from '../app/public/educationimg.jpg';
+import Education from '../app/public/education.jpg';
+import healtha from '../app/public/healtha.jpg';
+import healthb from '../app/public/healthb.jpg';
+import Adcocacy from '../app/public/advocacy.jpg';
 import { FaArrowLeft, FaArrowRight, FaTimes } from 'react-icons/fa';
 import { motion } from 'framer-motion';
+
 
 const Gallary = () => {
   const cardData = [
@@ -51,6 +62,16 @@ const Gallary = () => {
     { id: 16, image: headerimage5 },
     { id: 17, image: headerimage4 },
     { id: 18, image: headerimage6 },
+    { id: 19, image: missionImg },
+    { id: 20, image: Skill1 },
+    { id: 21, image: Skill2 },
+    { id: 22, image: community },
+    { id: 23, image: community2 },
+    { id: 24, image: education },
+    { id: 25, image: Education },
+    { id: 26, image: healtha },
+    { id: 27, image: healthb},
+    { id: 28, image: Adcocacy },
   ];
 
   const [startIndex, setStartIndex] = useState(0);
