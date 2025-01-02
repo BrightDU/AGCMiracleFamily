@@ -34,6 +34,14 @@ import healthb from '../public/healthb.jpg';
 import Adcocacy from '../public/advocacy.jpg';
 import btsabout from '../public/btsaboutsection.jpg'; // Ensure the path to the image is correct
 
+
+import white4 from '../public/white4.jpg'; // Ensure the path to the image is correct
+import white5 from '../public/white5.jpg'; // Ensure the path to the image is correct
+import white6 from '../public/white6.jpg'; // Ensure the path to the image is correct
+import white7 from '../public/white7.jpg'; // Ensure the path to the image is correct
+import white8 from '../public/white8.jpg'; // Ensure the path to the image is correct
+import white9 from '../public/white9.jpg'; // Ensure the path to the image is correct
+
 import { FaArrowLeft, FaArrowRight, FaTimes } from 'react-icons/fa';
 
 const Gallery = () => {
@@ -67,6 +75,14 @@ const Gallery = () => {
     { id: 27, image: healthb},
     { id: 28, image: Adcocacy },
     { id: 29, image: btsabout },
+
+    { id: 30, image: white4 },
+
+    { id: 31, image: white5 },
+    { id: 32, image: white6 },
+    { id: 33, image: white7 },
+    { id: 34, image: white8 },
+    { id: 35, image: white9 },
   ];
 
   const [startIndex, setStartIndex] = useState(0);

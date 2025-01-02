@@ -123,21 +123,7 @@ const Bts = () => {
           </div>
         </div>
 
-        {/* How It Works Section */}
-        <div className="py-16 bg-[#DDF3FF] mt-[40px]">
-          <div className="text-center mb-10">
-            <h3 className="text-sm font-bold font-roboto text-[32px] tracking-wide text-[#1D2130] uppercase">
-              How It Works
-            </h3>
-            <p className="font-roboto text-[16px] text-[#1D2130] leading-[160%] sm:text-center text-left mt-6">
-              This will initially thrive through our social media handles, by identifying the celebrating the BTS people known as the BTS FACE OF THE MONTH campaign. These activities are aimed at driving traffic to our website as these posts will be promoted and people will engage with the posts based on their stories, and at the end of it, the face of the week will be selected and kept on the website gallery folder - THE BTS HALL OF FAME
-            </p>
-            <p className="font-roboto text-[16px] text-[#1D2130] leading-[160%] sm:text-center text-left mt-6">
-              We would then progress to inviting organisations and teams to nominate outstanding individuals who contribute significantly behind the scenes to the existence and sustenance of brands.
-              Through our BTS Project, we will share their stories, achievements, and the impact they make. By bringing these stories to light, we hope to celebrate their efforts and inspire young ones, carefully identify similar interests and create room for hands-on mentoring fostered by the relationship of CCF with the brand.
-            </p>
-          </div>
-        </div>
+        
 
         {/* Team Section */}
               <div className="py-12 mt-[-10px]">
@@ -179,7 +165,7 @@ const Bts = () => {
   <div className="relative z-10 text-center mx-auto px-4 sm:px-8 lg:px-12 xl:px-16">
     <div className="w-full sm:w-[870.35px] h-full bg-transparent flex flex-col justify-center items-center text-white mx-auto">
       <h1 className="text-[18px] font-roboto leading-[1.5] text-[#FFFFFF] font-bold sm:text-[25px] md:text-[45px] sm:leading-[1.3] font-semibold mt-8 mb-6 sm:mb-10">
-        Do you know a Behind The Scene Worker? Let&apos;s bring them to the Spotlight.
+        Do you know a Behind The Scene Worker? Let&apos;s bring them to Prominence.
       </h1>
 
       {/* Added text and arrow animation */}

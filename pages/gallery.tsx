@@ -39,6 +39,13 @@ import healtha from '../app/public/healtha.jpg';
 import healthb from '../app/public/healthb.jpg';
 import Adcocacy from '../app/public/advocacy.jpg';
 import btsabout from '../app/public/btsaboutsection.jpg'; // Ensure the path to the image is correct
+
+import white4 from '../app/public/white4.jpg'; // Ensure the path to the image is correct
+import white5 from '../app/public/white5.jpg'; // Ensure the path to the image is correct
+import white6 from '../app/public/white6.jpg'; // Ensure the path to the image is correct
+import white7 from '../app/public/white7.jpg'; // Ensure the path to the image is correct
+import white8 from '../app/public/white8.jpg'; // Ensure the path to the image is correct
+import white9 from '../app/public/white9.jpg'; // Ensure the path to the image is correct
 import { FaArrowLeft, FaArrowRight, FaTimes } from 'react-icons/fa';
 import { motion } from 'framer-motion';
 
@@ -74,6 +81,15 @@ const Gallary = () => {
     { id: 27, image: healthb},
     { id: 28, image: Adcocacy },
     { id: 29, image: btsabout },
+
+    { id: 30, image: white4 },
+
+    { id: 31, image: white5 },
+    { id: 32, image: white6 },
+    { id: 33, image: white7 },
+    { id: 34, image: white8 },
+    { id: 35, image: white9 },
+
   ];
 
   const [startIndex, setStartIndex] = useState(0);

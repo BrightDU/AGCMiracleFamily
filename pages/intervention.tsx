@@ -3,7 +3,7 @@
 import { useEffect, useState } from 'react';
 import Image from 'next/image';
 import 'tailwindcss/tailwind.css';
-import Maternal from '../app/public/maternal.jpg';
+import Maternal from '../app/public/aboutpageimg.jpg';  //maternal and child care picture edit 
 import Adolescent from '../app/public/adolesent.jpg';
 import Life from '../app/public/aboutBtsImage.jpg';
 import Navbar from '../app/components/Navbar'; // Replace with the correct Navbar import path
