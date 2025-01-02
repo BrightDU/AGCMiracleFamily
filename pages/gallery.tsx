@@ -38,6 +38,7 @@ import Education from '../app/public/education.jpg';
 import healtha from '../app/public/healtha.jpg';
 import healthb from '../app/public/healthb.jpg';
 import Adcocacy from '../app/public/advocacy.jpg';
+import btsabout from '../app/public/btsaboutsection.jpg'; // Ensure the path to the image is correct
 import { FaArrowLeft, FaArrowRight, FaTimes } from 'react-icons/fa';
 import { motion } from 'framer-motion';
 
@@ -72,6 +73,7 @@ const Gallary = () => {
     { id: 26, image: healtha },
     { id: 27, image: healthb},
     { id: 28, image: Adcocacy },
+    { id: 29, image: btsabout },
   ];
 
   const [startIndex, setStartIndex] = useState(0);

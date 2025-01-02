@@ -32,6 +32,7 @@ import Education from '../public/education.jpg';
 import healtha from '../public/healtha.jpg';
 import healthb from '../public/healthb.jpg';
 import Adcocacy from '../public/advocacy.jpg';
+import btsabout from '../public/btsaboutsection.jpg'; // Ensure the path to the image is correct
 
 import { FaArrowLeft, FaArrowRight, FaTimes } from 'react-icons/fa';
 
@@ -65,6 +66,7 @@ const Gallery = () => {
     { id: 26, image: healtha },
     { id: 27, image: healthb},
     { id: 28, image: Adcocacy },
+    { id: 29, image: btsabout },
   ];
 
   const [startIndex, setStartIndex] = useState(0);

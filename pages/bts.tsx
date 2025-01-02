@@ -56,7 +56,7 @@ const Bts = () => {
           </div>
         </div>
 
-        {/* Awards Section */}
+        {/* Awards Section
         <div className="py-12">
           <h2 className="text-center text-xl font-bold mb-8">Awards and Recognitions</h2>
           <div className="flex flex-wrap justify-center items-center gap-12">
@@ -85,7 +85,7 @@ const Bts = () => {
               <p className="text-gray-500 text-sm">2021</p>
             </div>
           </div>
-        </div>
+        </div> */}
 
         {/* About BTS Section */}
         <div className="flex flex-col md:flex-row justify-between items-center sm:ml-[20px] mx-auto mt-12 md:w-[1322px]">

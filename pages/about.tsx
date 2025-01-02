@@ -3,7 +3,7 @@ import Link from 'next/link'; // Import Link for navigation
 import Image from 'next/image';
 import Navbar from '../app/components/Navbar'; // Adjust the path based on your folder structure
 import Whatwedo from '../app/components/Whatwedo'; // Adjust the path to your Services component
-import missionImg from '../app/public/aboutpageimg.jpg'; // Ensure the path to the image is correct
+import btsabout from '../app/public/btsaboutsection.jpg'; // Ensure the path to the image is correct
 import 'tailwindcss/tailwind.css';
 import HeroSection from '../app/components/Hero2';
 import Footer from '../app/components/Footer';
@@ -73,7 +73,7 @@ const About = () => {
       >
         <div className="max-w-7xl mb-[-80px] sm:mb-[-380px] w-full">
           {/* Subtitle */}
-          <h3 className="font-roboto text-center font-bold text-sm sm:text-base tracking-[2px] text-[#1D2130] mx-auto mb-6">
+          <h3 className="font-roboto text-center mt-[50px] font-bold text-sm sm:text-base tracking-[2px] text-[#1D2130] mx-auto mb-6">
             About Us
           </h3>
 
@@ -90,11 +90,11 @@ const About = () => {
           {/* Image Section */}
           <div className="relative w-full max-w-[1200px] h-auto mt-12 mx-auto">
             <Image
-              src={missionImg}
+              src={btsabout}
               alt="Relevant Image"
               layout="responsive"
               width={1200}
-              height={556}
+              height={656}
               style={{ objectFit: 'cover' }}
               className="rounded-lg"
             />
