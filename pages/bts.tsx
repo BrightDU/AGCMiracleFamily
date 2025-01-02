@@ -3,7 +3,7 @@
 import 'tailwindcss/tailwind.css'; // Ensure TailwindCSS is applied
 import Image from 'next/image'; // Import the Image component
 import heroBackground from '../app/public/btsheroimg.png'; // Replace with your actual path
-import aboutBtsImage from '../app/public/whitehero2.jpg'; // Replace with the image path for the About BTS section
+import aboutBtsImage from '../app/public/white5.jpg'; // Replace with the image path for the About BTS section
 import Footer from '../app/components/Footer';
 import image1 from '../app/public/btsannouce.jpeg';
 import Head from 'next/head'; // Import the Head component
