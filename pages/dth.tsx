@@ -31,7 +31,7 @@ const Bts = () => {
         <title>Digital Empowerment Hub(DTH)</title>
       </Head>
 
-      <div className="overflow-x-hidden sm:w-full w-[500px]">
+      <div className="overflow-x-hidden sm:w-full w-[700px]">
         {/* Navbar */}
         <BtsNavbar />
 
@@ -62,23 +62,23 @@ const Bts = () => {
 
     {/* second image  Image */}
     <div className="w-full md:w-1/3 shadow-lg rounded-lg overflow-hidden">
-      <Image src={second} alt="Kids Engaged in Digital Learning" className="w-full h-60 object-cover" />
+      <Image src={second} alt="Kids Engaged in Digital Learning" className="w-full h-[500px] sm:h-60 object-cover" />
     </div>
 
      {/* Left Image */}
      <div className="w-full md:w-1/3 shadow-lg rounded-lg overflow-hidden">
-      <Image src={dthkidd} alt="Kids Learning Tech" className="w-full h-[300px] object-cover" />
+      <Image src={dthkidd} alt="Kids Learning Tech" className="w-full h-[600px] sm:h-[300px] object-cover" />
     </div>
       
 
      {/* third image        */}
     <div className="w-full md:w-1/3 shadow-lg rounded-lg overflow-hidden">
-      <Image src={third} alt="Kids Engaged in Digital Learning" className="w-full h-60 object-cover" />
+      <Image src={third} alt="Kids Engaged in Digital Learning" className="w-full h-[500px] sm:h-60 object-cover" />
     </div>
   </div>
 </div>
 {/* Digital Empowerment for Kids Section */}
-<div className="container mx-auto px-6 py-16 text-left sm:w-full w-[500px] sm:mt-[-30px] sm:text-center mt-[150px]">
+<div className="container mx-auto px-6 py-16 text-left sm:w-full w-[700px] sm:mt-[-30px] sm:text-center mt-[150px]">
   <h2 className="text-3xl font-bold  text-[#003771] font-roboto  sm:text-4xl">Digital Empowerment for Kids</h2>
   <p className="mt-4 font-roboto  font-normal text-[20px] max-w-2xl mx-auto">
     In today's digital world, equipping children with the right technological skills is crucial. 
@@ -101,24 +101,24 @@ const Bts = () => {
 
     {/* second image  Image */}
     <div className="w-full md:w-1/3 shadow-lg rounded-lg overflow-hidden">
-      <Image src={fourth} alt="Kids Engaged in Digital Learning" className="w-full h-[400px] object-cover" />
+      <Image src={fourth} alt="Kids Engaged in Digital Learning" className="w-full h-[600px] sm:h-[400px] object-cover" />
     </div>
 
      {/* Left Image */}
      <div className="w-full md:w-1/3 shadow-lg rounded-lg overflow-hidden">
-      <Image src={fifth} alt="Kids Learning Tech" className="w-full h-[300px] object-cover" />
+      <Image src={fifth} alt="Kids Learning Tech" className="w-full h-[600px] sm:h-[300px] object-cover" />
     </div>
       
 
      {/* third image        */}
     <div className="w-full md:w-1/3 shadow-lg rounded-lg overflow-hidden">
-      <Image src={sixth} alt="Kids Engaged in Digital Learning" className="w-full h-[400px] object-cover" />
+      <Image src={sixth} alt="Kids Engaged in Digital Learning" className="w-full h-[700px] sm:h-[400px] object-cover" />
     </div>
   </div>
 </div>
 
 {/* Digital Empowerment for Kids Section */}
-<div className="container mx-auto px-6 py-16 text-left  sm:w-full w-[500px] sm:mt-[-30px] sm:text-center">
+<div className="container mx-auto px-6 py-16 text-left  sm:w-full w-[700px] sm:mt-[-30px] mt-[-50px] sm:mb-auto sm:text-center">
   <h2 className="text-3xl text-[#003771] font-roboto font-bold  sm:text-4xl">Digital Empowerment for Youths and Middle-aged</h2>
   <p className="mt-4  font-roboto ont-normal text-[20px] max-w-2xl mx-auto">
   Digital Empowerment for Youths and Middle-Aged**  
@@ -145,7 +145,7 @@ In today's fast-paced digital world, equipping youths and middle-aged individual
 
 
         {/* Footer */}
-        <div className="mb-[-70px] text-left ml-[-30px]  w-[500px] sm:w-[1268px]">
+        <div className="mb-[-70px] text-left ml-[-30px]  w-[700px] sm:w-[1268px]">
   <Footer />
 </div>
 
