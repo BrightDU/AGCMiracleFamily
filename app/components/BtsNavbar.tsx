@@ -60,9 +60,9 @@ const Navbar = () => {
   return (
     <>
       <nav
-        className={`bg-[#FFFFFF] text-[#525560] font-roboto font-medium py-4 fixed top-0 w-full z-50 transition-all duration-700 ease-out ${animate ? 'opacity-100' : 'opacity-0 translate-y-[-100%]'}`}
+        className={`bg-[#FFFFFF] text-[#525560] font-roboto font-medium py-4 fixed top-0 w-full z-50  transition-all duration-700 ease-out ${animate ? 'opacity-100' : 'opacity-0 translate-y-[-100%]'}`}
         ref={navContainerRef}
-        style={{ fontSize: '16px', lineHeight: '18.75px' }}
+        style={{ fontSize: '14px', lineHeight: '18.75px' }}
       >
         <div className="container mx-auto flex justify-between items-center px-4 sm:px-6 lg:px-8 h-16">
           {/* Logo */}
@@ -75,7 +75,7 @@ const Navbar = () => {
          
 
           {/* Desktop Navigation Links */}
-          <ul className="hidden md:flex space-x-6 items-center mx-auto">
+          <ul className="hidden md:flex space-x-6  md:mr-[-10px] items-center mx-auto">
             {[{ name: 'Home', link: '/' }, { name: 'About', link: '/about' }].map(({ name, link }) => (
               <li key={name}>
                 <Link
@@ -99,7 +99,7 @@ const Navbar = () => {
               </button>
               {desktopProgramsDropdownOpen && (
                 <ul className="absolute left-0 mt-2 bg-[#DDF3FF] shadow-lg rounded-md overflow-hidden w-52">
-                  {[{ name: 'Maternal, Child and Adolescent Care', link: '/intervention' }, { name: 'Life Skills', link: '/Lifeskill' }, { name: 'Community Development', link: '/community-development' }, { name: 'Health Intervention', link: '/health-intervention' }, { name: 'Education Intervention', link: '/education-intervention' }, { name: 'Advocacy', link: '/advocacy' }].map(({ name, link }) => (
+                  {[{ name: 'Maternal, Child and Adolescent Care', link: '/intervention' }, { name: 'Life Skills', link: '/Lifeskill' },{ name: 'Digital Empowerment for Kids', link: '/dth' },{ name: 'Digital Empowerment for Youths and Middle-aged', link: '/dth' }, { name: 'Community Development', link: '/community-development' }, { name: 'Health Intervention', link: '/health-intervention' }, { name: 'Education Intervention', link: '/education-intervention' }, { name: 'Advocacy', link: '/advocacy' }].map(({ name, link }) => (
                     <li key={name}>
                       <Link
                         href={link}
@@ -112,6 +112,20 @@ const Navbar = () => {
                   ))}
                 </ul>
               )}
+            </li>
+
+
+
+             {/* DTH */}
+             <li>
+              <Link
+                href="/dth"
+                className="relative py-2 group inline-block text-[#525560] transition-colors duration-300 hover:text-[#003871]"
+                target="_blank"
+              >
+                Digital Empowerment Hub (DEH)
+                <span className="absolute left-0 bottom-0 w-0 h-[2px] bg-[#003871] transition-all duration-300 group-hover:w-full"></span>
+              </Link>
             </li>
 
             {/* Behind the Scene */}
@@ -145,7 +159,7 @@ const Navbar = () => {
                 rel="noopener noreferrer"
                 className="relative py-2 group inline-block text-[#525560] transition-colors duration-300 hover:text-[#003871]"
               >
-                Volunteer Or Partner With Us
+                 Partner With Us
                 <span className="absolute left-0 bottom-0 w-0 h-[2px] bg-[#003871] transition-all duration-300 group-hover:w-full"></span>
               </a>
             </li>
@@ -194,7 +208,7 @@ const Navbar = () => {
               </button>
               {mobileProgramsDropdownOpen && (
                 <ul className="pl-4 mt-2">
-                  {[{ name: 'Maternal, Child and Adolescent Care', link: '/intervention' }, { name: 'Life Skills', link: '/Lifeskill' }, { name: 'Community Development', link: '/community-development' }, { name: 'Health Intervention', link: '/health-intervention' }, { name: 'Education Intervention', link: '/education-intervention' }, { name: 'Advocacy', link: '/advocacy' }].map(({ name, link }) => (
+                  {[{ name: 'Maternal, Child and Adolescent Care', link: '/intervention' }, { name: 'Life Skills', link: '/Lifeskill' },{ name: 'Digital Empowerment for Kids', link: '/dth' },{ name: 'Digital Empowerment for Youths and Middle-aged', link: '/dth' }, { name: 'Community Development', link: '/community-development' }, { name: 'Health Intervention', link: '/health-intervention' }, { name: 'Education Intervention', link: '/education-intervention' }, { name: 'Advocacy', link: '/advocacy' }].map(({ name, link }) => (
                     <li key={name} className="py-3">
                       <Link
                         href={link}
@@ -208,6 +222,25 @@ const Navbar = () => {
                 </ul>
               )}
             </li>
+     
+
+             {/* dth */}
+             <li className="py-2">
+              <Link
+                href="/dth"
+                className="block text-[#003771] text-[20px] transition-colors duration-300 hover:text-[#003871]"
+                onClick={closeMenu}
+              >
+                Digital Empowerment Hub (DEH)
+              </Link>
+            </li>
+
+
+
+
+
+
+
 
             {/* BTS */}
             <li className="py-2">

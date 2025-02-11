@@ -6,6 +6,7 @@ import Image from 'next/image';
 import cardImage1 from '../public/card1.png'; // Replace with the actual path for the first card image
 import cardImage2 from '../public/card2.png'; // Replace with the actual path for the second card image
 import cardImage3 from '../public/card3.png'; // Replace with the actual path for the third card image
+import cardImage4 from '../public/dthadult2.png'; //  digital empowerment for adult pic 
 
 const Whatwedo = () => {
   const [isInView, setIsInView] = useState(false);
@@ -56,6 +57,12 @@ const Whatwedo = () => {
       title: 'Life Skill',
       text: 'Our programs aim to build confidence and self-sufficiency for our target population, equipping them with the skills necessary to thrive.',
     },
+    {
+      id: 4,
+      image: cardImage4,
+      title: 'Digital Empowerment Hub (DEH)',
+      text: 'Our Digital Empowerment Hub aims to empower school-age children, teens, adult with digital literacy and skills that prepare them for the demands of the modern workforce. It also provides employment opportunities in the digital space, aligning with the Sustainable Development Goals (SDGs) by promoting quality education, reducing inequalities, and creating decent work opportunities for all.',
+    },
   ];
 
   return (
@@ -87,11 +94,11 @@ const Whatwedo = () => {
 </p>
 
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mt-12 mb-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 sm:ml-[-160px] md:grid-cols-4 gap-10 sm:gap-[170px] mt-12 mb-6">
           {cardData.map((card) => (
             <div
               key={card.id}
-              className="flex flex-col bg-white border border-gray-200 rounded-lg overflow-hidden shadow-lg h-full"
+              className="flex flex-col bg-white border border-gray-200 rounded-lg overflow-hidden sm:w-[300px]   shadow-lg  sm:h-[500px] h-full"
             >
               <div className="h-48">
                 <Image
@@ -106,7 +113,7 @@ const Whatwedo = () => {
                 <h3 className="font-roboto font-bold text-[20px] text-center text-gray-800 mb-4">
                   {card.title}
                 </h3>
-                <p className="font-roboto font-normal text-[12px] text-sm text-gray-700 mb-6">
+                <p className="font-roboto font-normal sm:w-[280px] text-[12px] text-sm text-gray-700 mb-6">
                   {card.text}
                 </p>
                 <div className="mt-auto text-center"></div>
