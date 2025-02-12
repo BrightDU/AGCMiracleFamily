@@ -28,7 +28,7 @@ const Bts = () => {
       <Head>
         <link rel="icon" href={favicon.src} type="image/x-icon" sizes="any" />
         <meta name="description" content="NGO, Charity, Support, Intervention programs, Nigeria, UK." />
-        <title>Digital Empowerment Hub(DTH)</title>
+        <title>Digital Empowerment Hub(DEH)</title>
       </Head>
 
       <div className="overflow-x-hidden sm:w-full w-[700px]">

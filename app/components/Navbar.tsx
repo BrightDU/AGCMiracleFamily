@@ -99,7 +99,7 @@ const Navbar = () => {
               </button>
               {desktopProgramsDropdownOpen && (
                 <ul className="absolute left-0 mt-2 bg-[#DDF3FF] shadow-lg rounded-md overflow-hidden w-52">
-                  {[{ name: 'Maternal, Child and Adolescent Care', link: '/intervention' }, { name: 'Life Skills', link: '/Lifeskill' },{ name: 'Digital Empowerment for Kids', link: '/dth' },{ name: 'Digital Empowerment for Youths and Middle-aged', link: '/dth' }, { name: 'Community Development', link: '/community-development' }, { name: 'Health Intervention', link: '/health-intervention' }, { name: 'Education Intervention', link: '/education-intervention' }, { name: 'Advocacy', link: '/advocacy' }].map(({ name, link }) => (
+                  {[{ name: 'Maternal, Child and Adolescent Care', link: '/intervention' }, { name: 'Life Skills', link: '/Lifeskill' },{ name: 'Digital Empowerment for Kids', link: '/deh' },{ name: 'Digital Empowerment for Youths and Middle-aged', link: '/deh' }, { name: 'Community Development', link: '/community-development' }, { name: 'Health Intervention', link: '/health-intervention' }, { name: 'Education Intervention', link: '/education-intervention' }, { name: 'Advocacy', link: '/advocacy' }].map(({ name, link }) => (
                     <li key={name}>
                       <Link
                         href={link}
@@ -118,7 +118,7 @@ const Navbar = () => {
            {/* DTH */}
             <li>
               <Link
-                href="/dth"
+                href="/deh"
                 className="relative py-2 group inline-block text-[#525560] transition-colors duration-300 hover:text-[#003871]"
                 target="_blank"
               >
@@ -225,7 +225,7 @@ const Navbar = () => {
               </button>
               {mobileProgramsDropdownOpen && (
                 <ul className="pl-4 mt-2">
-                  {[{ name: 'Maternal, Child and Adolescent Care', link: '/intervention' }, { name: 'Life Skills', link: '/Lifeskill' },{ name: 'Digital Empowerment for Kids', link: '/dth' },{ name: 'Digital Empowerment for Youths and Middle-aged', link: '/dth' }, { name: 'Community Development', link: '/community-development' }, { name: 'Health Intervention', link: '/health-intervention' }, { name: 'Education Intervention', link: '/education-intervention' }, { name: 'Advocacy', link: '/advocacy' }].map(({ name, link }) => (
+                  {[{ name: 'Maternal, Child and Adolescent Care', link: '/intervention' }, { name: 'Life Skills', link: '/Lifeskill' },{ name: 'Digital Empowerment for Kids', link: '/deh' },{ name: 'Digital Empowerment for Youths and Middle-aged', link: '/deh' }, { name: 'Community Development', link: '/community-development' }, { name: 'Health Intervention', link: '/health-intervention' }, { name: 'Education Intervention', link: '/education-intervention' }, { name: 'Advocacy', link: '/advocacy' }].map(({ name, link }) => (
                     <li key={name} className="py-3">
                       <Link
                         href={link}
@@ -244,7 +244,7 @@ const Navbar = () => {
               {/* dth */}
               <li className="py-2">
               <Link
-                href="/dth"
+                href="/deh"
                 className="block text-[#003771]  text-[20px] transition-colors duration-300 hover:text-[#003871]"
                 onClick={closeMenu}
               >
