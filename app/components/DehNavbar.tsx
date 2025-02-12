@@ -60,15 +60,15 @@ const Navbar = () => {
   return (
     <>
       <nav
-        className={`bg-[#FFFFFF] text-[#525560] font-roboto font-medium py-4 fixed top-0 w-full z-50  transition-all duration-700 ease-out ${animate ? 'opacity-100' : 'opacity-0 translate-y-[-100%]'}`}
+        className={`bg-[#FFFFFF] text-[#525560] font-roboto  sm:h-auto h-[170px] font-medium py-4 fixed top-0 w-full z-50  transition-all duration-700 ease-out ${animate ? 'opacity-100' : 'opacity-0 translate-y-[-100%]'}`}
         ref={navContainerRef}
         style={{ fontSize: '14px', lineHeight: '18.75px' }}
       >
-        <div className="container mx-auto flex justify-between items-center px-4 sm:px-6 lg:px-8 h-16">
+        <div className="container mx-auto flex justify-between  items-center px-4 sm:px-6 lg:px-8 h-16">
           {/* Logo */}
 
           <div className="flex items-center">
-              <Link href="/" className="hover:text-[#93e9be] sm:ml-[-6px] w-[100px] mb-[-1px] transition-all duration-300">
+              <Link href="/" className="hover:text-[#93e9be] sm:ml-[-6px] sm:h-auto sm:mt-auto mt-[70px]  w-[500px] sm:w-[100px] mb-[-1px] transition-all duration-300">
               <Image src={loo} alt="Logo" width={147} height={50} className="object-cover" />
                
               </Link>
@@ -174,7 +174,7 @@ const Navbar = () => {
           </ul>
 
           {/* Hamburger Menu for Mobile */}
-          <div className="md:hidden text-[#003871] mr-7">
+          <div className="md:hidden mt-[70px] text-[#003871] mr-7">
             <button onClick={toggleMenu} className="focus:outline-none">
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-8 h-8">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16m-7 6h7" />
