@@ -15,12 +15,14 @@ import headerimage5 from '../public/headerimage5.png'
 
 import image2 from '../public/image2.png';
 import image3 from '../public/image3.png';
+import crystalslide from '../public/heroslidecrystal.jpg'
+import crystal from '../public/heroslidecrystal1.jpg'
 import whitehero3 from '../public/whitehero3.jpg'
 
 const HeroSection = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
 
-  const images = [image1,whitehero1,headerimage4,headerimage6,whitehero2, image2,headerimage5, image3,whitehero3];
+  const images = [image1, crystalslide,whitehero1,headerimage4,crystal ,headerimage6,whitehero2, image2,headerimage5, image3,whitehero3];
 
   useEffect(() => {
     const interval = setInterval(() => {
