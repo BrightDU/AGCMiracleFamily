@@ -81,7 +81,7 @@ const Bts = () => {
 <div className="container mx-auto px-6 py-16 text-left sm:w-full w-[700px] sm:mt-[-30px] sm:text-center mt-[150px]">
   <h2 className="text-3xl font-bold  text-[#003771] font-roboto  sm:text-4xl">Digital Empowerment for Kids and Teens</h2>
   <p className="mt-4 font-roboto  font-normal text-[20px] max-w-2xl mx-auto">
-    In today's digital world, equipping children with the right technological skills is crucial. 
+    In today&apos;s digital world, equipping children with the right technological skills is crucial. 
     Our program focuses on nurturing young minds, fostering creativity, and teaching essential 
     digital skills. Through interactive lessons, mentorship, and hands-on projects, we prepare 
     kids to thrive in the evolving tech landscape. This initiative ensures that no child is left 
