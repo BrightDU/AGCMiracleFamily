@@ -123,10 +123,10 @@ const Bts = () => {
   <p className="mt-4  font-roboto ont-normal text-[20px] max-w-2xl mx-auto">
   Digital Empowerment for Youths and Middle-Aged**  
 
-In today's fast-paced digital world, equipping youths and middle-aged individuals with essential digital skills is crucial for personal and professional growth. Digital empowerment fosters innovation,
+In today&apos;s fast-paced digital world, equipping youths and middle-aged individuals with essential digital skills is crucial for personal and professional growth. Digital empowerment fosters innovation,
  enhances career opportunities, and bridges the gap between technology and everyday life. 
  By providing access to digital tools, training, and resources, we enable individuals to adapt, 
- thrive, and contribute meaningfully to society. Whether it's coding, digital marketing, data analytics, 
+ thrive, and contribute meaningfully to society. Whether it&apos;s coding, digital marketing, data analytics, 
  or entrepreneurship, digital literacy opens doors to endless possibilities, ensuring a more inclusive and progressive future for all.
   </p>
 
