@@ -2,7 +2,8 @@
 
 import 'tailwindcss/tailwind.css'; // Ensure TailwindCSS is applied
 import Image from 'next/image'; // Import the Image component
-import heroBackground from '../app/public/dthdemo.jpg'; //  dth demo pic 
+ 
+import { useState, useEffect } from 'react';
 
 import dthkidd from '../app/public/digitalteen.png'; //   digital empowerment for kid pic 
 import second from '../app/public/digitalkid.png'; //  digital empowerment for kid pic 
@@ -19,8 +20,29 @@ import BtsNavbar from '@/app/components/DehNavbar';
 
 // Import team member images
 
+// Import images
+import image1 from '../app/public/dehcrystalslide1.jpg'
+import image2 from '../app/public/dehcrystalslide2.jpg'
+import image3 from '../app/public/dehcrystalslide3.jpg'
 
-const Bts = () => {
+import image4 from '../app/public/dehcrystalslide4.jpg'
+
+
+
+
+
+const Deh = () => {
+  const [currentSlide, setCurrentSlide] = useState(0);
+
+  const images = [image1, image2, image3, image4];
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % images.length);
+    }, 3000);
+
+    return () => clearInterval(interval);
+  }, [images.length]); // Add images.length as a dependency
   
   return (
     <>
@@ -31,57 +53,60 @@ const Bts = () => {
         <title>Digital Empowerment Hub(DEH)</title>
       </Head>
 
-      <div className="overflow-x-hidden sm:w-full w-[700px]">
+      <div className="overflow-x-hidden sm:w-full w-[110vh]">
         {/* Navbar */}
         <BtsNavbar />
 
-        {/* Hero Section */}
-        <div className="relative w-full h-[700px] flex flex-col justify-center items-center text-center">
-          <Image
-            src={heroBackground}
-            alt="BTS Background"
-            layout="fill"
-            objectFit="cover"
-            objectPosition="center"
-            priority
-          />
-         
-        </div>
+         {/* Background Images */}
+              <div className="absolute sm:w-auto sm:w-full w-[115vh] py-0 px-0 inset-0 transition-all duration-1000 ease-in-out">
+                <Image
+                  src={images[currentSlide]}
+                  alt="Slideshow Image"
+                  layout="fill"
+                  objectFit="cover"
+                  objectPosition="center"
+                  priority
+                />
+                <div className="absolute inset-0 bg-black bg-opacity-40"></div>
+              </div>
 
-        <div className='pt-[50px]'>
+        <div className='pt-[50px] mt-[800px] sm:mt-[530px]'>
           <h1 className='text-[20px]  text-center font-bold mt-[90px]  text-[#003771] font-roboto  sm:text-[30px]'>Digital Empowerment Hub (DEH)</h1>
         </div>
+        <p className="mt-4 font-roboto mb-[-140px] sm:text-center text-left  font-normal text-[20px] max-w-2xl mx-auto">
+        This project has successfully trained and graduated over 2,000 trainees from various cohorts, all driven by a singular goal—achieving digital equity and fluency among talented young individuals with limited access to training and essential infrastructure. To expand our reach and ensure widespread impact across underserved communities and slums in Nigeria, we collaborate with leading digital hubs. Our activities include hands-on training, personalized mentorship sessions, and recommendations for organizational placement to maximize the relevance and application of acquired skills. We also regularly announce and offer scholarship opportunities to interested candidates while tracking progress based on our structured training curriculum.
+        </p>
 
 
 
 
   {/* Image Cards Section */}
-  <div className="mt-[310px] flex flex-col md:flex-row justify-center  items-center gap-8">
+  <div className="mt-[310px] sm:w-full w-[115vh] sm:ml-auto ml-[20px] sm:mr-auto ml-[-10px] flex flex-col md:flex-row justify-center  items-center gap-8">
     
    
 
     {/* second image  Image */}
     <div className="w-full md:w-1/3 shadow-lg rounded-lg overflow-hidden">
-      <Image src={second} alt="Kids Engaged in Digital Learning" className="w-full h-[500px] sm:h-60 object-cover" />
+      <Image src={second} alt="Kids Engaged in Digital Learning" className="w-full h-[700px] sm:h-60 object-cover" />
     </div>
 
      {/* Left Image */}
      <div className="w-full md:w-1/3 shadow-lg rounded-lg overflow-hidden">
-      <Image src={dthkidd} alt="Kids Learning Tech" className="w-full h-[600px] sm:h-[300px] object-cover" />
+      <Image src={dthkidd} alt="Kids Learning Tech" className="w-full h-[800px] sm:h-[300px] object-cover" />
     </div>
       
 
      {/* third image        */}
     <div className="w-full md:w-1/3 shadow-lg rounded-lg overflow-hidden">
-      <Image src={third} alt="Kids Engaged in Digital Learning" className="w-full h-[500px] sm:h-60 object-cover" />
+      <Image src={third} alt="Kids Engaged in Digital Learning" className="w-full h-[600px] sm:h-60 object-cover" />
     </div>
   </div>
 </div>
 {/* Digital Empowerment for Kids Section */}
-<div className="container mx-auto px-6 py-16 text-left sm:w-full w-[700px] sm:mt-[-30px] sm:text-center mt-[150px]">
+<div className="container mx-auto px-6 py-16 text-center sm:w-full w-[115vh] sm:mt-[-30px] sm:text-center mt-[150px]">
   <h2 className="text-3xl font-bold  text-[#003771] font-roboto  sm:text-4xl">Digital Empowerment for Kids and Teens</h2>
   <p className="mt-4 font-roboto  font-normal text-[20px] max-w-2xl mx-auto">
-    In today's digital world, equipping children with the right technological skills is crucial. 
+    In today&apos;s digital world, equipping children with the right technological skills is crucial. 
     Our program focuses on nurturing young minds, fostering creativity, and teaching essential 
     digital skills. Through interactive lessons, mentorship, and hands-on projects, we prepare 
     kids to thrive in the evolving tech landscape. This initiative ensures that no child is left 
@@ -101,32 +126,32 @@ const Bts = () => {
 
     {/* second image  Image */}
     <div className="w-full md:w-1/3 shadow-lg rounded-lg overflow-hidden">
-      <Image src={fourth} alt="Kids Engaged in Digital Learning" className="w-full h-[600px] sm:h-[400px] object-cover" />
+      <Image src={fourth} alt="Kids Engaged in Digital Learning" className="w-full h-[1000px] sm:h-[400px] object-cover" />
     </div>
 
      {/* Left Image */}
      <div className="w-full md:w-1/3 shadow-lg rounded-lg overflow-hidden">
-      <Image src={fifth} alt="Kids Learning Tech" className="w-full h-[600px] sm:h-[300px] object-cover" />
+      <Image src={fifth} alt="Kids Learning Tech" className="w-full h-[1000px] sm:h-[300px] object-cover" />
     </div>
       
 
      {/* third image        */}
     <div className="w-full md:w-1/3 shadow-lg rounded-lg overflow-hidden">
-      <Image src={sixth} alt="Kids Engaged in Digital Learning" className="w-full h-[700px] sm:h-[400px] object-cover" />
+      <Image src={sixth} alt="Kids Engaged in Digital Learning" className="w-full h-[1100px] sm:h-[400px] object-cover" />
     </div>
   </div>
 </div>
 
 {/* Digital Empowerment for Kids Section */}
-<div className="container mx-auto px-6 py-16 text-left  sm:w-full w-[700px] sm:mt-[-30px] mt-[-50px] sm:mb-auto sm:text-center">
+<div className="container mx-auto px-6 py-16 text-center  sm:w-full w-[110vh] sm:mt-[-30px] mt-[-50px] sm:mb-auto sm:text-center">
   <h2 className="text-3xl text-[#003771] font-roboto font-bold  sm:text-4xl">Digital Empowerment for Youths and Middle-aged</h2>
   <p className="mt-4  font-roboto ont-normal text-[20px] max-w-2xl mx-auto">
-  Digital Empowerment for Youths and Middle-Aged**  
+  Digital Empowerment for Youths and Middle-Aged  
 
-In today's fast-paced digital world, equipping youths and middle-aged individuals with essential digital skills is crucial for personal and professional growth. Digital empowerment fosters innovation,
+In today&apos;s fast-paced digital world, equipping youths and middle-aged individuals with essential digital skills is crucial for personal and professional growth. Digital empowerment fosters innovation,
  enhances career opportunities, and bridges the gap between technology and everyday life. 
  By providing access to digital tools, training, and resources, we enable individuals to adapt, 
- thrive, and contribute meaningfully to society. Whether it's coding, digital marketing, data analytics, 
+ thrive, and contribute meaningfully to society. Whether it&apos;s coding, digital marketing, data analytics, 
  or entrepreneurship, digital literacy opens doors to endless possibilities, ensuring a more inclusive and progressive future for all.
   </p>
 
@@ -145,7 +170,7 @@ In today's fast-paced digital world, equipping youths and middle-aged individual
 
 
         {/* Footer */}
-        <div className="mb-[-70px] text-left ml-[-30px]  w-[700px] sm:w-[1268px]">
+        <div className="mb-[-70px] text-left ml-[-30px]  w-[115vh] sm:w-[1268px]">
   <Footer />
 </div>
 
@@ -175,4 +200,4 @@ In today's fast-paced digital world, equipping youths and middle-aged individual
   );
 };
 
-export default Bts;
+export default Deh;

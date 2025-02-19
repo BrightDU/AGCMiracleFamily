@@ -110,7 +110,9 @@ const Footer = () => {
           </p>
           <h4 className="text-lg font-semibold mb-4">Address</h4>
           <p className="text-sm leading-6 mt-2">
-            HQ - 222 Ekpri Nsukara Estate, Uyo, Nigeria; <br />
+            HQ – 222 Ekpri Nsukara Estate, Uyo, Nigeria.<br />
+            Mailing Address – 5 Garba Abbas Road, TMC Complex, Barnawa Kaduna, Nigeria.
+          <br />
             Foreign Mission - 36 Poundway, OXFORD, ENGLAND, OX4 3XX.
           </p>
         </div>

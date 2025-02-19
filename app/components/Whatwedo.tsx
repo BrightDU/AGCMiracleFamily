@@ -93,6 +93,10 @@ const Whatwedo = () => {
   Our charity&apos;s social impacts are research-driven and focus on reaching underserved populations, particularly those in slums and remote communities. These efforts address key thematic areas such as Maternal and Child Health, Safe Delivery Services, Nutrition and Early Childhood (Neuro)development, Maternal Literacy, Education, Advocacy, Adolescent Sexual and Reproductive Health (ASRH), Life Skills Development, and Mentorship Programs. Additionally, our work extends to community development projects tailored to meet pressing needs that enhance child care and overall well-being.
 </p>
 
+<p className="font-roboto font-normal text-sm sm:text-base leading-relaxed text-[#525560] mx-auto text-left sm:text-left mb-3">
+We are actively advancing equitable access to digital empowerment through our Digital Empowerment Hub (DEH) program, designed to support young individuals in underserved communities who face systemic exclusion. This initiative equips them with the skills needed to participate in the digital economy, enhance their employability, and compete effectively in the global market. The DEH project&apos;s growing impact is evident through our cutting-edge partner hubs, mentorship programs, and the job opportunities available to our trainees.
+</p>
+
 
         <div className="grid grid-cols-1 sm:grid-cols-2 sm:ml-[-160px] md:grid-cols-4 gap-10 sm:gap-[170px] mt-12 mb-6">
           {cardData.map((card) => (

@@ -54,7 +54,7 @@ const About = () => {
               Our Mission
             </h3>
             <p className="font-roboto font-normal  text-sm sm:text-base leading-relaxed text-[#525560]">
-              Our mission is to empower every child by enhancing maternal and child health, nutrition, and supportive development; promoting maternal literacy, advocacy, education, and implementing research-based interventions for a virtuous society.
+            Our mission is to empower every child by improving maternal and child health, nutrition, and early childhood development. We strive to promote maternal literacy, advocacy, education, and digital empowerment for young individuals while implementing research-driven interventions to foster a virtuous society.
             </p>
           </div>
 

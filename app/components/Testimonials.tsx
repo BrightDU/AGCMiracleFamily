@@ -6,6 +6,7 @@ import Image from 'next/image';
 // Import images for testimonials
 import testimonialImage1 from '../public/testimonial1.jpg'; // Adjust path as needed
 import testimonialImage2 from '../public/testimonial2.jpg'; // Adjust path as needed
+import testimonialImage3 from '../public/member1.png';
 
 
 
@@ -25,9 +26,9 @@ const testimonials = [
     title: "Founder & Chief Encouragement Officer",
   },
   {
-    image:  "",
+    image:  testimonialImage3,
     quote:
-      "As my due date approached, my health began to decline due to malnutrition, and I feared for my baby's well-being. Fortunately, during one of my visits to the local health center, I unexpectedly encountered representatives from Carelife Character Foundation. Their kindness, encouragement, generosity and support were a beacon of hope.  I gave birth to a healthy baby girl named Ekemmi. I am eternally grateful to Carelife Character Foundation for their aid, which enabled me to become a proud mother.",
+      "A transformative moment in my life was receiving a scholarship for the Digital Empowerment Hub (DEH) training from the CareLife Team. The cohort training, mentorship experiences, and newfound access to numerous job opportunities were beyond my expectations. It has been a complete and life-changing experience",
     name: "",
     title: "",
   },
