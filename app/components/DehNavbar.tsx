@@ -8,6 +8,7 @@ import lo from '../public/carelife-logo.jpg'; // carelife logo
 import loo from '../public/dthcrystallogo.png'; // bts logo 
 import Modal from './Modal';
 
+/* DEH */
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [mobileProgramsDropdownOpen, setMobileProgramsDropdownOpen] = useState(false);
@@ -120,7 +121,7 @@ const Navbar = () => {
              {/* DTH */}
              <li>
               <Link
-                href="/dth"
+                href="/deh"
                 className="relative py-2 group inline-block text-[#525560] transition-colors duration-300 hover:text-[#003871]"
                 target="_blank"
               >
