@@ -58,7 +58,7 @@ const Deh = () => {
         <DehNavbar />
 
          {/* Background Images */}
-              <div className="absolute sm:w-auto sm:w-full w-[115vh] py-0 px-0 inset-0 transition-all duration-1000 ease-in-out">
+              <div className="absolute  sm:h-auto h-[900px] sm:w-auto sm:w-full w-[115vh] py-0 px-0 inset-0 transition-all duration-1000 ease-in-out">
                 <Image
                   src={images[currentSlide]}
                   alt="Slideshow Image"
