@@ -61,7 +61,7 @@ const Navbar = () => {
   return (
     <>
       <nav
-        className={`bg-[#FFFFFF] text-[#525560] font-roboto  sm:h-auto h-[170px] font-medium py-4 fixed top-0 w-full z-50  transition-all duration-700 ease-out ${animate ? 'opacity-100' : 'opacity-0 translate-y-[-100%]'}`}
+        className={`bg-[#FFFFFF] text-[#525560] sm:h-auto h-[250px] font-roboto font-medium py-4 fixed top-0 w-full z-50  transition-all duration-700 ease-out ${animate ? 'opacity-100' : 'opacity-0 translate-y-[-100%]'}`}
         ref={navContainerRef}
         style={{ fontSize: '14px', lineHeight: '18.75px' }}
       >
@@ -69,8 +69,8 @@ const Navbar = () => {
           {/* Logo */}
 
           <div className="flex items-center">
-              <Link href="/" className="hover:text-[#93e9be] sm:ml-[-6px] sm:h-auto sm:mt-auto mt-[70px]  w-[500px] sm:w-[100px] mb-[-1px] transition-all duration-300">
-              <Image src={loo} alt="Logo" width={147} height={50} className="object-cover" />
+              <Link href="/" className="hover:text-[#93e9be] sm:ml-[-6px] ml-[20px] sm:h-auto h-[150px] sm:mt-auto mt-[200px]  w-[500px] sm:w-[100px] mb-[-1px] transition-all duration-300">
+              <Image src={loo} alt="Logo" width={147} height={50} className="object-cover sm:h-auto sm:w-auto w-[250px] h-[100px]" />
                
               </Link>
             </div>
@@ -175,9 +175,9 @@ const Navbar = () => {
           </ul>
 
           {/* Hamburger Menu for Mobile */}
-          <div className="md:hidden mt-[70px] text-[#003871] mr-7">
+          <div className="md:hidden mt-[130px] text-[#003871] mr-7">
             <button onClick={toggleMenu} className="focus:outline-none">
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-8 h-8">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-[130px] h-[50px]">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16m-7 6h7" />
               </svg>
             </button>
@@ -186,12 +186,13 @@ const Navbar = () => {
 
         {/* Mobile Menu */}
         {isOpen && (
-          <ul className="md:hidden bg-white font-bold shadow-lg rounded-md mt-2 px-4 pb-4">
+          <ul className="md:hidden bg-white font-bold mb-[20px]  shadow-lg mt-[150px] px-5 pb-5 pt-5 space-y-7">
+
             {[{ name: 'Home', link: '/' }, { name: 'About', link: '/about' }].map(({ name, link }) => (
               <li key={name} className="py-2">
                 <Link
                   href={link}
-                  className="block text-[#003771] text-[20px] transition-colors duration-300 hover:text-[#003871]"
+                  className="block text-[#003771] text-[40px] transition-colors duration-300 hover:text-[#003871]"
                   onClick={closeMenu}
                 >
                   {name}
@@ -200,21 +201,21 @@ const Navbar = () => {
             ))}
 
             {/* Mobile Programs Dropdown */}
-            <li className="py-2">
+            <li className="py-4">
               <button
                 onClick={toggleMobileProgramsDropdown}
-                className="w-full text-left flex items-center text-[#003771] text-[20px] transition-colors duration-300 hover:text-[#003871] focus:outline-none"
+                className="w-full text-left flex items-center text-[#003771] text-[40px] transition-colors duration-300 hover:text-[#003871] focus:outline-none"
               >
                 Our Programmes
                 <FaChevronDown className="ml-1" />
               </button>
               {mobileProgramsDropdownOpen && (
-                <ul className="pl-4 mt-2">
+                <ul className="pl-4 mt-2 space-y-5">
                   {[{ name: 'Maternal, Child and Adolescent Care', link: '/intervention' }, { name: 'Life Skills', link: '/Lifeskill' }, { name: 'Community Development', link: '/community-development' }, { name: 'Health Intervention', link: '/health-intervention' }, { name: 'Education Intervention', link: '/education-intervention' }, { name: 'Advocacy', link: '/advocacy' }].map(({ name, link }) => (
                     <li key={name} className="py-3">
                       <Link
                         href={link}
-                        className="block text-[#003771] font-semibold text-[20px] transition-colors duration-300 hover:text-[#003871]"
+                        className="block text-[#003771] font-semibold text-[30px] transition-colors duration-300 hover:text-[#003871]"
                         onClick={closeMenu}
                       >
                         {name}
@@ -230,7 +231,7 @@ const Navbar = () => {
              <li className="py-2">
               <Link
                 href="/deh"
-                className="block text-[#003771] text-[20px] transition-colors duration-300 hover:text-[#003871]"
+                className="block text-[#003771] text-[40px] transition-colors duration-300 hover:text-[#003871]"
                 onClick={closeMenu}
               >
                 Digital Empowerment Hub (DEH)
@@ -248,7 +249,7 @@ const Navbar = () => {
             <li className="py-2">
               <Link
                 href="/bts"
-                className="block text-[#003771] text-[20px] transition-colors duration-300 hover:text-[#003871]"
+                className="block text-[#003771] text-[40px] transition-colors duration-300 hover:text-[#003871]"
                 onClick={closeMenu}
               >
                 Behind the Scene (BTS)
@@ -259,7 +260,7 @@ const Navbar = () => {
             <li className="py-2">
               <Link
                 href="/gallery"
-                className="block text-[#003771] text-[20px] transition-colors duration-300 hover:text-[#003871]"
+                className="block text-[#003771] text-[40px] transition-colors duration-300 hover:text-[#003871]"
                 onClick={closeMenu}
               >
                 Gallery
@@ -272,7 +273,7 @@ const Navbar = () => {
                 href="https://docs.google.com/forms/d/1ONaLrIKrSF0HZP4fsXOQd_7rOCsTNpmT0fvB7bY9TPg/edit"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="block text-[#003771] text-[20px] transition-colors duration-300 hover:text-[#003871]"
+                className="block text-[#003771] text-[40px] transition-colors duration-300 hover:text-[#003871]"
               >
                 Volunteer Or Partner With Us
               </a>

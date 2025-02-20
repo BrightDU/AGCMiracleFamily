@@ -16,7 +16,7 @@ import Footer from '../app/components/Footer';
 
 import Head from 'next/head'; // Import the Head component
 import favicon from '../app/public/favicon.ico'; // Explicit import for favicon
-import BtsNavbar from '@/app/components/DehNavbar';
+import DehNavbar from '@/app/components/DehNavbar';
 
 // Import team member images
 
@@ -53,9 +53,9 @@ const Deh = () => {
         <title>Digital Empowerment Hub(DEH)</title>
       </Head>
 
-      <div className="overflow-x-hidden sm:w-full w-[110vh]">
+      <div className="overflow-x-hidden sm:h-auto   sm:w-full w-[110vh]">
         {/* Navbar */}
-        <BtsNavbar />
+        <DehNavbar />
 
          {/* Background Images */}
               <div className="absolute sm:w-auto sm:w-full w-[115vh] py-0 px-0 inset-0 transition-all duration-1000 ease-in-out">
@@ -70,10 +70,10 @@ const Deh = () => {
                 <div className="absolute inset-0 bg-black bg-opacity-40"></div>
               </div>
 
-        <div className='pt-[50px] mt-[800px] sm:mt-[530px]'>
-          <h1 className='text-[20px]  text-center font-bold mt-[90px]  text-[#003771] font-roboto  sm:text-[30px]'>Digital Empowerment Hub (DEH)</h1>
+        <div className='pt-[50px] mt-[900px] sm:mt-[530px]'>
+          <h1 className='text-[50px]  text-center font-bold mt-[90px] sm:w-auto  text-[#003771] font-roboto  sm:text-[30px]'>Digital Empowerment Hub (DEH)</h1>
         </div>
-        <p className="mt-4 font-roboto mb-[-140px] sm:text-center text-left  font-normal text-[20px] max-w-2xl mx-auto">
+        <p className="mt-4 font-roboto mb-[-140px] flex justify-between text-justify sm:text-center text-left  font-semibold sm:font-normal sm:text-[20px] text-[30px] max-w-2xl mx-auto">
         This project has successfully trained and graduated over 2,000 trainees from various cohorts, all driven by a singular goal—achieving digital equity and fluency among talented young individuals with limited access to training and essential infrastructure. To expand our reach and ensure widespread impact across underserved communities and slums in Nigeria, we collaborate with leading digital hubs. Our activities include hands-on training, personalized mentorship sessions, and recommendations for organizational placement to maximize the relevance and application of acquired skills. We also regularly announce and offer scholarship opportunities to interested candidates while tracking progress based on our structured training curriculum.
         </p>
 
@@ -103,9 +103,9 @@ const Deh = () => {
   </div>
 </div>
 {/* Digital Empowerment for Kids Section */}
-<div className="container mx-auto px-6 py-16 text-center sm:w-full w-[115vh] sm:mt-[-30px] sm:text-center mt-[150px]">
-  <h2 className="text-3xl font-bold  text-[#003771] font-roboto  sm:text-4xl">Digital Empowerment for Kids and Teens</h2>
-  <p className="mt-4 font-roboto  font-normal text-[20px] max-w-2xl mx-auto">
+<div className="container mx-auto px-6 py-16 sm:text-center  sm:w-full w-[115vh] sm:mt-[-30px] sm:text-center sm:mb-[1px] mb-[50px] mt-[30px]">
+  <h2 className="sm:text-3xl text-[35px] font-bold text-center  text-[#003771] font-roboto  sm:text-4xl">Digital Empowerment for Kids and Teens</h2>
+  <p className="mt-4 font-roboto font-semibold text-justify sm:text-center text-left  sm:font-normal text-[30px] sm:text-[20px] max-w-2xl mx-auto">
     In today&apos;s digital world, equipping children with the right technological skills is crucial. 
     Our program focuses on nurturing young minds, fostering creativity, and teaching essential 
     digital skills. Through interactive lessons, mentorship, and hands-on projects, we prepare 
@@ -143,9 +143,9 @@ const Deh = () => {
 </div>
 
 {/* Digital Empowerment for Kids Section */}
-<div className="container mx-auto px-6 py-16 text-center  sm:w-full w-[110vh] sm:mt-[-30px] mt-[-50px] sm:mb-auto sm:text-center">
-  <h2 className="text-3xl text-[#003771] font-roboto font-bold  sm:text-4xl">Digital Empowerment for Youths and Middle-aged</h2>
-  <p className="mt-4  font-roboto ont-normal text-[20px] max-w-2xl mx-auto">
+<div className="container mx-auto px-6 py-16 text-center sm:mb-[40px] mb-[30px]  sm:w-full w-[110vh] sm:mt-[-30px] mt-[-50px] sm:mb-auto sm:text-center">
+  <h2 className="sm:text-3xl text-[35px] text-[#003771] text-center font-roboto font-bold  sm:text-4xl">Digital Empowerment for Youths and Middle-aged</h2>
+  <p className="mt-4  font-roboto sm:text-center text-justify text-left font-semibold sm:font-normal text-[30px] sm:text-[20px] max-w-2xl mx-auto">
   Digital Empowerment for Youths and Middle-Aged  
 
 In today&apos;s fast-paced digital world, equipping youths and middle-aged individuals with essential digital skills is crucial for personal and professional growth. Digital empowerment fosters innovation,
@@ -169,10 +169,10 @@ In today&apos;s fast-paced digital world, equipping youths and middle-aged indiv
       
 
 
-        {/* Footer */}
-        <div className="mb-[-70px] text-left ml-[-30px]  w-[115vh] sm:w-[1268px]">
+  <div className=" mb-[-120px] ml-[-30px] sm:w-[223vh] w-[116vh] pr-[-30px]  text-left">
   <Footer />
 </div>
+
 
 
 

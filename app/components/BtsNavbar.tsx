@@ -227,7 +227,7 @@ const Navbar = () => {
              {/* dth */}
              <li className="py-2">
               <Link
-                href="/dth"
+                href="/deh"
                 className="block text-[#003771] text-[20px] transition-colors duration-300 hover:text-[#003871]"
                 onClick={closeMenu}
               >
