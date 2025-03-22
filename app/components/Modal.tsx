@@ -57,7 +57,7 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose }) => {
           {/* Left Section */}
           <div className="lg:w-1/3 p-4 sm:p-6 flex flex-col items-center">
             <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold text-[#003871] text-center">
-              DONATE TODAY SAVE A LIFE
+            GOD LOVES A CHEERFUL GIVER.
             </h2>
             <div className="flex justify-center mt-4">
               <svg
@@ -78,20 +78,20 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose }) => {
               {/* Choose Gift Type */}
               <div>
                 <label className="text-lg font-bold font-roboto text-[#003871]">
-                  Choose your gift type
+                BRING YE ALL THE TITHES
                 </label>
                 <div className="mt-2 flex gap-2 sm:gap-4 flex-wrap">
                   <button
                     type="button"
                     className="bg-[#003871] text-white px-4 sm:px-6 py-2 rounded-md hover:bg-[#002b56] transition-all w-full sm:w-auto"
                   >
-                    Monthly
+                    TITHES
                   </button>
                   <button
                     type="button"
                     className="bg-[#003871] text-white px-4 sm:px-6 py-2 rounded-md hover:bg-[#002b56] transition-all w-full sm:w-auto"
                   >
-                    One Time
+                    DONATION
                   </button>
                 </div>
               </div>

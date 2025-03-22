@@ -3,12 +3,14 @@
 import { useState, useEffect } from 'react';
 import Image from 'next/image';
 
-const images = [
-  '/agcimage/agc6.jpg',  // No '/public/' in path
-  '/agcimage/agc3.jpg',
-  '/agcimage/agc1.jpg',
-  '/agcimage/agc8.jpg'
-];
+// ✅ Importing images statically (from /public/agcimage/)
+import agc6 from '../public/agcimage/agc6.jpg';
+import agc3 from '../public/agcimage/agc3.jpg';
+import agc1 from '../public/agcimage/agc1.jpg';
+import agc8 from '../public/agcimage/agc8.jpg';
+
+// ✅ Static image array
+const images = [agc6, agc3, agc1, agc8];
 
 const HeroSection = () => {
   const [currentImage, setCurrentImage] = useState(0);
@@ -22,13 +24,14 @@ const HeroSection = () => {
   }, []);
 
   return (
-    <section className="relative h-[500px] w-full flex items-center px-6 md:px-16 lg:px-24">
+    <section className="relative h-[800px] w-full flex items-center px-6 md:px-16 lg:px-24">
       {/* Background Image Slider */}
       <div className="absolute inset-0 transition-opacity duration-1000 ease-in-out">
         <Image
-          src={images[currentImage]} // Dynamic image path
+          src={images[currentImage]} // ✅ Now using imported image
           alt="Background"
           fill
+          priority
           className="object-cover object-center transition-opacity duration-1000"
         />
         <div className="absolute inset-0 bg-black bg-opacity-50"></div>
@@ -39,12 +42,14 @@ const HeroSection = () => {
         <h1 className="text-[32px] md:text-[48px] font-extrabold uppercase leading-tight">
           Welcome to AGC <br /> Nasarawa Road
         </h1>
-        <p className="text-lg md:text-xl mt-2">
-          — Where everybody is somebody and Jesus Christ is LORD
-        </p>
-        <button className="mt-6 bg-[#3D2FC2] text-white px-6 py-3 rounded-md text-lg font-semibold hover:bg-[#2b21a5] transition">
+      
+        <button className="mt-6 bg-[#003871] text-white px-6 py-3 rounded-md text-lg font-semibold hover:bg-[#2b21a5] transition">
           About Us
         </button>
+
+        <p className="text-lg md:text-xl mt-[20px]">
+           Where everybody is somebody and Jesus Christ is LORD
+        </p>
       </div>
 
       {/* Dots Indicator */}

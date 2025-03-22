@@ -3,7 +3,7 @@ import Header from "../app/components/Header";
 import About from "../app/components/About";
 // import Whatwedo from './components/Whatwedo'
 // import Impact from "../app/components/Impact";
-import Gallery from "../app/components/Gallery";
+
 
 // Import Testimonials component
 // import Partner from "./components/partner";
@@ -12,6 +12,7 @@ import Footer from "../app/components/Footer";
 import Hero2 from "../app/components/Hero2";
 import BlogSection from "./components/Blog";
 import Leaders from "../app/components/Services";
+import Messages from "./components/Messages";
 
 // export const metadata = {
 //   title: 'Carelife Foundation',
@@ -30,7 +31,7 @@ export default function Home() {
       {/* <Whatwedo/> */}
       {/* <Impact /> */}
       <Leaders />
-      <Gallery />
+      <Messages />
 
       
      

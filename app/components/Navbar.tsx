@@ -3,7 +3,7 @@
 import { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import lo from '../public/carelife-logo.jpg';
+import lo from '../public/agcimage/agclogo.png';
 import Modal from './Modal';
 
 const Navbar = () => {
@@ -53,12 +53,24 @@ const Navbar = () => {
         style={{ fontSize: '14px', lineHeight: '18.75px' }}
       >
         <div className="container mx-auto flex justify-between items-center px-4 sm:px-6 lg:px-8 h-16">
-          {/* Logo */}
-          <div className="flex items-center">
-            <Link href="/" className="hover:text-[#93e9be] transition-all duration-300">
-              <Image src={lo} alt="Logo" width={143} height={40} className="object-contain" />
-            </Link>
-          </div>
+        {/* Logo + Church Text */}
+<div className="flex sm:ml-[-40px] items-center space-x-3">
+  {/* Logo Image */}
+  <Link href="/" className="hover:text-[#93e9be] transition-all duration-300 flex-shrink-0">
+    <Image src={lo} alt="Logo" width={60} height={60} className="object-contain" />
+  </Link>
+
+  {/* Church Name Text */}
+  <div className="leading-tight text-left">
+    <h1 className="text-[14px] md:text-[16px] font-bold text-[#000000] uppercase">
+      Assemblies of God
+    </h1>
+    <p className="text-[12px] md:text-[13px] font-medium text-[#00000]">
+      Nassarawa Road, Kaduna
+    </p>
+  </div>
+</div>
+
 
           {/* Desktop Navigation Links */}
           <ul className="hidden md:flex space-x-6 items-center mx-auto">
@@ -66,35 +78,26 @@ const Navbar = () => {
               <li key={name}>
                 <Link
                   href={link}
-                  className="relative py-2 group inline-block text-[#525560] transition-colors duration-300 hover:text-[#003871]"
+                  className="relative py-2 group inline-block text-[#000000] transition-colors duration-300 hover:text-[#003871]"
                 >
                   {name}
                   <span className="absolute left-0 bottom-0 w-0 h-[2px] bg-[#003871] transition-all duration-300 group-hover:w-full"></span>
                 </Link>
               </li>
             ))}
-            <li>
-              <a
-                href="https://docs.google.com/forms/d/1ONaLrIKrSF0HZP4fsXOQd_7rOCsTNpmT0fvB7bY9TPg/edit"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="relative py-2 group inline-block text-[#525560] transition-colors duration-300 hover:text-[#003871]"
-              >
-                Partner With Us
-                <span className="absolute left-0 bottom-0 w-0 h-[2px] bg-[#003871] transition-all duration-300 group-hover:w-full"></span>
-              </a>
-            </li>
+           
           </ul>
 
-          {/* Donate Button for Desktop */}
           <div className="hidden md:block">
-            <button
-              onClick={openModal}
-              className="flex justify-end items-center bg-[#003871] hover:bg-[#DDF3FF] hover:text-[#003871] text-white w-[115px] h-[55px] pt-[12px] pr-[32px] pb-[12px] pl-[32px] gap-[10px] text-[16px] leading-[18.75px] font-roboto font-medium"
-            >
-              Donate
-            </button>
-          </div>
+  <button
+    onClick={openModal}
+    className="flex justify-center items-center bg-[#003871]  text-white w-[145px] h-[55px] px-6 text-[16px] leading-[18.75px] font-roboto font-semibold whitespace-nowrap rounded-lg transition-all duration-300"
+  >
+    ONLINE GIVING
+  </button>
+</div>
+
+
 
           {/* Hamburger Menu for Mobile */}
           <div className="md:hidden text-[#003871] mr-7">
@@ -120,17 +123,7 @@ const Navbar = () => {
                 </Link>
               </li>
             ))}
-            <li className="py-2">
-              <a
-                href="https://docs.google.com/forms/d/1ONaLrIKrSF0HZP4fsXOQd_7rOCsTNpmT0fvB7bY9TPg/edit"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="block text-[#003771] text-[20px] transition-colors duration-300 hover:text-[#003871]"
-                onClick={closeMenu}
-              >
-                Volunteer Or Partner With Us
-              </a>
-            </li>
+           
             <li className="py-2">
               <button
                 onClick={openModal}
