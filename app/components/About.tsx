@@ -1,98 +1,69 @@
 'use client';
 
 import { useEffect, useRef, useState } from 'react';
-// Ensure the path to the image is correct
+import { HandHeart, RadioTower, Handshake } from 'lucide-react';
 
 const About = () => {
   const [isVisible, setIsVisible] = useState(false);
   const aboutRef = useRef(null);
 
   useEffect(() => {
-    const currentRef = aboutRef.current; // Store the current reference value
-
     const observer = new IntersectionObserver(
       ([entry]) => {
-        setIsVisible(entry.isIntersecting); // Update state based on intersection
+        setIsVisible(entry.isIntersecting);
       },
-      { threshold: 0.5 } // Trigger animation when 50% of the section is in view
+      { threshold: 0.5 }
     );
 
-    if (currentRef) {
-      observer.observe(currentRef); // Observe using the stored ref
+    if (aboutRef.current) {
+      observer.observe(aboutRef.current);
     }
 
     return () => {
-      if (currentRef) {
-        observer.unobserve(currentRef); // Cleanup using the stored ref
+      if (aboutRef.current) {
+        observer.unobserve(aboutRef.current);
       }
     };
   }, []);
 
   return (
-    <section
-      id="about"
-      ref={aboutRef}
-      className="relative py-12 px-6 sm:px-12 md:px-24 lg:px-48  h-[650px]  sm:min-h-screen bg-white flex justify-center items-center overflow-x-hidden"
-    >
-      {/* Container for content */}
-      <div className="max-w-7xl mt-[-480px] sm:mb-auto mb-[-550px]  sm:mt-auto w-full">
-        {/* Title */}
-        <h2 className="font-roboto text-center  font-bold text-sm sm:text-base tracking-[2px] text-[#1D2130] mx-auto mb-6">
-          Mission and Vision
-        </h2>
+    <section id="about" ref={aboutRef} className="py-16 px-6 sm:px-12 bg-white">
+      {/* Title */}
+      <h2 className="text-center text-sm sm:text-base font-semibold tracking-wide text-gray-800 mb-4">
+        OUR VISION STATEMENT
+      </h2>
+      <h1 className="text-center text-2xl sm:text-4xl font-extrabold text-gray-900 mb-10">
+        A CHURCH THAT'S RELEVANT
+      </h1>
 
-        {/* Mission and Vision Content */}
-        <div className="flex flex-col md:flex-row mb-[680px] sm:mb-auto justify-between sm:items-center items-start gap-10">
-          {/* Mission Section */}
+      {/* Cards Section */}
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-7xl mx-auto">
+        {[
+          { title: 'ABOUT US', icon: <Handshake className="w-8 h-8" /> },
+          { title: 'GET INVOLVED', icon: <RadioTower className="w-8 h-8" /> },
+          { title: 'GIVING BACK', icon: <HandHeart className="w-8 h-8" /> },
+        ].map((item, index) => (
           <div
-            className={`flex-1 text-left transform transition-all duration-1000 ${
-              isVisible ? 'translate-x-0 opacity-100' : '-translate-x-10 opacity-0'
+            key={index}
+            className={`bg-gray-50 p-6 text-center rounded-lg shadow-md transform transition-all duration-700 ${
+              isVisible ? 'translate-y-0 opacity-100' : 'translate-y-5 opacity-0'
             }`}
           >
-            <h3 className="font-roboto text-lg  sm:text-xl font-bold text-[#003771] mb-4">
-              Our Mission
-            </h3>
-            <p className="font-roboto font-normal  text-sm sm:text-base leading-relaxed text-[#525560]">
-            Our mission is to empower every child by improving maternal and child health, nutrition, and early childhood development. We strive to promote maternal literacy, advocacy, education, and digital empowerment for young individuals while implementing research-driven interventions to foster a virtuous society.
+            <div className="flex justify-center">
+              <div className="w-14 h-14 flex items-center justify-center bg-blue-800 text-white rounded-full">
+                {item.icon}
+              </div>
+            </div>
+            <h3 className="mt-4 text-lg font-bold text-gray-900">{item.title}</h3>
+            <p className="mt-2 text-gray-600 text-sm">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
             </p>
+            <div className="mt-4 h-2 bg-blue-800 w-full"></div>
           </div>
-
-          {/* Vertical Border */}
-          <div className="hidden sm:block w-[2px] h-24 sm:h-40 bg-[#E5E5E5]"></div>
-
-          {/* Vision Section */}
-          <div
-            className={`flex-1 text-left transform transition-all duration-1000 ${
-              isVisible ? 'translate-x-0 opacity-100' : 'translate-x-10 opacity-0'
-            }`}
-          >
-            <h3 className="font-roboto text-lg sm:text-xl font-bold text-[#003771] mb-4">
-              Our Vision
-            </h3>
-            <p className="font-roboto font-normal text-sm sm:text-base leading-relaxed text-[#525560]">
-              Our vision is to foster a safe and supportive environment for every child, empowering them to get the future they deserve.
-            </p>
-          </div>
-        </div>
-
-       
+        ))}
       </div>
     </section>
   );
 };
 
 export default About;
-
-
-
-
-
-
-
-
-
-
-
-
-
-

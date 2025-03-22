@@ -1,136 +1,60 @@
 'use client';
 
 import Image from 'next/image'; 
-import missionImg from '../public/Vector.png'; // Adjust path as needed
-// import Testimonials from './Testimonials'; // Import the Testimonials component
 
-const Services = () => {
+const leaders = [
+  { id: 1, imgSrc: '/agcimage/acg4.jpg', name: 'Leader One' },
+  { id: 2, imgSrc: '/agcimage/acg5.jpg', name: 'Leader Two' },
+  { id: 3, imgSrc: '/agcimage/acg1.jpg', name: 'Leader Three' },
+  { id: 4, imgSrc: '/agcimage/acg4.jpg', name: 'Leader Four' },
+];
+
+const Leaders = () => {
   return (
-    <section id="services" className="relative py-20 px-6 md:px-12 lg:px-24 min-h-[80vh] lg:min-h-[140vh] bg-[#FFFFFF]">
-  {/* Content */}
-  <div className="relative z-20 container mx-auto text-black font-bold text-center">
-    <h2 className="font-roboto font-extrabold text-[30px] md:text-[32px] leading-[40px] md:leading-[57.6px] text-[#6A6969] mt-[-30px] md:mt-[-60px]">
-      Operationalizing Our Core Values
-    </h2>
+    <section className="relative w-full min-h-screen bg-gray-100 flex flex-col items-center">
+      
+      {/* Background Image with Dark Overlay */}
+      <div className="absolute top-0 left-0 w-full h-full bg-cover bg-center"
+        style={{ backgroundImage: "url('/church-bg.jpg')", minHeight: "50vh" }}>
+        {/* Overlay */}
+        <div className="absolute inset-0 bg-black opacity-50"></div>
+      </div>
 
-    {/* Services Grid */}
-    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-[20px] md:gap-[29px] mt-8 justify-center mx-auto w-full max-w-[1140px]">
-      {[
-        {
-          title: "Inclusivity",
-          points: [
-            "We are committed to making our programs",
-            "accessible to all children and families, regardless of their background.",
-          ]
-        },
-        {
-          title: "Integrity",
-          points: [
-            "We uphold the highest ethical standards,",
-            "maintaining transparency and accountability in all",
-            "our operations."
-          ]
-        },
-        {
-          title: "Compassion",
-          points: [
-            "We approach every aspect of our work with",
-            "empathy and understanding, striving to provide",
-            "support and care that meets the emotional and",
-            "physical needs of those we serve."
-          ]
-        },
-        {
-          title: "Advocacy",
-          points: [
-            "We champion the rights of children and",
-            "adolescents, ensuring their voices are heard and",
-            "their needs are addressed through effective",
-            "programs, policies, and community engagement."
-          ]
-        },
-        {
-          title: "Resilience",
-          points: [
-            "We are dedicated to fostering strength and",
-            "adaptability in the communities we serve,",
-            "supporting individuals through challenges",
-            "and promoting long-term growth and well-being."
-          ]
-        },
-        {
-          title: "Excellence",
-          points: [
-            "We are committed to delivering high-quality,",
-            "impactful services and programs, continuously",
-            "improving our practices and striving for excellence",
-            "in all aspects of our work"
-          ]
-        },
-      ].map((Corevalue, index) => (
-        <div 
-          key={index} 
-          className="bg-[#E5E9EE] text-black p-[15px] rounded-[10px] w-full max-w-[330px] sm:max-w-[380px] h-auto mx-auto flex flex-col gap-[15px] justify-between pl-[20px] md:pl-[50px] relative transition-all duration-300 ease-in-out transform hover:scale-105"
-        >
-          {/* Icon at the top-left corner */}
-          <div className="absolute top-[20px] md:top-[36px] mt-[-13px] ml-[-16px] left-[20px] md:left-[37px] bg-[#002771] w-[28px] h-[28px] flex justify-center items-center rounded-[4px]">
-            <Image
-              src={missionImg}
-              alt="Icon"
-              width={15}
-              height={15}
-              className="w-[20px] h-[20px] md:w-[15px] md:h-[15px]" // Increased size for mobile view
-            />
-          </div>
+      {/* Text Section (Fixed position issue) */}
+      <div className="relative z-20 text-center text-white mt-20 md:mt-28 px-6">
+        <p className="text-lg uppercase tracking-widest text-gray-300 font-semibold">
+          We Are Glad You're Here
+        </p>
+        <h2 className="text-4xl md:text-5xl font-extrabold text-white mt-3 drop-shadow-lg">
+          Meet Our Leaders
+        </h2>
+      </div>
 
-          <div className="w-full h-auto mb-[8px]">
-            <h3 className="font-roboto font-bold text-[18px] md:text-[22px] leading-[25px] md:leading-[28.13px] mt-[40px] md:mt-[60px] ml-[-10px] md:ml-[-30px] text-left">
-              {Corevalue.title}
-            </h3>
-            {Corevalue.points.map((point, idx) => (
-              <p key={idx} className="font-roboto font-bold text-[12px] md:text-[13px] ml-[-10px] md:ml-[-30px] leading-[20px] md:leading-[25.6px] text-[#525560] text-left">
-                {point}
-              </p>
+      {/* Leader Cards (Fixed positioning) */}
+      <div className="relative z-20 flex justify-center mt-6 md:mt-12 px-6 w-full">
+        <div className="bg-white shadow-lg rounded-lg px-6 py-6 max-w-6xl w-full">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
+            {leaders.map((leader) => (
+              <div key={leader.id} className="bg-white rounded-lg shadow-md overflow-hidden text-center">
+                <Image 
+                  src={leader.imgSrc} 
+                  alt={leader.name} 
+                  width={300} 
+                  height={300} 
+                  className="w-full object-cover"
+                  unoptimized
+                />
+                <div className="p-4">
+                  <h3 className="text-xl font-bold text-gray-800">{leader.name}</h3>
+                </div>
+              </div>
             ))}
           </div>
         </div>
-      ))}
-    </div>
+      </div>
 
-    
-  </div>
-</section>
-
+    </section>
   );
 };
 
-export default Services;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+export default Leaders;
