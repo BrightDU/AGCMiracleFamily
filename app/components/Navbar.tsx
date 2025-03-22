@@ -3,14 +3,11 @@
 import { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import { FaChevronDown } from 'react-icons/fa';
-import lo from '../public/carelife-logo.jpg'; // Ensure the path to your logo image is correct
+import lo from '../public/carelife-logo.jpg';
 import Modal from './Modal';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const [mobileProgramsDropdownOpen, setMobileProgramsDropdownOpen] = useState(false);
-  const [desktopProgramsDropdownOpen, setDesktopProgramsDropdownOpen] = useState(false);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const navContainerRef = useRef<HTMLDivElement | null>(null);
   const [animate, setAnimate] = useState(false);
@@ -21,13 +18,10 @@ const Navbar = () => {
 
   const toggleMenu = () => {
     setIsOpen((prev) => !prev);
-    setMobileProgramsDropdownOpen(false);
   };
 
   const closeMenu = () => {
     setIsOpen(false);
-    setMobileProgramsDropdownOpen(false);
-    setDesktopProgramsDropdownOpen(false);
   };
 
   useEffect(() => {
@@ -43,14 +37,6 @@ const Navbar = () => {
     };
   }, []);
 
-  const toggleDesktopProgramsDropdown = () => {
-    setDesktopProgramsDropdownOpen((prev) => !prev);
-  };
-
-  const toggleMobileProgramsDropdown = () => {
-    setMobileProgramsDropdownOpen((prev) => !prev);
-  };
-
   const openModal = () => {
     setIsModalOpen(true);
   };
@@ -62,7 +48,7 @@ const Navbar = () => {
   return (
     <>
       <nav
-        className={`bg-[#FFFFFF] text-[#525560] font-roboto font-medium py-4 fixed top-0 w-full z-50  transition-all duration-700 ease-out ${animate ? 'opacity-100' : 'opacity-0 translate-y-[-100%]'}`}
+        className={`bg-[#FFFFFF] text-[#525560] font-roboto font-medium py-4 fixed top-0 w-full z-50 transition-all duration-700 ease-out ${animate ? 'opacity-100' : 'opacity-0 translate-y-[-100%]'}`}
         ref={navContainerRef}
         style={{ fontSize: '14px', lineHeight: '18.75px' }}
       >
@@ -76,7 +62,7 @@ const Navbar = () => {
 
           {/* Desktop Navigation Links */}
           <ul className="hidden md:flex space-x-6 items-center mx-auto">
-            {[{ name: 'Home', link: '/' }, { name: 'About', link: '/about' }].map(({ name, link }) => (
+            {[{ name: 'Home', link: '/' }, { name: 'About', link: '#' }, { name: 'Sermon', link: '/sermon' }, { name: 'Blog', link: '/blog' }, { name: 'Live Service', link: '/live-service' }].map(({ name, link }) => (
               <li key={name}>
                 <Link
                   href={link}
@@ -87,85 +73,6 @@ const Navbar = () => {
                 </Link>
               </li>
             ))}
-
-            {/* Programs Dropdown for Desktop */}
-            <li className="relative">
-              <button
-                onClick={toggleDesktopProgramsDropdown}
-                className="flex items-center relative py-2 text-[#525560] transition-colors duration-300 hover:text-[#003871] focus:outline-none"
-              >
-                Our Programmes
-                <FaChevronDown className="ml-1" />
-              </button>
-              {desktopProgramsDropdownOpen && (
-                <ul className="absolute left-0 mt-2 bg-[#DDF3FF] shadow-lg rounded-md overflow-hidden w-52">
-                  {[{ name: 'Maternal, Child and Adolescent Care', link: '/intervention' }, { name: 'Life Skills', link: '/Lifeskill' }, { name: 'Community Development', link: '/community-development' }, { name: 'Health Intervention', link: '/health-intervention' }, { name: 'Education Intervention', link: '/education-intervention' }, { name: 'Advocacy', link: '/advocacy' }].map(({ name, link }) => (
-                    <li key={name}>
-                      <Link
-                        href={link}
-                        className="block px-4 py-2 hover:bg-[#003871] hover:text-white transition-all duration-300"
-                        onClick={closeMenu}
-                      >
-                        {name}
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
-              )}
-            </li>
-        
-
-           {/* DTH */}
-            <li>
-              <Link
-                href="/deh"
-                className="relative py-2 group inline-block text-[#525560] transition-colors duration-300 hover:text-[#003871]"
-                target="_blank"
-              >
-                Digital Empowerment Hub (DEH)
-                <span className="absolute left-0 bottom-0 w-0 h-[2px] bg-[#003871] transition-all duration-300 group-hover:w-full"></span>
-              </Link>
-            </li>
-
-
-
-
-
-
-
-            {/* Behind the Scene */}
-            <li>
-              <Link
-                href="/bts"
-                className="relative py-2 group inline-block text-[#525560] transition-colors duration-300 hover:text-[#003871]"
-                target="_blank"
-              >
-                Behind the Scene (BTS)
-                <span className="absolute left-0 bottom-0 w-0 h-[2px] bg-[#003871] transition-all duration-300 group-hover:w-full"></span>
-              </Link>
-            </li>
-              
-        
-
-
-
-
-
-
-
-
-            {/* Gallery */}
-            <li>
-              <Link
-                href="/gallery"
-                className="relative py-2 group inline-block text-[#525560] transition-colors duration-300 hover:text-[#003871]"
-              >
-                Gallery
-                <span className="absolute left-0 bottom-0 w-0 h-[2px] bg-[#003871] transition-all duration-300 group-hover:w-full"></span>
-              </Link>
-            </li>
-
-            {/* Volunteer or Partner With Us */}
             <li>
               <a
                 href="https://docs.google.com/forms/d/1ONaLrIKrSF0HZP4fsXOQd_7rOCsTNpmT0fvB7bY9TPg/edit"
@@ -173,7 +80,7 @@ const Navbar = () => {
                 rel="noopener noreferrer"
                 className="relative py-2 group inline-block text-[#525560] transition-colors duration-300 hover:text-[#003871]"
               >
-                 Partner With Us
+                Partner With Us
                 <span className="absolute left-0 bottom-0 w-0 h-[2px] bg-[#003871] transition-all duration-300 group-hover:w-full"></span>
               </a>
             </li>
@@ -201,8 +108,8 @@ const Navbar = () => {
 
         {/* Mobile Menu */}
         {isOpen && (
-          <ul className="md:hidden bg-white font-bold  shadow-lg rounded-md mt-2 px-4 pb-4">
-            {[{ name: 'Home', link: '/' }, { name: 'About', link: '/about' }].map(({ name, link }) => (
+          <ul className="md:hidden bg-white font-bold shadow-lg rounded-md mt-2 px-4 pb-4">
+            {[{ name: 'Home', link: '/' }, { name: 'About', link: '/about' }, { name: 'Sermon', link: '/sermon' }, { name: 'Blog', link: '/blog' }, { name: 'Live Service', link: '/live-service' }].map(({ name, link }) => (
               <li key={name} className="py-2">
                 <Link
                   href={link}
@@ -213,81 +120,17 @@ const Navbar = () => {
                 </Link>
               </li>
             ))}
-
-            {/* Mobile Programs Dropdown */}
-            <li className="py-2">
-              <button
-                onClick={toggleMobileProgramsDropdown}
-                className="w-full text-left flex items-center text-[#003771] text-[20px] transition-colors duration-300 hover:text-[#003871] focus:outline-none"
-              >
-                Our Programmes
-                <FaChevronDown className="ml-1" />
-              </button>
-              {mobileProgramsDropdownOpen && (
-                <ul className="pl-4 mt-2">
-                  {[{ name: 'Maternal, Child and Adolescent Care', link: '/intervention' }, { name: 'Life Skills', link: '/Lifeskill' }, { name: 'Community Development', link: '/community-development' }, { name: 'Health Intervention', link: '/health-intervention' }, { name: 'Education Intervention', link: '/education-intervention' }, { name: 'Advocacy', link: '/advocacy' }].map(({ name, link }) => (
-                    <li key={name} className="py-3">
-                      <Link
-                        href={link}
-                        className="block text-[#003771]  font-semibold text-[20px] transition-colors duration-300 hover:text-[#003871]"
-                        onClick={closeMenu}
-                      >
-                        {name}
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
-              )}
-            </li>
-
-
-              {/* dth */}
-              <li className="py-2">
-              <Link
-                href="/deh"
-                className="block text-[#003771]  text-[20px] transition-colors duration-300 hover:text-[#003871]"
-                onClick={closeMenu}
-              >
-                Digital Empowerment Hub (DEH)
-              </Link>
-            </li>
-
-            {/* BTS */}
-            <li className="py-2">
-              <Link
-                href="/bts"
-                className="block text-[#003771]  text-[20px] transition-colors duration-300 hover:text-[#003871]"
-                onClick={closeMenu}
-              >
-                Behind the Scene (BTS)
-              </Link>
-            </li>
-
-            {/* Gallery */}
-            <li className="py-2">
-              <Link
-                href="/gallery"
-                className="block text-[#003771]  text-[20px] transition-colors duration-300 hover:text-[#003871]"
-                onClick={closeMenu}
-              >
-                Gallery
-              </Link>
-            </li>
-
-            {/* Volunteer or Partner */}
             <li className="py-2">
               <a
                 href="https://docs.google.com/forms/d/1ONaLrIKrSF0HZP4fsXOQd_7rOCsTNpmT0fvB7bY9TPg/edit"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="block text-[#003771]  text-[20px] transition-colors duration-300 hover:text-[#003871]"
+                className="block text-[#003771] text-[20px] transition-colors duration-300 hover:text-[#003871]"
                 onClick={closeMenu}
               >
                 Volunteer Or Partner With Us
               </a>
             </li>
-
-            {/* Donate Button */}
             <li className="py-2">
               <button
                 onClick={openModal}
@@ -307,33 +150,3 @@ const Navbar = () => {
 };
 
 export default Navbar;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
