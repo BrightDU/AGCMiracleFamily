@@ -13,6 +13,7 @@ import Hero2 from "../app/components/Hero2";
 import BlogSection from "./components/Blog";
 import Leaders from "../app/components/Services";
 import Messages from "./components/Messages";
+import OurPrograms from "./components/OurPrograms";
 
 // export const metadata = {
 //   title: 'Carelife Foundation',
@@ -32,7 +33,7 @@ export default function Home() {
       {/* <Impact /> */}
       <Leaders />
       <Messages />
-
+      <OurPrograms />
       
      
 
