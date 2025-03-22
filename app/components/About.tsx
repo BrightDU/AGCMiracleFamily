@@ -1,8 +1,7 @@
 'use client';
 
 import { useEffect, useRef, useState } from 'react';
-import Image from 'next/image';
-import missionImg from '../public/abtimage.png'; // Ensure the path to the image is correct
+// Ensure the path to the image is correct
 
 const About = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -76,18 +75,7 @@ const About = () => {
           </div>
         </div>
 
-        {/* Image Section */}
-        <div className="relative w-full max-w-[1200px] sm:h-auto  mb-auto h-[-800] mt-[-650px]  sm:mt-20 sm:mt-12 mx-auto">
-          <Image
-            src={missionImg}
-            alt="Relevant Image"
-            layout="responsive"
-            width={1200}
-            height={656}
-            style={{ objectFit: 'cover' }}
-            className="rounded-lg h-[350px] sm:h-[450px] md:h-auto"
-          />
-        </div>
+       
       </div>
     </section>
   );
