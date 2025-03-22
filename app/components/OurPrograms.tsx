@@ -6,11 +6,13 @@ import { FaClock, FaMapMarkerAlt } from 'react-icons/fa';
 
 const OurPrograms = () => {
   return (
-    <section className="bg-white py-16 px-6 lg:px-20">
+    
+    <section  id="live-service" className="bg-white py-16 px-6 lg:px-20">
+      
       {/* Top Section - Headings */}
       <div className="text-center">
-        <p className="text-sm uppercase text-gray-600 font-semibold tracking-widest">
-          Our Programs
+        <p className="text-[18px] font-bold text-[#1D2130] mb-6 text-center font-['Roboto']">
+          OUR PROGRAMS
         </p>
         <h2 className="text-4xl md:text-5xl font-extrabold text-gray-900 mt-2 leading-tight">
           JOIN US AND BECOME PART <br /> OF SOMETHING GREAT

@@ -54,7 +54,7 @@ const Messages = () => {
 
   return (
     <section
-      id="blog-section"
+      id="sermon"
       className={`py-5 w-full max-w-[1400px] mt-[60px] mx-auto bg-white px-2 sm:px-4 ${
         isInView ? 'animate-fadeIn' : ''
       }`}

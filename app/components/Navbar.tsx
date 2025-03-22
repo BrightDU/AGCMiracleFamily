@@ -74,7 +74,7 @@ const Navbar = () => {
 
           {/* Desktop Navigation Links */}
           <ul className="hidden md:flex space-x-6 items-center mx-auto">
-            {[{ name: 'Home', link: '/' }, { name: 'About', link: '#' }, { name: 'Sermon', link: '/sermon' }, { name: 'Blog', link: '/blog' }, { name: 'Live Service', link: '/live-service' }].map(({ name, link }) => (
+            {[{ name: 'Home', link: '/' }, { name: 'About', link: '#about' }, { name: 'Sermon', link: '#sermon' }, { name: 'Blog', link: '#blog' }, { name: 'Live Service', link: '#live-service' }].map(({ name, link }) => (
               <li key={name}>
                 <Link
                   href={link}

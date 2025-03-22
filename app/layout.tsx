@@ -17,8 +17,8 @@ const geistMono = localFont({
 });
 
 export const metadata: Metadata = {
-  title: 'Carelife Foundation',
-  description: 'NGO, Charity, Support, Intervention programs, Nigeria, UK.',
+  title: 'ASSEMBLIES OF GOD',
+  description: '',
   icons: {
     icon: favicon.src, // Use imported favicon
   },
@@ -34,8 +34,8 @@ export default function RootLayout({
       <head>
         {/* Add global favicon link for SSR */}
         <link rel="icon" href={favicon.src} type="image/x-icon" sizes="any" />
-        <meta name="description" content="NGO, Charity, Support, Intervention programs, Nigeria, UK." />
-        <title>Carelife Foundation</title>
+        <meta name="description" content="" />
+        <title>ASSEMBLIES OF GOD</title>
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen flex flex-col`}

@@ -31,8 +31,8 @@ const HeroSection = () => {
   SERVE THE<br />
   WORLD AROUND US
     </h1>
-    <p className="mt-4 sm:mt-6 font-semibold text-[10px] sm:text-[10px] md:text-[26px] leading-[1.6] text-[#525560] font-roboto">
-      Your support can make a world of difference.
+    <p className="mt-4 sm:mt-6 font-semibold text-[10px] sm:text-[15px] md:text-[15px] text-[#000000] font-roboto">
+      Lorem ipsum dolor sit amet, consectetur<br />  adipiscing elit, sed do.
     </p>
     <button
       onClick={handleOpenModal}

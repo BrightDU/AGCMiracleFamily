@@ -62,7 +62,7 @@ const BlogSection = () => {
 
   return (
     <section
-      id="blog-section"
+      id="blog"
       className={`py-5 w-full max-w-[1400px] mt-[60px] sm:max-h-auto max-h-[500vh] mx-auto bg-white px-2 sm:px-4 ${isInView ? 'animate-fadeIn' : ''}`}
     >
       <div className="w-full">
@@ -78,7 +78,7 @@ const BlogSection = () => {
         {blogPosts.map((post, index) => (
   <div
     key={index}
-    className="bg-[#f9f9f9] px-7 pr-5 pt-2 pb-4 sm:min-h-[200px] h-[350px] w-full sm:w-[60%] md:w-[85%] lg:w-[290px] mx-auto transition-all duration-300 hover:shadow-[0px_6px_0px_0px_#003771] flex flex-col justify-center"
+    className="bg-[#f5f1ec] px-7 pr-5 pt-2 pb-4 sm:min-h-[200px] h-[350px] w-full sm:w-[60%] md:w-[85%] lg:w-[290px] mx-auto transition-all duration-300 hover:shadow-[0px_6px_0px_0px_#003771] flex flex-col justify-center"
   >
     <div className="text-left">
       <h3 className="text-[23px] font-bold text-[#1D2130] mb-3 font-['Roboto']">

@@ -1,26 +1,27 @@
+// Updated Modal component
+
 import { useEffect, useState } from "react";
 
 // Define the prop types for the Modal component
 interface ModalProps {
-  isOpen: boolean; // `isOpen` is a boolean
-  onClose: () => void; // `onClose` is a function that takes no arguments and returns void
+  isOpen: boolean;
+  onClose: () => void;
 }
 
 const Modal: React.FC<ModalProps> = ({ isOpen, onClose }) => {
   const [heartColor, setHeartColor] = useState("#003871");
 
-  // Animation to alternate heart color
   useEffect(() => {
     const interval = setInterval(() => {
       setHeartColor((prevColor) =>
         prevColor === "#003871" ? "#DDF3FF" : "#003871"
       );
-    }, 1000); // Change color every second
+    }, 1000);
 
-    return () => clearInterval(interval); // Cleanup on component unmount
+    return () => clearInterval(interval);
   }, []);
 
-  if (!isOpen) return null; // Don't render the modal if it's closed
+  if (!isOpen) return null;
 
   return (
     <div className="fixed inset-0 flex justify-center items-center z-50 overflow-auto">
@@ -57,7 +58,7 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose }) => {
           {/* Left Section */}
           <div className="lg:w-1/3 p-4 sm:p-6 flex flex-col items-center">
             <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold text-[#003871] text-center">
-            GOD LOVES A CHEERFUL GIVER.
+              GOD LOVES A CHEERFUL GIVER.
             </h2>
             <div className="flex justify-center mt-4">
               <svg
@@ -78,7 +79,7 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose }) => {
               {/* Choose Gift Type */}
               <div>
                 <label className="text-lg font-bold font-roboto text-[#003871]">
-                BRING YE ALL THE TITHES
+                  BRING YE ALL THE TITHES
                 </label>
                 <div className="mt-2 flex gap-2 sm:gap-4 flex-wrap">
                   <button
@@ -96,96 +97,21 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose }) => {
                 </div>
               </div>
 
-              {/* Donation Amount */}
-              <div>
-                <label className="text-lg font-bold font-roboto text-[#003871]">
-                  Choose your amount
-                </label>
-                <div className="mt-2 flex flex-col sm:flex-row gap-2 sm:gap-4">
-                  <input
-                    type="number"
-                    placeholder="Enter amount"
-                    className="border border-gray-300 p-3 rounded-md w-full placeholder-[#003871]"
-                  />
-                  <select className="border border-gray-300 p-3 rounded-md text-[#003871]">
-                    <option value="USD">USD</option>
-                    <option value="EUR">EUR</option>
-                    <option value="NGN">NGN</option>
-                  </select>
-                </div>
-              </div>
+             
 
-              {/* Billing Address */}
-              <div>
-                <label className="text-lg font-bold font-roboto text-[#003871]">
-                  Enter billing address
-                </label>
-                <div className="space-y-4 mt-2">
-                  <input
-                    type="email"
-                    placeholder="Email address"
-                    className="border border-gray-300 p-3 rounded-md w-full placeholder-[#003871]"
-                  />
-                  <input
-                    type="text"
-                    placeholder="Title"
-                    className="border border-gray-300 p-3 rounded-md w-full placeholder-[#003871]"
-                  />
-                  <div className="flex flex-col sm:flex-row gap-2 sm:gap-4">
-                    <input
-                      type="text"
-                      placeholder="First Name"
-                      className="border border-gray-300 p-3 rounded-md w-full placeholder-[#003871]"
-                    />
-                    <input
-                      type="text"
-                      placeholder="Last Name"
-                      className="border border-gray-300 p-3 rounded-md w-full placeholder-[#003871]"
-                    />
-                  </div>
-                  <input
-                    type="text"
-                    placeholder="Country"
-                    className="border border-gray-300 p-3 rounded-md w-full placeholder-[#003871]"
-                  />
-                </div>
-              </div>
+              {/* Replaced Billing Address Section */}
+              <div className="space-y-2 text-[#003871] font-semibold text-lg mt-6">
+                <p>Account Number: <span className="font-bold">3345657645</span></p>
+                <p>Bank Name: <span className="font-bold">First Bank</span></p>
+                <p>Account Name Name: <span className="font-bold">First Bank</span></p>
+                <p className="text-center mt-6 text-[30px] font-bold text-[#003871] animate-bounce">
+  God bless you
+</p>
 
-              {/* Payment Info */}
-              <div>
-                <label className="text-lg font-bold font-roboto text-[#003871]">
-                  Enter your payment information
-                </label>
-                <div className="space-y-4 mt-2">
-                  <input
-                    type="text"
-                    placeholder="Card Number"
-                    className="border border-gray-300 p-3 rounded-md w-full placeholder-[#003871]"
-                  />
-                  <div className="flex flex-col sm:flex-row gap-2 sm:gap-4">
-                    <input
-                      type="text"
-                      placeholder="Expiry Date (MM/YY)"
-                      className="border border-gray-300 p-3 rounded-md w-full placeholder-[#003871]"
-                    />
-                    <input
-                      type="text"
-                      placeholder="CVV"
-                      className="border border-gray-300 p-3 rounded-md w-full placeholder-[#003871]"
-                    />
-                  </div>
-                </div>
               </div>
 
               {/* Submit Button */}
-              <div>
-                <button
-                  type="submit"
-                  className="bg-[#003871] text-white w-full py-3 rounded-md hover:bg-[#002b56] transition-all"
-                >
-                  Donate
-                </button>
-              </div>
+             
             </form>
           </div>
         </div>
@@ -195,12 +121,3 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose }) => {
 };
 
 export default Modal;
-
-
-
-
-
-  
-  
-  
-  
