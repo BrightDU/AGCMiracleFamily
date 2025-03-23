@@ -40,7 +40,7 @@ const HeroSection = () => {
       {/* Content */}
       <div className="relative z-10 text-white max-w-3xl">
         <h1 className="text-[32px] md:text-[48px] font-extrabold uppercase leading-tight">
-          Welcome to AGC <br /> Nasarawa Road
+          Welcome to AGC <br /> Nassarawa Road
         </h1>
       
         <button className="mt-6 bg-[#003871] text-white px-6 py-3 rounded-md text-lg font-semibold hover:bg-[#2b21a5] transition">
@@ -48,7 +48,7 @@ const HeroSection = () => {
         </button>
 
         <p className="text-lg md:text-xl mt-[20px]">
-           Where everybody is somebody and Jesus Christ is LORD
+           Where Everybody is Somebody and Jesus Christ is LORD
         </p>
       </div>
 

@@ -1,6 +1,6 @@
 'use client';
 import Image from "next/image";
-import { FaFacebookF, FaInstagram, FaLinkedinIn } from "react-icons/fa";
+import { FaFacebookF, FaInstagram, FaYoutube, FaTiktok } from "react-icons/fa";
 import { FaWhatsapp } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import Link from 'next/link';
@@ -30,9 +30,11 @@ const Footer = () => {
           <div>
             <h4 className="text-lg font-semibold mb-2">Address</h4>
             <p className="text-sm leading-6">
-              HQ – 222 Ekpri Nsukara Estate, Uyo, Nigeria.<br />
-              Mailing – 5 Garba Abbas Road, TMC Complex, Barnawa Kaduna.<br />
-              Foreign Mission – 36 Poundway, OXFORD, ENGLAND, OX4 3XX.
+              RR 1-4 Nassarawa/Junction Road Kaduna
+            </p>
+            <h5 className="text-lg font-semibold mb-2">Email</h5>
+            <p className="text-sm leading-6">
+              agcmiraclefamily@gmail.com
             </p>
           </div>
         </div>
@@ -55,19 +57,22 @@ const Footer = () => {
             <div>
               <h4 className="text-base font-semibold mb-3">Follow Us on Social Channels</h4>
               <div className="flex space-x-4">
-                <Link href="https://www.x.com/teamcarelife" target="_blank" aria-label="Twitter">
+                {/* <Link href="https://www.x.com/teamcarelife" target="_blank" aria-label="Twitter">
                   <FaXTwitter className="text-white text-xl hover:text-[#1DA1F2]" />
-                </Link>
-                <Link href="https://www.facebook.com/TeamCarelife/" target="_blank" aria-label="Facebook">
+                </Link> */}
+                <Link href="https://www.facebook.com/Agcmiraclefamily" target="_blank" aria-label="Facebook">
                   <FaFacebookF className="text-white text-xl hover:text-[#3b5998]" />
                 </Link>
-                <Link href="https://www.instagram.com/carelifefoundation/" target="_blank" aria-label="Instagram">
+                <Link href="https://www.instagram.com/agcmiraclefamily?igsh=OXA1cDdxMWpkZXd3" target="_blank" aria-label="Instagram">
                   <FaInstagram className="text-white text-xl hover:text-[#E4405F]" />
                 </Link>
-                <Link href="https://www.linkedin.com/company/104742373/" target="_blank" aria-label="LinkedIn">
-                  <FaLinkedinIn className="text-white text-xl hover:text-[#0e76a8]" />
+                <Link href="https://www.youtube.com/@agcmiraclefamily?si=Hdj9E-pv4pQvHNI_" target="_blank" aria-label="Youtube">
+                  <FaYoutube className="text-white text-xl hover:text-[#0e76a8]" />
                 </Link>
-                <Link href="https://wa.me/+2349122180058" target="_blank" aria-label="WhatsApp">
+                <Link href="https://vm.tiktok.com/ZMBSJg66w/" target="_blank" aria-label="TikTok">
+                  <FaTiktok className="text-white text-xl hover:text-[#0e76a8]" />
+                </Link>
+                <Link href="https://wa.me/+2348066401072" target="_blank" aria-label="WhatsApp">
                   <FaWhatsapp className="text-white text-xl hover:text-[#25D366]" />
                 </Link>
               </div>
@@ -103,7 +108,7 @@ const Footer = () => {
           rel="noopener noreferrer"
           className="hover:text-[#93e9be] transition"
         >
-          Developed by Crystal TalentPool
+          Developed by Crystal EdTech | Info-Tech Unit
         </a>
       </div>
     </footer>

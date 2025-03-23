@@ -10,10 +10,9 @@ import acg6 from '../public/agcimage/agc6.jpg';
 import bgImage from '../public/agcimage/agc10.jpg';
 
 const leaders = [
-  { id: 1, imgSrc: acg4, name: 'Leader One' },
-  { id: 2, imgSrc: acg5, name: 'Leader Two' },
-  { id: 3, imgSrc: acg1, name: 'Leader Three' },
-  { id: 4, imgSrc: acg6, name: 'Leader Four' },
+  { id: 1, imgSrc: acg6, name: 'Rev. Dr. Paul C. Adim' },
+  { id: 2, imgSrc: acg1, name: 'Rev. David Sylvester' },
+
 ];
 
 const Leaders = () => {
