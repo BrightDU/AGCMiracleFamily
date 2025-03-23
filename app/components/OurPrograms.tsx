@@ -27,7 +27,7 @@ const OurPrograms = () => {
             Upcoming Event
           </p>
           <h3 className="text-3xl font-bold text-gray-900 mt-2">
-            Overcomer's Rendezvous 2025
+            Overcomer&apos;s Rendezvous 2026
           </h3>
           <p className="text-gray-600 text-lg mt-3">
             Experience a transformative event designed to uplift and inspire. Be part of a remarkable gathering!

@@ -23,7 +23,7 @@ const Leaders = () => {
       {/* ✅ Text should be at top */}
       <div className="w-full text-center pt-16 px-6 z-20">
         <p className="text-center text-sm sm:text-base font-semibold tracking-wide text-black mb-4">
-          We Are Glad You're Here
+          We Are Glad You&apos;re Here
         </p>
         <h2 className="text-3xl md:text-5xl font-extrabold text-gray-900 mt-3 drop-shadow-sm">
           Meet Our Leaders

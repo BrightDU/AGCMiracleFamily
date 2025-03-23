@@ -8,7 +8,7 @@ import lo from '../public/agcimage/agclogo.png';
 import { useState } from 'react';
 
 const Footer = () => {
-  const [isModalOpen, setIsModalOpen] = useState(false);
+  // const [isModalOpen, setIsModalOpen] = useState(false);
 
   return (
     <footer className="bg-[#003771] font-roboto text-white py-5">
