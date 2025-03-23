@@ -5,7 +5,7 @@ import { FaWhatsapp } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import Link from 'next/link';
 import lo from '../public/agcimage/agclogo.png';
-import { useState } from 'react';
+// import { useState } from 'react';
 
 const Footer = () => {
   // const [isModalOpen, setIsModalOpen] = useState(false);
