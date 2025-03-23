@@ -5,10 +5,10 @@ import { FaWhatsapp } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import Link from 'next/link';
 import lo from '../public/agcimage/agclogo.png';
-import { useState } from 'react';
+
 
 const Footer = () => {
-  const [isModalOpen, setIsModalOpen] = useState(false);
+  
 
   return (
     <footer className="bg-[#003771] font-roboto text-white py-5">
@@ -77,16 +77,16 @@ const Footer = () => {
 
         {/* Right Section - Subscription */}
         <div className="flex-1 mt-8 min-w-[250px]">
-          <h4 className="text-[24px] md:text-[29px] font-bold uppercase mb-4">
+          <h4 className="text-[20px] md:text-[29px] font-bold uppercase mb-4">
             Subscribe to Get All Latest Updates and News
           </h4>
-          <div className="w-full max-w-[700px] bg-transparent border border-[#C0C0C0] rounded-[15px] flex items-center overflow-hidden">
+          <div className="sm:w-full sm:max-w-[700px] w-[300px] bg-transparent border border-[#C0C0C0] rounded-[15px] flex items-center overflow-hidden">
   <input
     type="email"
     placeholder="Yourmail@gmail.com"
     className="flex-grow bg-transparent px-5 py-4 text-sm text-black placeholder:text-gray-500 focus:outline-none"
   />
-  <button className="bg-white text-black font-medium text-sm px-6 h-[60px] rounded-[15px] hover:bg-gray-100 transition-all">
+  <button className="bg-white text-black font-medium text-sm px-6 h-[60px] sm:ml-auto ml-[-80px] rounded-[15px] hover:bg-gray-100 transition-all">
     SUBSCRIBE
   </button>
 </div>

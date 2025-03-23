@@ -112,7 +112,7 @@ const Navbar = () => {
         {/* Mobile Menu */}
         {isOpen && (
           <ul className="md:hidden bg-white font-bold shadow-lg rounded-md mt-2 px-4 pb-4">
-            {[{ name: 'Home', link: '/' }, { name: 'About', link: '/about' }, { name: 'Sermon', link: '/sermon' }, { name: 'Blog', link: '/blog' }, { name: 'Live Service', link: '/live-service' }].map(({ name, link }) => (
+            {[{ name: 'Home', link: '/' }, { name: 'About', link: '#about' }, { name: 'Sermon', link: '#sermon' }, { name: 'Blog', link: '#blog' }, { name: 'Live Service', link: '#live-service' }].map(({ name, link }) => (
               <li key={name} className="py-2">
                 <Link
                   href={link}

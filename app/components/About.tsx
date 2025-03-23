@@ -12,16 +12,18 @@ const About = () => {
       ([entry]) => {
         setIsVisible(entry.isIntersecting);
       },
-      { threshold: 0.5 }
+      { threshold: 0.2 }
     );
 
-    if (aboutRef.current) {
-      observer.observe(aboutRef.current);
+    const currentRef = aboutRef.current; // ✅ Save it in a variable
+
+    if (currentRef) {
+      observer.observe(currentRef);
     }
 
     return () => {
-      if (aboutRef.current) {
-        observer.unobserve(aboutRef.current);
+      if (currentRef) {
+        observer.unobserve(currentRef); // ✅ Use the saved variable
       }
     };
   }, []);
@@ -55,10 +57,9 @@ const About = () => {
               </div>
             </div>
             <h3 className="mt-4 text-[28px] font-bold text-black">{item.title}</h3>
-            <p className="mt-2 text-black text-[17px] ">
+            <p className="mt-2 text-black text-[17px]">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
             </p>
-           
           </div>
         ))}
       </div>
