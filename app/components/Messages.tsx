@@ -61,7 +61,7 @@ const Messages = () => {
     >
       <div className="w-full">
         <h3 className="text-[18px] font-bold text-[#1D2130] mb-6 text-center font-['Roboto']">
-          WATCH AND LISTEN
+          WATCH AND LISTEN!
         </h3>
 
         <h2 className="text-[25px] md:text-[38px] font-bold text-[#000000] mb-12 text-center font-['Roboto']">

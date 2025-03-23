@@ -3,17 +3,16 @@
 import Image from 'next/image';
 
 // ✅ Import images
-import acg4 from '../public/agcimage/agc4.jpg';
-import acg5 from '../public/agcimage/agc5.jpg';
+// import acg4 from '../public/agcimage/agc4.jpg';
+// import acg5 from '../public/agcimage/agc5.jpg';
 import acg1 from '../public/agcimage/agc1.jpg';
 import acg6 from '../public/agcimage/agc6.jpg';
 import bgImage from '../public/agcimage/agc10.jpg';
 
 const leaders = [
-  { id: 1, imgSrc: acg4, name: 'Leader One' },
-  { id: 2, imgSrc: acg5, name: 'Leader Two' },
-  { id: 3, imgSrc: acg1, name: 'Leader Three' },
-  { id: 4, imgSrc: acg6, name: 'Leader Four' },
+  { id: 1, imgSrc: acg6, name: 'Rev. Dr. Paul C. Adim' },
+  { id: 2, imgSrc: acg1, name: 'Rev. David Sylvester' },
+
 ];
 
 const Leaders = () => {
@@ -23,7 +22,7 @@ const Leaders = () => {
       {/* ✅ Text should be at top */}
       <div className="w-full text-center pt-16 px-6 z-20">
         <p className="text-center text-sm sm:text-base font-semibold tracking-wide text-black mb-4">
-          We Are Glad You're Here
+          We Are Glad You&apos;re Here
         </p>
         <h2 className="text-3xl md:text-5xl font-extrabold text-gray-900 mt-3 drop-shadow-sm">
           Meet Our Leaders
