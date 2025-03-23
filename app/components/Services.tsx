@@ -3,8 +3,8 @@
 import Image from 'next/image';
 
 // ✅ Import images
-import acg4 from '../public/agcimage/agc4.jpg';
-import acg5 from '../public/agcimage/agc5.jpg';
+// import acg4 from '../public/agcimage/agc4.jpg';
+// import acg5 from '../public/agcimage/agc5.jpg';
 import acg1 from '../public/agcimage/agc1.jpg';
 import acg6 from '../public/agcimage/agc6.jpg';
 import bgImage from '../public/agcimage/agc10.jpg';
