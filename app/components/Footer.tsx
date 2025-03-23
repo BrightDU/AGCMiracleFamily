@@ -91,7 +91,7 @@ const Footer = () => {
         </div>
       </div>
 
-      {/* Bottom Footer Text */}
+      {/* Bottom Footer Text t */}
       <div className="text-center mt-10 pt-4 text-sm">
         <a
           href="https://www.crystaledtech.com/"
@@ -105,5 +105,6 @@ const Footer = () => {
     </footer>
   );
 };
+
 
 export default Footer;
